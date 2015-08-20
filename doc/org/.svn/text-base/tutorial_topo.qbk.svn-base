@@ -1,0 +1,543 @@
+[section:tutorial_topo Neurobiology Tutorial II]
+
+This second tutorial will guide you through the process of evolving not only
+the weights, but also the topology of a neural network. Using the nn2 module
+from sferes2, we will test both the evolution of a a recurrent network on the
+same task as [link documentation.tutorial_neuro previously] (function
+approximation). 
+
+[section Download and install Sferes2 and crete a new experiment]
+
+The first step is to install and compile Sferes2. To do so, please follow the
+[link documentation.download download] and [link documentation.compilation
+compilation] pages before continuing. If you have successfully followed these two
+pages, you should be in the "trunk" directory of sferes2, else, type the
+following command after replacing $SFERES2_PARENT_DIRECTORY by the path where
+you put sferes2:
+
+[teletype]
+``cd $SFERES2_PARENT_DIRECTORY/sferes2/trunk``
+
+you should now create a new experiment: 
+
+[teletype]
+``./waf --create test2``
+
+We can now enter the experiment source code and edit the wscript to add the necessary modules:
+
+[teletype]
+``
+cd exp/test2
+edit wscript 
+``
+
+The required modules are the same as the previous tutorial:
+
+[teletype]
+``
+#! /usr/bin/env python
+def build(bld):
+    obj = bld.new_task_gen('cxx', 'program')
+    obj.source = 'test2.cpp'
+    obj.includes = '. ../../'
+    obj.uselib = 'EIGEN2'
+    obj.target = 'test2'
+    obj.uselib_local = 'sferes2'
+``
+
+we can then edit the source code for our new experiment: test2.cpp.
+
+[endsect]
+
+[section:add_headers Add the relevant headers]
+
+Unlike the previous tutorial, we are going to include headers that wrap the
+previous neural network code with functions to generate random topologies and
+evolve them.
+
+[c++]
+``
+#include <modules/nn2/gen_dnn.hpp>
+#include <modules/nn2/phen_dnn.hpp>
+
+using namespace sferes::gen::dnn;
+``
+
+If you look at these files, you will see that a few methods have been added to
+evolve the topology of neural networks. In the genotype, you will find the
+following methods:
+
+* random() initializes a genotype randomly (using the parameters from
+Params).
+
+* mutate() randomly changes the network by adding, removing or
+changing nodes and connections ( using the probabilities stated in params).
+
+* cross(parent1, parent2) initializes the network genotype as a
+random of one of the two parents.
+
+the phenotype file provides the following methods:
+
+* develop() must be called to initialize a genotype (fill in the
+parameters) and is mandatory before using a network.
+
+* show(ostream out) dumps the network topology to a dot file.
+
+* nn() returns a reference to the neural network in the phenotype.
+
+Finally, we need the dnn namespace. 
+[endsect]
+
+[section Define the necessary parameters]
+
+Again, we need to define the required parameters for our networks, the main addition concerns the mutation rates:
+ 
+[c++]
+``
+  struct evo_float
+  {
+    static const float mutation_rate = 0.1f;
+    static const float cross_rate = 0.1f;
+    static const mutation_t mutation_type = polynomial;
+    static const cross_over_t cross_over_type = sbx;
+    static const float eta_m = 15.0f;
+    static const float eta_c = 15.0f;
+  };
+  struct parameters
+  {
+    // maximum value of parameters
+    static const float min = -5.0f;
+    // minimum value
+    static const float max = 5.0f;
+  };
+  struct dnn
+  {
+    static const size_t nb_inputs = 2;
+    static const size_t nb_outputs  = 1;
+    static const size_t min_nb_neurons  = 3;
+    static const size_t max_nb_neurons  = 10;
+    static const size_t min_nb_conns  = 100;
+    static const size_t max_nb_conns  = 101;
+
+    static const float m_rate_add_conn  = 1.0f;
+    static const float m_rate_del_conn  = 1.0f;
+    static const float m_rate_change_conn = 1.0f;
+    static const float m_rate_add_neuron  = 1.0f;
+    static const float m_rate_del_neuron  = 1.0f;
+
+    static const int io_param_evolving = true;
+//    static const init_t init = ff;
+    static const init_t init = random_topology;
+  };
+``
+
+As previously, you need an evo_float struct which provides the mutation rate
+of the parameters (bias_t) and for the weights (weight_t). If you need
+different values for the two, you can create multiple Params classes and pass
+them as template arguments in your typedefs in the next paragraph.
+
+The second struct, parameters, is used to define the scaling of the evo-float
+values (evo_float are between 0 and 1 normally). Again, if you require
+different scaling for the neuron parameters and weights, you can provide
+separate params.
+
+The last struct, dnn, defines several new elements:
+
+* the number of intputs and outputs of the evolved network (it must be constant)
+
+* the minimum and maximum number of neurons in any evolved network
+
+* the minimum and maximum number of connections in the network
+
+* probabilities to (in order)
+
+  * add a connection
+
+  * remove a connection
+
+  * change the source or target of a connection
+
+  * add a new neuron (replaces an existing connection)
+
+  * remove a neuron
+
+The probability of changing a parameter is defined by the values in the
+evo_float struct. The evolution of parameters of the output nodes can be
+enabled or disabled through the io_param_evolving constant. Finally, the init
+constant is used to define if the initial random network have a feedforward
+topology with no hidden nodes ("ff" value) like NEAT or a random topology
+(random_topology).
+
+[endsect]
+
+[section Declare the type of our input/outputs, weights, connections and neurons]
+
+Similarly to the previous tutorial, we need to define the template parameters
+of our neural network in the main function. However, here, the io_t and
+weight_t are replaced by evo_float which has the mutate, random and cross
+methods (bias_t is the internal bias of the neuron and has the same type as all
+the other inputs io_t). If you use a neuron with more than one parameter, you
+should increase the bias_t size). Finally, we need to set the fitness as the
+algorithm fitness.
+
+[c++]
+``
+  typedef phen::Parameters<gen::EvoFloat<1, Params>, fit::FitDummy<>, Params> weight_t;
+  typedef phen::Parameters<gen::EvoFloat<1, Params>, fit::FitDummy<>, Params> bias_t;
+  typedef PfWSum<weight_t> pf_t;
+  typedef AfTanh<bias_t> af_t;
+  typedef Neuron<pf_t, af_t > neuron_t;
+  typedef Connection<weight_t> connection_t;
+
+  typedef sferes::gen::Dnn<neuron_t,  connection_t, Params> gen_t;
+  typedef phen::Dnn<gen_t, FitTest<Params>, Params> phen_t;
+``
+
+[endsect]
+
+[section Using the parallel evaluation]
+
+If your sferes has been compiled with tbb, you can evaluate your individuals in
+parallel. This works quite well on HyperThreaded processors by the way.
+However, this is only useful for significant time evaluation. To do so, just
+replace the eval::Eval by eval::Parallel in the main typedefs. This divided the
+runtime of this example from 18,023 seconds to 8,313 seconds using a three
+processor machine.
+
+[c++]
+``
+typedef eval::Parallel<Params> eval_t;
+``
+
+[endsect]
+
+[section add code to initialise the neural network and run it]
+
+We are going to use the neural network in a way similar to the previous
+tutorial, to approximate a function. To do so, we must modify the eval function
+in the fitness class.
+
+[c++]
+``
+template<typename Indiv>
+    void eval(Indiv& ind)
+  {
+    //initialize network (set weights and parameters, reset accumulators and set the weight buffers if pf)
+    ind.develop();
+    float v = 0;
+    float tmp_val = 0;
+    for (size_t i = 0; i < Params::fit::x_pos_size(); ++i)
+    {
+      for (size_t j = 0; j < Params::fit::y_pos_size(); ++j)
+      {
+        //set the network inputs
+        std::vector<float> inputs(0);
+        inputs.push_back(Params::fit::x_pos(i));
+        inputs.push_back(Params::fit::y_pos(j));
+       //iterate the network 5 times (if the network is recurrent, additionnal tests could be necessary to test the stability)
+       size_t max_iterations = 5;
+       for (size_t k = 0;k < max_iterations; ++k)
+       {
+         ind.nn().step(inputs);
+       }
+       tmp_val=(_gaussian(inputs[0],inputs[1])-ind.nn().get_outf()[0]);
+       v+=tmp_val*tmp_val;
+      }
+    }
+    if (this->mode() == fit::mode::view)
+    {
+      std::ofstream ofs(std::string("graph.dot").c_str());
+      ind.nn().write(ofs);
+    }
+    this->_value = -v;
+  }
+``
+
+The first modification from the previous version are that we increased the
+number of step done by the network. We also call only the develop method from
+the individual's phenotype and we then use ind.nn() to access its network.  
+
+we also must add the positions to test in the parameters:
+
+[c++]
+``
+ struct fit
+  {
+    static const size_t nb_hidden_neurons = 3 ;
+    SFERES_ARRAY(float,x_pos, 0.69, 0.52, 0.80, 0.95, 0.97, 0.82, 0.11, 0.13, 0.27, 0.59);
+    SFERES_ARRAY(float,y_pos, 0.24, 0.30, 0.63, 0.30, 0.81, 0.50, 0.47, 0.53, 0.51, 0.66);
+  };
+``
+
+and finally the function to approximate:
+
+[c++]
+``
+ protected:
+  float _gaussian(float x, float y)
+  {
+    return exp(-(x*x+y*y)/2);
+  }
+``
+
+You can now compile the new experiment (view the previous tutorial) and obtain networks such as the following one :
+
+
+[endsect]
+
+[section using feedforward networks only]
+
+The dnn genotype can create recursive networks. In order to generate only
+feedforward networks, you can use the gen_dnn_ff.hpp include which is a
+derivative class from gen_dnn.hpp. 
+
+As we want to create both an experiment using dnn and dnn_ff with the same
+codebase, we are going to use a feature from sferes2, called variants to
+generate two different binaries from a single source code.
+
+First, we need to replace the previosu wscript to tell the compiler to create two binaries
+
+[teletype]
+``
+import sferes
+
+def build(bld):
+  uselib_ = 'EIGEN2 GSL BOOST_UNIT_TEST_FRAMEWORK'
+  cxxflags_kdtree = \
+      bld.get_env()['CXXFLAGS']
+  sferes.create_variants(bld,
+                          source = 'test2.cpp',
+                          uselib_local = 'sferes2',
+                          uselib = uselib_,
+                          target = '',
+                          json = '',
+                          cxxflags=cxxflags_kdtree,
+                          variants = ['DNN','DNN FEEDF'])
+
+``
+
+The important part of this code is the variants which define the variants of
+the binary to compile. The first flag is generic (you need at least one flag to
+compile a binary) and the second one, FEEDF, will create a variant which has a
+#define FF at the beginning of the file (do not use FF as it is already defined in BOOST code).
+
+we can then modify the include to add the gen_dnn_ff.hpp genotype instead of the previous gen_dnn.hpp if FF is defined:
+
+[c++]
+``
+#ifdef FEEDF
+#include <modules/nn2/gen_dnn_ff.hpp>
+#else
+#include <modules/nn2/gen_dnn.hpp>
+#endif
+``
+
+The next step is to change the network template parameters to use feedforward networks:
+
+[c++]
+``
+#ifdef FEEDF
+  typedef sferes::gen::DnnFF<neuron_t,  connection_t, Params> gen_t;
+#else
+  typedef sferes::gen::Dnn<neuron_t,  connection_t, Params> gen_t;
+#endif
+``
+
+The next necessary step is to define the initial topology as a feedforward simple network, as a random topology may be recursive:
+
+[c++]
+``
+#ifdef FEEDF
+    static const init_t init = ff;
+#else
+    static const init_t init = random_topology;
+#endif
+``
+
+As a bonus, if you use the DnnFF instead of Dnn, the number of steps required before
+convergence of the network is equal to the network's depth, which can be computed by the
+get_depth function. 
+
+[c++]
+``
+ifdef FEEDF
+  size_t max_iterations = ind.gen().get_depth();
+#else
+  size_t max_iterations = 5;
+#endif  
+``
+
+the compilation should the provide you with two binary files :
+
+[teletype]
+``
+test2_dnn
+test2_dnn_feedf
+``
+
+[endsect]
+
+[section Complete source code for the experiment]
+
+[c++]
+``
+#include <iostream>
+#include <sferes/phen/parameters.hpp>
+#include <sferes/gen/evo_float.hpp>
+#include <sferes/ea/rank_simple.hpp>
+#include <sferes/eval/eval.hpp>
+#include <sferes/stat/best_fit.hpp>
+#include <sferes/stat/mean_fit.hpp>
+#include <sferes/modif/dummy.hpp>
+#include <sferes/run.hpp>
+
+
+#include <modules/nn2/gen_dnn.hpp>
+
+#ifdef FEEDF
+#include <modules/nn2/gen_dnn_ff.hpp>
+#endif
+
+#include <modules/nn2/phen_dnn.hpp>
+
+using namespace sferes;
+using namespace sferes::gen::evo_float;
+using namespace sferes::gen::dnn;
+using namespace nn;
+
+struct Params
+{
+ struct evo_float
+  {
+    static const float mutation_rate = 0.1f;
+    static const float cross_rate = 0.1f;
+    static const mutation_t mutation_type = polynomial;
+    static const cross_over_t cross_over_type = sbx;
+    static const float eta_m = 15.0f;
+    static const float eta_c = 15.0f;
+  };
+  struct dnn
+  {
+    static const size_t nb_inputs = 2;
+    static const size_t nb_outputs  = 1;
+    static const size_t min_nb_neurons  = 3;
+    static const size_t max_nb_neurons  = 8;
+    static const size_t min_nb_conns  = 100;
+    static const size_t max_nb_conns  = 101;
+
+    static const float m_rate_add_conn  = 1.0f;
+    static const float m_rate_del_conn  = 1.0f;
+    static const float m_rate_change_conn = 1.0f;
+    static const float m_rate_add_neuron  = 1.0f;
+    static const float m_rate_del_neuron  = 1.0f;
+
+    static const int io_param_evolving = true;
+#ifdef FEEDF
+    static const init_t init = ff;
+#else
+    static const init_t init = random_topology;
+#endif
+  };
+  struct pop
+  {
+    static const unsigned size = 200;
+    static const unsigned nb_gen = 2000;
+    static const int dump_period = 5;
+    static const int initial_aleat = 1;
+    static const float coeff = 1.1f;
+    static const float keep_rate = 0.6f;    
+  };
+  struct parameters
+  {
+    static const float min = -5.0f;
+    static const float max = 5.0f;
+  };
+  struct fit
+  {
+    static const size_t nb_hidden_neurons = 3 ;
+    SFERES_ARRAY(float,x_pos, 0.69, 0.52, 0.80, 0.95, 0.97, 0.82, 0.11, 0.13, 0.27, 0.59);
+    SFERES_ARRAY(float,y_pos, 0.24, 0.30, 0.63, 0.30, 0.81, 0.50, 0.47, 0.53, 0.51, 0.66);
+  };
+
+};
+
+SFERES_FITNESS(FitTest, sferes::fit::Fitness)
+{
+ public:
+  // indiv will have the type defined in the main (phen_t)
+  template<typename Indiv>
+    void eval(Indiv& ind)
+  {
+    //initialize network (set weights and parameters, reset accumulators and set the weight buffers if pf)
+    ind.develop();
+    float v = 0;
+    float tmp_val = 0;
+#ifdef FEEDF
+    size_t max_iterations = ind.gen().get_depth();
+#else
+    size_t max_iterations = 5;
+#endif
+    for (size_t i = 0; i < Params::fit::x_pos_size(); ++i)
+    {
+      for (size_t j = 0; j < Params::fit::y_pos_size(); ++j)
+      {
+        //set the network inputs
+        std::vector<float> inputs(0);
+        inputs.push_back(Params::fit::x_pos(i));
+        inputs.push_back(Params::fit::y_pos(j));
+        //iterate the network 5 times (if the network is recurrent, additionnal tests could be necessary to test the stability)
+        for (size_t k = 0;k < max_iterations; ++k)
+        {
+          ind.nn().step(inputs);
+        }
+        tmp_val=(_gaussian(inputs[0],inputs[1])-ind.nn().get_outf()[0]);
+        v+=tmp_val*tmp_val;
+      }
+    }
+    if (this->mode() == fit::mode::view)
+    {
+      std::ofstream ofs(std::string("graph.dot").c_str());
+      ind.nn().write(ofs);
+    }
+    this->_value = -v;
+  }
+ protected:
+  float _gaussian(float x, float y)
+  {
+    return exp(-(x*x+y*y)/2);
+  }
+
+};
+
+
+
+int main(int argc, char **argv)
+{
+  typedef phen::Parameters<gen::EvoFloat<1, Params>, fit::FitDummy<>, Params> weight_t;
+  typedef phen::Parameters<gen::EvoFloat<1, Params>, fit::FitDummy<>, Params> bias_t;
+  typedef PfWSum<weight_t> pf_t;
+  typedef AfTanh<bias_t> af_t;
+  typedef Neuron<pf_t, af_t > neuron_t;
+  typedef Connection<weight_t> connection_t;
+
+#ifdef FEEDF
+  typedef sferes::gen::DnnFF<neuron_t,  connection_t, Params> gen_t;
+#else
+  typedef sferes::gen::Dnn<neuron_t,  connection_t, Params> gen_t;
+#endif
+
+  typedef phen::Dnn<gen_t, FitTest<Params>, Params> phen_t;
+  typedef eval::Parallel<Params> eval_t;
+  typedef boost::fusion::vector<stat::BestFit<phen_t, Params>, stat::MeanFit<Params> >  stat_t;
+  typedef modif::Dummy<> modifier_t;
+  typedef ea::RankSimple<phen_t, eval_t, stat_t, modifier_t, Params> ea_t;
+  ea_t ea;
+  run_ea(argc, argv, ea);
+  //
+  return 0;
+}
+``
+
+[endsect]
+
+[endsect]

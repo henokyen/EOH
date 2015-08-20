@@ -1,0 +1,465 @@
+[section:tutorial_evoneuro Neurobiology Tutorial III]
+
+This third tutorial will guide you through the process of evolving the topology
+and parameters of maps, using the evoneuro module. We will test both the
+evolution of parameters first and then the evolution of a complete topology. 
+
+This tutorial will evolve networks to solve the task taken from neurosciences.
+With inputs corresponding to possible actions, the network must select the
+output corresponding to the maximum input and have a minimal output on this
+node. On the contrary, all the other outputs must be maximized. This a task
+similar to a winner-takes-all,  but where the winner has a minimal output and
+losers have a maximal output.
+
+Disclaimer : If you do not intend to evolve the topology of the network, you
+might instead use the first tutorial to create by hand any fixed network
+topology instead of learning to use this tool. The main advantage of the
+EvoNeuro module is the automatic generation of neural maps and its ability to
+evolve them.
+
+[section Presentation of the EvoNeuro module]
+
+The evoneuro module in sferes is composed of both a genotype and a phenotype
+class. The genotype class evolves a dnn network similar to the one used in dnn
+(appart from some additionnal evolvable parameters in each node and
+connection). The topology, weights and parameters can be evolved as in a
+standard neural network.
+
+The specificity of the EvoNeuro module comes from the phenotype class: it
+creates a new network of neuron maps from the topology of the genotype network.
+During the develop() function (viewed in the [link
+documentation.tutorial_topo.add_headers second tutorial]) each neurons from the
+genotype can be transformed into:
+
+* a map of neurons with similar properties as the original neuron;
+* a single neuron (no transformation).
+
+This depends on an evolved parameter for each neuron. Each connection is
+similarly transformed into:
+
+* a one-to-all connectivity pattern (if either the pre- and/or post-synaptic
+node is a single neuron, this is the only possibility);
+
+* a on-to-one connectivity pattern between two maps;
+
+* a on-to-all connectivity pattern between two mapos with gaussian weights (the
+ connection between corresponding elements is at the maximum weights and the
+ weights gets smaller when the index difference increases).
+
+The development process is shown in the following figure.
+
+[$../img/evoneuro.png]
+
+[endsect]
+
+[section Creating a new experiment which uses the evoneuro module]
+
+Like previously, we are going to start from the sample experiment we used
+previously. The first thing to modify is the params. We need to declare the
+parameters for dnn (used by evoneuro) and evoneuro itself:
+
+[c++]
+``
+ struct dnn
+  {
+    static const size_t nb_inputs = 1;
+    static const size_t nb_outputs  = 1;
+
+    static const size_t min_nb_neurons	= 3;
+    static const size_t max_nb_neurons	= 8;
+    static const size_t min_nb_conns	= 2;
+    static const size_t max_nb_conns	= 15;
+
+    static const float m_rate_add_conn	= 0.05f;
+    static const float m_rate_del_conn	= 0.03f;
+    static const float m_rate_change_conn = 0.07f;
+    static const float m_rate_add_neuron  = 0.02f;
+    static const float m_rate_del_neuron  = 0.01f;
+
+    static const int io_param_evolving  = 1;
+
+    static const init_t init = random_topology;
+  };
+  struct evo_neuro
+  {
+    typedef nn::Neuron<nn::PfWSum<>, nn::AfLpds<> >  neuron_t;
+    typedef nn::Connection<> connection_t;
+    static const size_t map_size  = 5;
+    static const float  max_weight  = 5.0f;
+  };
+``
+
+First, nb_inputs and nb_outputs are set to one, as there are usually a single
+input and a single output map. The maximum and minimum values of neurons and
+connections will only apply to the genotype graph and not to the developped network. 
+
+The evo_neuro struct contains the type of neurons and connections that will be
+used by the develop() function to create the phenotype network as they are
+different from the genotype one (contrary to dnn). For the sake of simplicity,
+we will keep the AfLpds function used which is a neuron with internal
+variables. However, you can easily modify the phen_evoneuro.hpp file to use
+other types of neurons.
+
+We must then define the typedefs for our network in the main function:
+
+[c++]
+``
+  typedef phen::Parameters<gen::EvoFloat<4, Params>, fit::FitDummy<>, Params> node_label_t;
+  typedef phen::Parameters<gen::EvoFloat<3, Params>, fit::FitDummy<>, Params> conn_label_t;
+  typedef gen::EvoNeuro<node_label_t, conn_label_t, Params> gen_t;
+  typedef phen::EvoNeuro<gen_t, FitTest<Params>, Params> phen_t;
+``
+
+The first two lines are the nodes and connection types of neurons and connexions.
+
+* a node should contain the number of parameters for your af (your pf is considered to have no internal parameter) plus 1 parameter
+ (defining if the node is a map or a single neuron)
+* a connection should contain 3 parameters:
+  * one for the type of connection (1-1 or 1-all) 
+  * one for the weight pattern (constant or gaussian)
+  * one for the weight of the connection
+
+The two other lines are constant for use with evoneuro appart from the fitness definition
+
+[endsect]
+
+[section Defining an adapted fitness function]
+
+Contrary to the previous tutorial, the EvoNeuro module is ill-adapted to
+calculating a simple mathematical function. We instead try to emulate the
+results of the paper described in
+[@http://www.isir.upmc.fr/files/2010ACTI1526.pdf this paper]. We want our
+network to evolve a contrast augmenting function : it should maximize the max
+from the incoming signals while reducing the value of other inputs channels in
+the output. 
+
+[$../img/contrast.png]
+
+[endsect]
+
+[section Using the NSGA II algorithms instead of simple sorting]
+
+As sferes2 provides NSGA2 (a multi-objective state of the art
+algorithm), we will optimize the two objectives separately. 
+
+To change the evaluation algorithm, we just need to add the relevant headers.
+The first one is the evolutionary algorithm, the second one the statistics used
+to dump the fitness of the individuals on the pareto front.
+
+[c++]
+``
+//#include <sferes/ea/rank_simple.hpp>
+#include <sferes/ea/nsga2.hpp>
+//#include <sferes/stat/best_fit.hpp>
+#include <sferes/stat/pareto_front.hpp>
+
+``
+
+We also need to change the corresponding typedefs in the main function:
+
+[c++]
+``
+//typedef boost::fusion::vector<stat::BestFit<phen_t, Params>, stat::MeanFit<Params> >  stat_t;
+typedef boost::fusion::vector<stat::ParetoFront<phen_t, Params>, stat::MeanFit<Params> >  stat_t;
+//typedef ea::RankSimple2<phen_t, eval_t, stat_t, modifier_t, Params> ea_t;
+typedef ea::Nsga2<phen_t, eval_t, stat_t, modifier_t, Params> ea_t;
+
+``
+
+The next step is to initialize the objective vector at the beginning of our
+eval function (NSGA II uses a vector of objectives instead of a single value):
+
+[c++]
+``
+this->_objs.resize(2);
+for (size_t i=0;i<this->_objs.size();++i)
+  this->_objs[i]=0;
+``
+
+[endsect]
+
+[section Defining the random inputs sets]
+
+The evaluation function will need to test the different networks on a set of
+random inputs, and, for each set, have only the output corresponding to the
+maximum input at zero, while the other outputs are maxed out. This can be
+easily done throught two objectives:
+
+* minimize the output corresponding to the max input
+* maximize the sum of the other outputs
+
+The first step is therefore to create random inputs sets in the fitness
+function. These sets are created here as a vector of vector of floats with
+values between 0 and 1. The sets are created at the initialisation of the
+FitTest function.
+
+``
+public:
+  FitTest():
+    inputs_list(0)
+  {
+   for (size_t test = 0; test < Params::fit::nb_tests; ++test )
+   {
+     inputs_list.push_back(std::vector<float>(Params::evo_neuro::map_size));
+     for (size_t i = 0; i < inputs_list.back().size(); ++i )
+     {
+       inputs_list.back()[i] = misc::rand<float>();
+     }
+   }
+  }
+``
+
+and
+
+``
+protected:
+  std::vector<std::vector< float> > inputs_list;
+``
+
+
+
+[endsect]
+
+[section Defining the eval function]
+
+We are going to use the following eval function:
+
+``
+template<typename Indiv>
+  void eval(Indiv& ind) 
+{
+  // resize the objective vector
+  this->_objs.resize(2);
+  for (size_t i=0;i<this->_objs.size();++i)
+    this->_objs[i]=0.0f;
+  // generate the phenotype network
+  ind.develop();
+  // if we are looking at the results, dump the genotype topology to graph.dot
+  // the simplify function remove all non-useful parts
+  if (this->mode() == fit::mode::view)
+  {
+    std::ofstream ofs(std::string("graph.dot").c_str());
+    ind.gen().simplify();
+    ind.gen().name_io();
+    ind.gen().write(ofs);
+  }
+  // initialise the phenotype network 
+  ind.nn().init();
+  // test all the possible input sets
+  for (size_t test = 0; test < Params::fit::nb_tests; ++test )
+  {
+    //find the maximum input in the set
+    size_t max = 0;
+    for (size_t i = 0; i < inputs_list[test].size(); ++i )
+    {
+      if (inputs_list[test][i] > inputs_list[test][max])
+        max = i;
+    }
+    //loop the network 
+    for (size_t cycles = 0; cycles < Params::fit::max_cycles; ++cycles)
+    {
+      ind.nn().step(inputs_list[test]);
+    }
+    //set the first objective (minimise output with the same index as the maximal input)
+    this->_objs[0] += 1.0f-fabs(ind.nn().get_outf()[max]);
+    //set the second objective as the average value of other outputs
+    for (size_t i = 0; i < ind.nn().get_outf().size(); ++i )
+    {
+      if (i != max)
+        this->_objs[1] += fabs(ind.nn().get_outf()[i])/(float)(ind.nn().get_outf().size()-1.0f);
+    }
+  }
+  //average the objectives with the number of tests
+  for (size_t i=0;i<this->_objs.size();++i)
+    this->_objs[i]/=(float)(Params::fit::nb_tests);
+}
+``
+
+[endsect]
+
+[section Sample solution network]
+
+If you launch an experiment with this code, you should find networks like the
+following graph (the maps have not been developped):
+ 
+[$../img/graph.png]
+
+[endsect]
+
+[section Analysing the results]
+
+After compiling the code and executing the code, you can analyse the results by
+browsing the pareto.dat file or launching the runs with the load command.
+
+
+[endsect]
+
+[section Complete source code]
+``
+#include <iostream>
+#include <sferes/phen/parameters.hpp>
+#include <sferes/gen/evo_float.hpp>
+#include <sferes/eval/eval.hpp>
+#include <sferes/ea/nsga2.hpp>
+//#include <sferes/stat/best_fit.hpp>
+#include <sferes/stat/pareto_front.hpp>
+#include <sferes/stat/mean_fit.hpp>
+#include <sferes/modif/dummy.hpp>
+#include <sferes/run.hpp>
+
+#include <modules/evoneuro2/gen_evo_neuro.hpp>
+//#include "phen_evo_neuro.hpp"
+#include <modules/evoneuro2/phen_evo_neuro.hpp>
+#include <modules/evoneuro2/lpds.hpp>
+
+using namespace sferes;
+using namespace sferes::gen::evo_float;
+using namespace sferes::gen::dnn;
+using namespace nn;
+
+struct Params
+{
+  struct evo_float
+  {
+    static const mutation_t mutation_type = polynomial;
+    static const cross_over_t cross_over_type = sbx;
+    static const float mutation_rate = 0.1f;
+    static const float cross_rate = 0.5f;
+    static const float eta_m = 15.0f;
+    static const float eta_c = 10.0f;
+  };
+  struct pop
+  {
+    static const unsigned size = 200;
+    static const unsigned nb_gen = 15000;
+    static const int dump_period = 200;
+    static const int initial_aleat = 1;
+    static const float coeff = 1.1f;
+    static const float keep_rate = 0.6f;    
+  };
+  struct dnn
+  {
+    static const size_t nb_inputs	= 1;
+    static const size_t nb_outputs	= 1;
+    
+    static const size_t min_nb_neurons	= 3;
+    static const size_t max_nb_neurons	= 8;
+    static const size_t min_nb_conns	= 2;
+    static const size_t max_nb_conns	= 15;
+
+    static const float m_rate_add_conn	= 0.05f;
+    static const float m_rate_del_conn	= 0.03f;
+    static const float m_rate_change_conn = 0.07f;
+    static const float m_rate_add_neuron  = 0.02f;
+    static const float m_rate_del_neuron  = 0.01f;
+
+    static const int io_param_evolving  = 1; 
+
+    static const init_t init = random_topology;
+  };
+  struct evo_neuro
+  {
+    typedef nn::Neuron<nn::PfWSum<>, nn::AfLpds<> >  neuron_t;
+//    typedef nn::Neuron<nn::PfWSum<>, nn::AfTanh<float> >  neuron_t;
+    typedef nn::Connection<> connection_t;
+    static const size_t map_size	= 5;
+    static const float  max_weight	= 5.0f;
+  };
+
+  struct parameters
+  {
+    static const float min = 0.0f;
+    static const float max = 1.0f;
+  };
+  struct fit
+  {
+    static const size_t max_cycles = 200 ;
+    static const size_t nb_tests = 50 ;
+  };
+
+
+};
+
+SFERES_FITNESS(FitTest, sferes::fit::Fitness)
+{
+ public:
+   FitTest():
+     inputs_list(0)
+   {
+    for (size_t test = 0; test < Params::fit::nb_tests; ++test )
+    {
+      inputs_list.push_back(std::vector<float>(Params::evo_neuro::map_size));
+      for (size_t i = 0; i < inputs_list.back().size(); ++i )
+      {
+        inputs_list.back()[i] = misc::rand<float>();
+      }
+    }
+   }
+  template<typename Indiv>
+    void eval(Indiv& ind) 
+  {
+    // resize the objective vector
+    this->_objs.resize(2);
+    for (size_t i=0;i<this->_objs.size();++i)
+      this->_objs[i]=0.0f;
+    ind.develop();
+    if (this->mode() == fit::mode::view)
+    {
+      std::ofstream ofs(std::string("graph.dot").c_str());
+      ind.gen().simplify();
+      ind.gen().name_io();
+      ind.gen().write(ofs);
+    }
+    ind.nn().init();
+    for (size_t test = 0; test < Params::fit::nb_tests; ++test )
+    {
+      size_t max = 0;
+      for (size_t i = 0; i < inputs_list[test].size(); ++i )
+      {
+        if (inputs_list[test][i] > inputs_list[test][max])
+          max = i;
+      }
+      for (size_t cycles = 0; cycles < Params::fit::max_cycles; ++cycles)
+      {
+        ind.nn().step(inputs_list[test]);
+      }
+      this->_objs[0] += 1.0f-fabs(ind.nn().get_outf()[max]);
+      for (size_t i = 0; i < ind.nn().get_outf().size(); ++i )
+      {
+        if (i != max)
+          this->_objs[1] += fabs(ind.nn().get_outf()[i])/(float)(ind.nn().get_outf().size()-1.0f);
+      }
+    }
+    for (size_t i=0;i<this->_objs.size();++i)
+      this->_objs[i]/=(float)(Params::fit::nb_tests);
+  }
+ protected:
+  std::vector<std::vector< float> > inputs_list;
+};
+
+int main(int argc, char **argv)
+{
+  int a(time(0));
+  if (argc>1)
+    a=atoi(argv[1]);
+  srand(a);
+  typedef phen::Parameters<gen::EvoFloat<4, Params>, fit::FitDummy<>, Params> node_label_t;
+  typedef phen::Parameters<gen::EvoFloat<3, Params>, fit::FitDummy<>, Params> conn_label_t;
+  typedef gen::EvoNeuro<node_label_t, conn_label_t, Params> gen_t;
+  typedef phen::EvoNeuro<gen_t, FitTest<Params>, Params> phen_t;
+ 
+  typedef eval::Parallel<Params> eval_t;
+  typedef boost::fusion::vector<stat::ParetoFront<phen_t, Params>, stat::MeanFit<Params> >  stat_t;
+  typedef modif::Dummy<> modifier_t;
+  typedef ea::Nsga2<phen_t, eval_t, stat_t, modifier_t, Params> ea_t;
+  ea_t ea;
+  run_ea(argc, argv, ea);
+  return 0;
+}
+``
+
+[endsect]
+
+[endsect]
+
+

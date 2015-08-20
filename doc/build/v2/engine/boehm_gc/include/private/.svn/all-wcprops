@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private
+END
+gc_hdrs.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/gc_hdrs.h
+END
+gc_priv.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/gc_priv.h
+END
+thread_local_alloc.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/thread_local_alloc.h
+END
+gcconfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/gcconfig.h
+END
+darwin_stop_world.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/darwin_stop_world.h
+END
+gc_pmark.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/gc_pmark.h
+END
+pthread_stop_world.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/pthread_stop_world.h
+END
+pthread_support.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/pthread_support.h
+END
+gc_locks.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/gc_locks.h
+END
+msvc_dbg.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/msvc_dbg.h
+END
+specific.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/specific.h
+END
+darwin_semaphore.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/darwin_semaphore.h
+END
+dbg_mlc.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/dbg_mlc.h
+END
+cord_pos.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/private/cord_pos.h
+END

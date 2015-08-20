@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/gettext
+END
+jamroot.jam
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/gettext/jamroot.jam
+END
+russian.po
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/gettext/russian.po
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/gettext/main.cpp
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/gettext/readme.txt
+END
+jamfile.jam
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/gettext/jamfile.jam
+END

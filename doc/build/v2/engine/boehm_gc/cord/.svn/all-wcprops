@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord
+END
+cord.am
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/cord.am
+END
+cordbscs.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/cordbscs.c
+END
+de_cmds.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/de_cmds.h
+END
+de_win.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/de_win.c
+END
+cordxtra.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/cordxtra.c
+END
+cordtest.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/cordtest.c
+END
+de_win.RC
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/de_win.RC
+END
+de.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/de.c
+END
+de_win.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/de_win.h
+END
+cordprnt.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/cordprnt.c
+END
+de_win.ICO
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/cord/de_win.ICO
+END

@@ -1,0 +1,31 @@
+The html documentation is generated with emacs and org-mode. To generate it, add to your .emacs:
+(you may need to change the paths). You will need a recent org-mode (I use a least 6.14)
+
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(require 'org-publish)
+(setq org-publish-project-alist
+      '(
+        ("org-sferes2"
+         :link-up t
+         :base-directory "~/svn/sferes2/trunk/doc/org"
+         :base-extension "org"
+         :publishing-directory "~/svn/sferes2/trunk/doc/html"
+         :recursive t
+         :publishing-function org-publish-org-to-html
+         :headline-levels 4             ; Just the default for this project.
+         :auto-preamble t
+         )
+        ("org-sferes2-static"
+         :base-directory "~/svn/sferes2/trunk/doc/org"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|c\\|h\\|java\\|cpp\\|hpp"
+         :publishing-directory "~/svn/sferes2/trunk/doc/html"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+        ("sferes2" :components ("org-sferes2" "org-sferes2-static"))
+
+        )
+
+)
+
+(setq org-export-htmlize-output-type  'css)

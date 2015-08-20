@@ -1,0 +1,533 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools
+END
+cw.jam
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/cw.jam
+END
+vacpp.jam
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/vacpp.jam
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/__init__.py
+END
+clang-linux.jam
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/clang-linux.jam
+END
+borland.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/borland.jam
+END
+unix.jam
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/unix.jam
+END
+midl.jam
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/midl.jam
+END
+rc.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/rc.py
+END
+acc.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/acc.jam
+END
+docutils.jam
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/docutils.jam
+END
+mipspro.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/mipspro.jam
+END
+xlf.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/xlf.jam
+END
+quickbook-config.jam
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/quickbook-config.jam
+END
+gcc.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/gcc.jam
+END
+notfile.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/notfile.jam
+END
+whale.jam
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/whale.jam
+END
+hpfortran.jam
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/hpfortran.jam
+END
+dmc.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/dmc.jam
+END
+boostbook-config.jam
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/boostbook-config.jam
+END
+darwin.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/darwin.py
+END
+qcc.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/qcc.jam
+END
+qt3.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/qt3.jam
+END
+stlport.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/stlport.jam
+END
+symlink.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/symlink.py
+END
+qt4.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/qt4.jam
+END
+testing-aux.jam
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/testing-aux.jam
+END
+cast.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/cast.py
+END
+convert.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/convert.jam
+END
+xsltproc-config.jam
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/xsltproc-config.jam
+END
+ifort.jam
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/ifort.jam
+END
+python-config.jam
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/python-config.jam
+END
+symlink.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/symlink.jam
+END
+lex.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/lex.jam
+END
+common.jam
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/common.jam
+END
+como-win.jam
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/como-win.jam
+END
+hp_cxx.jam
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/hp_cxx.jam
+END
+generate.jam
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/generate.jam
+END
+cast.jam
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/cast.jam
+END
+mc.jam
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/mc.jam
+END
+boostbook.jam
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/boostbook.jam
+END
+pathscale.jam
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/pathscale.jam
+END
+clang-darwin.jam
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/clang-darwin.jam
+END
+intel-linux.jam
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/intel-linux.jam
+END
+intel.jam
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/intel.jam
+END
+fortran.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/fortran.jam
+END
+package.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/package.py
+END
+gcc.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/gcc.py
+END
+doxygen-config.jam
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/doxygen-config.jam
+END
+python.jam
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/python.jam
+END
+notfile.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/notfile.py
+END
+gfortran.jam
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/gfortran.jam
+END
+message.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/message.jam
+END
+clang.jam
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/clang.jam
+END
+qt.jam
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/qt.jam
+END
+stage.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/stage.py
+END
+mpi.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/mpi.jam
+END
+pch.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/pch.py
+END
+intel-darwin.jam
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/intel-darwin.jam
+END
+zlib.jam
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/zlib.jam
+END
+rc.jam
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/rc.jam
+END
+unix.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/unix.py
+END
+msvc.jam
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/msvc.jam
+END
+common.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/common.py
+END
+pch.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/pch.jam
+END
+bison.jam
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/bison.jam
+END
+msvc-config.jam
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/msvc-config.jam
+END
+cw-config.jam
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/cw-config.jam
+END
+make.jam
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/make.jam
+END
+doxygen.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/doxygen.jam
+END
+testing.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/testing.jam
+END
+xsltproc.jam
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/xsltproc.jam
+END
+pgi.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/pgi.jam
+END
+gettext.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/gettext.jam
+END
+darwin.jam
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/darwin.jam
+END
+fop.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/fop.jam
+END
+builtin.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/builtin.py
+END
+quickbook.jam
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/quickbook.jam
+END
+como-linux.jam
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/como-linux.jam
+END
+package.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/package.jam
+END
+como.jam
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/como.jam
+END
+make.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/make.py
+END
+testing.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/testing.py
+END
+doxproc.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/doxproc.py
+END
+stage.jam
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/stage.jam
+END
+message.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/message.py
+END
+sun.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/sun.jam
+END
+intel-win.jam
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/intel-win.jam
+END
+builtin.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/builtin.jam
+END

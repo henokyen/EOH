@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/er/!svn/ver/2879/src/sferes/exp/modularity/ssrc/spatial
+END
+distance.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/er/!svn/ver/2879/src/sferes/exp/modularity/ssrc/spatial/distance.h
+END
+kd_tree.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/er/!svn/ver/2879/src/sferes/exp/modularity/ssrc/spatial/kd_tree.h
+END
+rectangle_region.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/2879/src/sferes/exp/modularity/ssrc/spatial/rectangle_region.h
+END

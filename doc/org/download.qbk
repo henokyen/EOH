@@ -1,0 +1,82 @@
+[section:download Download and unzip]
+
+[section If you are not a member of ISIR]
+
+[section Download the last version]
+
+The last version of sferes2 is available
+[@http://chronos.isir.upmc.fr/~sferes2/bin/sferes2.latest.tar.bz2 here]. The
+archive is updated daily and contains the main sferes code as well as core
+modules and a few sample experiments.
+
+[endsect]
+
+[section Unzip the archive]
+
+To unzip the archive type the following command in the folder in which you
+downloaded the archive:
+
+[teletype]
+``tar -xvjf sferes2.latest.tar.bz2``
+
+[endsect]
+
+[section Go to sferes root]
+
+You can now change the directory to the root folder of sferes by typing the following command (replace ${VERSION} by your version number):
+[teletype]
+``cd sferes2-${VERSION}``
+
+[endsect]
+
+[endsect]
+
+[section If you are a member of ISIR]
+
+[section Checkout the svn version]
+
+If you are a member of ISIR, you should checkout the last version of
+sferes2 from the svn repository:
+
+[teletype]
+``svn co https://hotline.isir.upmc.fr/svn/sferes2``
+
+[endsect]
+
+[section Checkout the svn of experiments and modules]
+
+you should then checkout the svn containing the other isir experiments:
+
+[teletype]
+``svn co https://hotline.isir.upmc.fr/svn/er/src/sferes/exp``
+
+as well as the modules:
+
+[teletype]
+``svn co https://hotline.isir.upmc.fr/svn/er/src/sferes/modules``
+
+[endsect]
+
+[section Go to sferes root and add additionnal experiments]
+
+You can now change the directory to the root folder of sferes by typing the following command :
+[teletype]
+``cd sferes2/trunk``
+
+and add the additionnal modules and experiments to the path:
+
+[teletype]
+``cd modules
+ln -sf ../../../modules/* .
+cd ../exp
+ln -sf ../../../exp/* .
+cd ..
+``
+
+this should create the correct shortcuts to link the experiments from the svn in Sferes 2.
+
+[endsect]
+
+[endsect]
+
+[endsect]

@@ -1,0 +1,638 @@
+//| This file is a part of the sferes2 framework.
+//| Copyright 2009, ISIR / Universite Pierre et Marie Curie (UPMC)
+//| Main contributor(s): Jean-Baptiste Mouret, mouret@isir.fr
+//|
+//| This software is a computer program whose purpose is to facilitate
+//| experiments in evolutionary computation and evolutionary robotics.
+//|
+//| This software is governed by the CeCILL license under French law
+//| and abiding by the rules of distribution of free software.  You
+//| can use, modify and/ or redistribute the software under the terms
+//| of the CeCILL license as circulated by CEA, CNRS and INRIA at the
+//| following URL "http://www.cecill.info".
+//|
+//| As a counterpart to the access to the source code and rights to
+//| copy, modify and redistribute granted by the license, users are
+//| provided only with a limited warranty and the software's author,
+//| the holder of the economic rights, and the successive licensors
+//| have only limited liability.
+//|
+//| In this respect, the user's attention is drawn to the risks
+//| associated with loading, using, modifying and/or developing or
+//| reproducing the software by the user in light of its specific
+//| status of free software, that may mean that it is complicated to
+//| manipulate, and that also therefore means that it is reserved for
+//| developers and experienced professionals having in-depth computer
+//| knowledge. Users are therefore encouraged to load and test the
+//| software's suitability as regards their requirements in conditions
+//| enabling the security of their systems and/or data to be ensured
+//| and, more generally, to use and operate it in the same conditions
+//| as regards security.
+//|
+//| The fact that you are presently reading this means that you have
+//| had knowledge of the CeCILL license and that you accept its terms.
+
+
+#ifndef DNN_SPATIAL_HPP_
+#define DNN_SPATIAL_HPP_
+
+#include <boost/graph/dijkstra_shortest_paths.hpp>
+#include <boost/graph/dag_shortest_paths.hpp>
+#include <boost/graph/visitors.hpp>
+#include <boost/graph/reverse_graph.hpp>
+#include <boost/property_map/vector_property_map.hpp>
+#include <boost/random/uniform_real.hpp>
+#include <boost/random/variate_generator.hpp>
+
+#include <modules/nn2/gen_dnn_ff.hpp>
+
+#include "opt_placement.hpp"
+
+namespace sferes
+{
+  namespace gen
+  {
+    namespace spatial
+    {
+      class Pos
+      {
+        public:
+          Pos() {
+          }
+          Pos(float x, float y, float z) : _x(x), _y(y), _z(z) {
+          }
+          float dist(const Pos& p) const
+          {
+            float x = _x - p._x;
+            float y = _y - p._y;
+            float z = _z - p._z;
+            return sqrt(x * x + y * y + z * z);
+          }
+          float x() const { return _x; }
+          float y() const { return _y; }
+          float z() const { return _z; }
+
+          template<class Archive>
+          void serialize(Archive& ar, const unsigned int version)
+          {
+            ar& BOOST_SERIALIZATION_NVP(_x);
+            ar& BOOST_SERIALIZATION_NVP(_y);
+            ar& BOOST_SERIALIZATION_NVP(_z);
+          }
+          bool operator == (const Pos &p)
+          { return _x == p._x && _y == p._y && _z == p._z; }
+        protected:
+          float _x, _y, _z;
+      };
+    }
+
+    template<typename N, typename C, typename Params>
+    class DnnSpatial : public Dnn<N, C, Params>
+    {
+      public:
+        typedef nn::NN<N, C> nn_t;
+        typedef N neuron_t;
+        typedef C conn_t;
+        typedef typename nn_t::io_t io_t;
+        typedef typename nn_t::vertex_desc_t vertex_desc_t;
+        typedef typename nn_t::edge_desc_t edge_desc_t;
+        typedef typename nn_t::graph_t graph_t;
+        typedef std::vector<spatial::Pos> coords_t;
+        typedef std::vector<vertex_desc_t> layer_t;
+        typedef std::map<vertex_desc_t, std::pair<int, int> > layer_map_t;
+
+        void init()
+        {
+          Dnn<N, C, Params>::init();
+          //      _reinit_layers();
+        }
+        size_t nb_layers() const { return Params::dnn::spatial::layers_size(); }
+        size_t get_depth() const { return nb_layers() + 1; }
+
+        void random(int nb_conns)
+        {
+          _reset();
+          _layers.resize(nb_layers());
+          this->set_nb_inputs(Params::dnn::spatial::layers(0));
+          this->set_nb_outputs(Params::dnn::spatial::layers(nb_layers() - 1));
+          _layers[0] = this->get_inputs();
+          _layers[nb_layers() - 1] = this->get_outputs();
+
+          assert(_layers[0].size() == Params::dnn::nb_inputs);
+          for (size_t i = 1; i < nb_layers() - 1; ++i)
+          {
+            std::vector<vertex_desc_t> layer;
+            for (size_t j = 0; j < Params::dnn::spatial::layers(i); ++j)
+            {
+              vertex_desc_t v =
+                this->add_neuron("n" + boost::lexical_cast<std::string>(i));
+              layer.push_back(v);
+              _layer_map[v] = std::make_pair(i, j);
+            }
+            _layers[i] = layer;
+          }
+
+          assert(_layers[nb_layers() - 1].size() == Params::dnn::nb_outputs);
+
+          this->_random_neuron_params();
+          _copy_coords();
+
+          for (size_t i = 0; i < nb_conns; ++i)
+            this->_add_conn();
+          _rand_obj = misc::rand<float>();
+        }
+
+
+
+        void random()
+        {
+          _reset();
+          _layers.resize(nb_layers());
+          this->set_nb_inputs(Params::dnn::spatial::layers(0));
+          this->set_nb_outputs(Params::dnn::spatial::layers(nb_layers() - 1));
+          _layers[0] = this->get_inputs();
+          _layers[nb_layers() - 1] = this->get_outputs();
+
+          assert(_layers[0].size() == Params::dnn::nb_inputs);
+          for (size_t i = 1; i < nb_layers() - 1; ++i)
+          {
+            std::vector<vertex_desc_t> layer;
+            for (size_t j = 0; j < Params::dnn::spatial::layers(i); ++j)
+            {
+              vertex_desc_t v =
+                this->add_neuron("n" + boost::lexical_cast<std::string>(i));
+              layer.push_back(v);
+              _layer_map[v] = std::make_pair(i, j);
+            }
+            _layers[i] = layer;
+          }
+
+          assert(_layers[nb_layers() - 1].size() == Params::dnn::nb_outputs);
+
+          this->_random_neuron_params();
+          _copy_coords();
+          if (Params::dnn::spatial::rand_coords)
+          {
+            typedef boost::mt19937 base_generator_t;
+            typedef boost::variate_generator<base_generator_t, boost::uniform_real<> > rand_t;
+            assert(Params::seed >= 0);
+            rand_t rand_gen(base_generator_t(Params::seed),
+                            boost::uniform_real<>(Params::dnn::spatial::min_coord,
+                                                  Params::dnn::spatial::max_coord));
+            for (size_t i = 0; i < _layers[0].size(); ++i)
+            {
+              _xpos[i] = rand_gen();
+              _coords[i] = spatial::Pos(_xpos[i], _ypos[i], _zpos[i]);
+            }
+          }
+
+          size_t nb_conns = misc::rand(Params::dnn::min_nb_conns,
+                                       Params::dnn::max_nb_conns);
+          for (size_t i = 0; i < nb_conns; ++i)
+            this->_add_conn();
+          _rand_obj = misc::rand<float>();
+        }
+
+
+        template<typename Archive>
+        void save(Archive& a, const unsigned v) const
+        {
+          Dnn<N, C, Params>::save(a, v);
+          a& BOOST_SERIALIZATION_NVP(_coords);
+          a& BOOST_SERIALIZATION_NVP(_xpos);
+          a& BOOST_SERIALIZATION_NVP(_ypos);
+          a& BOOST_SERIALIZATION_NVP(_zpos);
+        }
+        template<typename Archive>
+        void load(Archive& a, const unsigned v)
+        {
+          Dnn<N, C, Params>::load(a, v);
+          a& BOOST_SERIALIZATION_NVP(_coords);
+          a& BOOST_SERIALIZATION_NVP(_xpos);
+          a& BOOST_SERIALIZATION_NVP(_ypos);
+          a& BOOST_SERIALIZATION_NVP(_zpos);
+
+          _reinit_layers();
+          if (!Params::dnn::spatial::rand_coords)
+            _copy_coords();
+        }
+        BOOST_SERIALIZATION_SPLIT_MEMBER();
+
+        void mutate()
+        {
+          _reinit_layers();
+
+          this->_change_conns();
+          this->_change_neurons();
+
+          if (misc::rand<float>() < Params::dnn::m_rate_add_conn)
+            this->_add_conn();
+
+          if (misc::rand<float>() < Params::dnn::m_rate_del_conn
+              && this->get_nb_connections() > Params::dnn::min_nb_conns)
+            this->_del_conn();
+
+          _rand_obj += misc::gaussian_rand<float>(0.0f, Params::rand_obj::std_dev);
+#ifdef BOUNDR
+           // add some bounds
+          if (_rand_obj > 1) _rand_obj = 1;
+          if (_rand_obj < 0) _rand_obj = 0;
+#endif
+        }
+        float rand_obj() const { return _rand_obj; }
+        void cross(const DnnSpatial& o, DnnSpatial& c1, DnnSpatial& c2)
+        {
+          if (misc::flip_coin())
+          {
+            c1 = *this;
+            c2 = o;
+          }
+          else
+          {
+            c2 = *this;
+            c1 = o;
+          }
+        }
+
+        nn_t simplified_nn()
+        {
+          nn_t nn = *this;
+
+           // remove not-connected vertices
+          std::vector<vertex_desc_t> to_remove;
+          nn.simplify(); //WARNING: suppress some subgraphs !
+          BGL_FORALL_VERTICES_T(v, nn.get_graph(), graph_t)
+          if (boost::in_degree(v, nn.get_graph())
+              + boost::out_degree(v, nn.get_graph()) == 0)
+            to_remove.push_back(v);
+          for (size_t i = 0; i < to_remove.size(); ++i)
+            remove_vertex(to_remove[i], nn.get_graph());
+          return nn;
+        }
+
+        float compute_optimal_length(float threshold = 0, bool write_graph = false)
+        {
+	  assert(_layers.size());
+          //  // copy the current nn
+	  nn_t nn = simplified_nn();
+	  if (nn.get_nb_neurons() == 0 || nn.get_nb_connections() == 0)
+	    return 0;
+
+	  // rebuild i/o and copy coordinates
+	  std::vector<vertex_desc_t> inputs, outputs;
+	  std::vector<float> x_in, y_in, x_out, y_out;
+	  assert(_xpos.size() >= nn.get_nb_neurons());
+	  assert(_ypos.size() >= nn.get_nb_neurons());
+	  BGL_FORALL_VERTICES_T(v, nn.get_graph(), graph_t)
+	    if (nn.get_graph()[v].get_in() != -1)
+	      {
+		inputs.push_back(v);
+		x_in.push_back(_xpos[nn.get_graph()[v].get_in()]);
+		y_in.push_back(_ypos[nn.get_graph()[v].get_in()]);
+	      }
+	    else
+           if (nn.get_graph()[v].get_out() != -1)
+	     {
+	       outputs.push_back(v);
+	       int o = nn.get_graph()[v].get_out();
+	       int n = Params::dnn::spatial::x_size() - _layers[_layers.size() - 1].size();
+	       assert(n + o < _xpos.size());
+	       assert(n + o < _ypos.size());
+	       x_out.push_back(_xpos[n + o]);
+	       y_out.push_back(_ypos[n + o]);
+	     }
+	  
+	  
+          //  // rebuild y coords (only if write_graph)
+	  std::map<vertex_desc_t, float> yv_pos; // for the svg file
+	  if (write_graph)
+           {
+             size_t nb_layers = _layers.size() - 1;
+             std::map<vertex_desc_t, size_t> dmap;
+             _compute_all_depths(nn.get_graph(), outputs, dmap);
+             for (typename std::map<vertex_desc_t, size_t>::iterator it = dmap.begin();
+		  it != dmap.end(); ++it)
+	         yv_pos[it->first] = _coords_map[_layers[nb_layers - it->second][0]].y();
+           }
+
+          //  // compute the optimal placement
+          Eigen::VectorXf x_pos = opt_placement::compute(nn.get_graph(),
+                                                         inputs, x_in,
+                                                         outputs, x_out);
+
+          Eigen::VectorXf y_pos = opt_placement::compute(nn.get_graph(),
+                                                         inputs, y_in,
+                                                         outputs, y_out);
+
+          // TEST
+          //   size_t i = 0;
+          //   BGL_FORALL_VERTICES_T(v, nn.get_graph(), graph_t) //layer y pos
+          //   y_pos[i++] = yv_pos[v];
+
+           // compute length
+          float length = 0;
+          std::map<vertex_desc_t, spatial::Pos> coords;
+          size_t k = 0;
+          BGL_FORALL_VERTICES_T(v, nn.get_graph(), graph_t)
+          {
+            coords[v] = spatial::Pos(x_pos[k], y_pos[k], 0);
+            ++k;
+          }
+          BGL_FORALL_EDGES_T(e, nn.get_graph(), graph_t)
+          {
+            vertex_desc_t src = boost::source(e, nn.get_graph());
+            vertex_desc_t tgt = boost::target(e, nn.get_graph());
+            double weight = this->_g[e].get_weight().data(0);
+            float d = coords[src].dist(coords[tgt]);
+            if (d > threshold)
+              length += d * d;
+          }
+          if (write_graph)
+          {
+            std::ofstream ofs("nn_opt.svg");
+            size_t i = 0;
+            BGL_FORALL_VERTICES_T(v, nn.get_graph(), graph_t) //layer y pos
+            y_pos[i++] = yv_pos[v];
+            opt_placement::to_svg(nn.get_graph(), x_pos, y_pos, ofs);
+          }
+	           return length;
+	  return 0;
+        }
+
+        float compute_length()
+        {
+          _reinit_layers(); //to remove ?
+          float length = 0;
+          BGL_FORALL_EDGES_T(e, this->_g, graph_t)
+          {
+            vertex_desc_t src = boost::source(e, this->_g);
+            vertex_desc_t tgt = boost::target(e, this->_g);
+            double weight = this->_g[e].get_weight().data(0);
+            float d = _coords_map[src].dist(_coords_map[tgt]);
+            length += d * d;
+          }
+          return length;
+        }
+
+        float compute_length(float min_length)
+        {
+          _reinit_layers(); //to remove ?
+          float length = 0;
+          BGL_FORALL_EDGES_T(e, this->_g, graph_t)
+          {
+            vertex_desc_t src = boost::source(e, this->_g);
+            vertex_desc_t tgt = boost::target(e, this->_g);
+            double weight = this->_g[e].get_weight().data(0);
+            float l = _coords_map[src].dist(_coords_map[tgt]);
+            length += l > min_length ? l : 0;
+          }
+          return length;
+        }
+        float max_length()
+        {
+          _reinit_layers(); //to remove ?
+          float length = 0;
+          BGL_FORALL_EDGES_T(e, this->_g, graph_t)
+          {
+            vertex_desc_t src = boost::source(e, this->_g);
+            vertex_desc_t tgt = boost::target(e, this->_g);
+            double weight = this->_g[e].get_weight().data(0);
+            length = std::max(_coords_map[src].dist(_coords_map[tgt]), length);
+            //std::cout<<_coords_map[src].dist(_coords_map[tgt])<<std::endl;
+          }
+          return length;
+        }
+
+        void write_svg(std::ostream& ofs)
+        {
+          _reinit_layers();
+          ofs << "<?xml version=\"1.0\" standalone=\"no\"?>" << std::endl;
+          ofs << "<svg width=\"100%\" height=\"100%\" version=\"1.1\""
+              << " xmlns=\"http://www.w3.org/2000/svg\">" << std::endl;
+
+          BGL_FORALL_EDGES_T(e, this->_g, graph_t)
+          {
+            vertex_desc_t src = boost::source(e, this->_g);
+            vertex_desc_t tgt = boost::target(e, this->_g);
+            float x1 = _coords_map[src].x() * 50 + 500;
+            float y1 = _coords_map[src].y() * 50 + 100;
+            float x2 = _coords_map[tgt].x() * 50 + 500;
+            float y2 = _coords_map[tgt].y() * 50 + 100;
+            double weight = this->_g[e].get_weight().data(0);
+            ofs << "<line x1=\"" << x1 << "\" y1=\"" << y1 << "\" "
+                << "x2=\"" << x2 << "\" y2=\"" << y2 << "\""
+                << " style=\"stroke:rgb("
+                << (weight > 0 ? "0,255,0" : "255,0,0")
+                << ");stroke-width:" << fabs(weight)
+                << "\"/>"
+                << std::endl;
+          }
+
+          BGL_FORALL_VERTICES_T(v, this->_g, graph_t)
+          {
+            float x = _coords_map[v].x() * 50 + 500;
+            float y = _coords_map[v].y() * 50 + 100;
+            ofs << "<circle cx=\"" << x << "\" cy=\"" << y
+                << "\" r=\"10\" stroke=\"black\" stroke-width=\"1\" fill=\"white\"/>" <<
+            std::endl;
+            ofs << "<text id=\"TextElement\" x=\"" << x - 5 << "\" y=\"" << y + 5 << "\""
+                << " style=\"font-family:Verdana;font-size:10\">"
+                << this->_g[v]._id
+                << "</text>" << std::endl;
+          }
+
+          ofs << "</svg>" << std::endl;
+        }
+        const layer_t& layer(size_t n) { assert(n < _layers.size()); return _layers[n]; }
+      protected:
+        std::vector<layer_t> _layers;
+        std::vector<float> _xpos, _ypos, _zpos;
+        std::map<vertex_desc_t, spatial::Pos> _coords_map;
+        coords_t _coords;
+        layer_map_t _layer_map;
+        float _rand_obj;
+
+        void _reset()
+        {
+          _coords_map.clear();
+           //      _coords.clear();
+          _layers.clear();
+          _layer_map.clear();
+          _layers.resize(nb_layers());
+        }
+        void _reinit_layers()
+        {
+          _reset();
+
+           // build layers
+          _layers[0] = this->get_inputs();
+          _layers[nb_layers() - 1] = this->get_outputs();
+          for (size_t k = 0; k < this->_inputs.size(); ++k)
+            _layer_map[this->_inputs[k]] = std::make_pair(0, k);
+          for (size_t k = 0; k < this->_outputs.size(); ++k)
+            _layer_map[this->_outputs[k]] = std::make_pair(nb_layers() - 1, k);
+          int l = 1, k = 0;
+          BGL_FORALL_VERTICES_T(v, this->_g, graph_t)
+          if (!this->is_input(v) && !this->is_output(v))
+          {
+            _layers[l].push_back(v);
+            _layer_map[v] = std::make_pair(l, k);
+            ++k;
+            if (k == Params::dnn::spatial::layers(l))
+            {
+              k = 0;
+              ++l;
+            }
+          }
+           // build coords
+          for (size_t i = 0, k = 0; i < _layers.size(); ++i)
+            for (size_t j = 0; j < _layers[i].size(); ++j, ++k)
+            {
+               // if (_coords.size() != Params::dnn::spatial::x_size())
+               //        {
+               //          spatial::Pos p(Params::dnn::spatial::x(k),
+               //                             Params::dnn::spatial::y(k),
+               //                         Params::dnn::spatial::z(k));
+               //           _coords.push_back(p);
+               //        }
+              assert(_coords.size());
+              assert(k < _coords.size());
+              _coords_map[_layers[i][j]] = _coords[k];
+            }
+        }
+         // void _swap_neurons()
+         // {
+         //        size_t l = nb_layers() <= 3 ? 1 : misc::rand<int>en(1, nb_layers() - 1);
+         //        int r_src = misc::rand<int>(0, _layers[l].size());
+         //        int r_tgt = misc::rand<int>(0, _layers[l].size());
+         //        vertex_desc_t src = _layers[l][r_src];
+         //        vertex_desc_t tgt = _layers[l][r_tgt];
+         //        coords_t::iterator it_src =
+         //          std::find(_coords.begin(), _coords.end(), _coords_map[src]);
+         //        coords_t::iterator it_tgt =
+         //          std::find(_coords.begin(), _coords.end(), _coords_map[tgt]);
+         //        std::swap(*it_src, *it_tgt);
+         // }
+        void _change_conns()
+        {
+          float p = Params::dnn::m_avg_weight / (float) this->get_nb_connections();
+
+          BGL_FORALL_EDGES_T(e, this->_g, graph_t)
+          if (misc::rand<float>() < p)
+            this->_g[e].get_weight().mutate();
+          BGL_FORALL_EDGES_T(e, this->_g, graph_t)
+          if (misc::rand<float>() < Params::dnn::m_rate_change_conn)
+          {
+            vertex_desc_t src = source(e, this->_g);
+            vertex_desc_t tgt = target(e, this->_g);
+            size_t src_layer = _layer_map[src].first;
+            size_t tgt_layer = _layer_map[tgt].first;
+
+            int max_tries = num_vertices(this->_g) * num_vertices(this->_g),
+                nb_tries = 0;
+            if (misc::flip_coin())
+              do
+                src =
+                  _layers[src_layer][misc::rand < int > (0, _layers[src_layer].size())];
+              while (++nb_tries < max_tries && is_adjacent(this->_g, src, tgt));
+            else
+              do
+                tgt =
+                  _layers[tgt_layer][misc::rand < int > (0, _layers[tgt_layer].size())];
+              while (++nb_tries < max_tries && is_adjacent(this->_g, src, tgt));
+            if (nb_tries < max_tries)
+            {
+              typename nn_t::weight_t w = this->_g[e].get_weight();
+              remove_edge(e, this->_g);
+              this->add_connection(src, tgt, w);
+            }
+            return;
+          }
+        }
+        void _copy_coords()
+        {
+          _xpos.clear();
+          _ypos.clear();
+          _zpos.clear();
+          _coords.clear();
+          for (size_t i = 0, k = 0; i < Params::dnn::spatial::layers_size(); ++i)
+            for (size_t j = 0; j < Params::dnn::spatial::layers(i); ++j, ++k)
+            {
+              _xpos.push_back(Params::dnn::spatial::x(k));
+              _ypos.push_back(Params::dnn::spatial::y(k));
+              _zpos.push_back(Params::dnn::spatial::z(k));
+              _coords.push_back(spatial::Pos(_xpos[k], _ypos[k], _zpos[k]));
+            }
+        }
+        void _add_conn()
+        {
+          vertex_desc_t src, tgt;
+          size_t max_tries = num_vertices(this->_g) * num_vertices(this->_g),
+                 nb_tries = 0;
+          do
+          {
+            size_t l = misc::rand<int>(0, nb_layers() - 1);
+            src = _layers[l][misc::rand < int > (0, _layers[l].size())];
+            tgt = _layers[l + 1][misc::rand < int > (0, _layers[l + 1].size())];
+          }
+          while (is_adjacent(this->_g, src, tgt) && ++nb_tries < max_tries);
+          if (nb_tries < max_tries)
+          {
+            typename nn_t::weight_t w; // = nn::trait<typename
+                                       // nn_t::weight_t>::zero();
+             //      w.gen().data(0, 0);
+            w.random();
+            this->add_connection(src, tgt, w);
+          }
+        }
+
+        template<typename G>
+        void _compute_all_depths(const G& g,
+                                 const std::vector<vertex_desc_t>& outputs,
+                                 std::map<vertex_desc_t, size_t>& final_dmap)
+        {
+          using namespace boost;
+          typedef std::map<vertex_desc_t, size_t> int_map_t;
+          typedef std::map<vertex_desc_t, vertex_desc_t> vertex_map_t;
+          typedef std::map<vertex_desc_t, default_color_type> color_map_t;
+          typedef std::map<edge_desc_t, int> edge_map_t;
+
+          typedef associative_property_map<int_map_t> a_map_t;
+          typedef associative_property_map<color_map_t> c_map_t;
+          typedef associative_property_map<vertex_map_t> v_map_t;
+          typedef associative_property_map<edge_map_t> e_map_t;
+
+          color_map_t cm; c_map_t cmap(cm);
+          vertex_map_t vm; v_map_t pmap(vm);
+          edge_map_t em;
+          BGL_FORALL_EDGES_T(e, g, graph_t)
+          em[e] = 1;
+          e_map_t wmap(em);
+
+	  BGL_FORALL_VERTICES_T(v, g, graph_t)
+	    final_dmap[v] = 1e10;
+
+          //  // we compute the shortest path between outputs and v
+           BOOST_FOREACH(vertex_desc_t s, outputs)
+           {
+             int_map_t im; a_map_t dmap(im);
+	     //             dag_shortest_paths(make_reverse_graph(g), s, dmap, wmap, cmap, pmap,
+                                // dijkstra_visitor<null_visitor>(),
+                                // std::greater<int>(),
+                                // closed_plus<int>(),
+                                // (std::numeric_limits<int>::min)(), 0);
+	     
+             BGL_FORALL_VERTICES_T(v, g, graph_t)
+	       {
+		 size_t d = get(dmap, v);
+		 if (d <= num_vertices(g))
+		   final_dmap[v] = std::min(final_dmap[v], d);
+	       }
+	   }
+        }
+    };
+
+  }
+}
+
+#endif

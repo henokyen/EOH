@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/libraries/util/foo
+END
+bar.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/libraries/util/foo/bar.cpp
+END
+jamfile.jam
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/libraries/util/foo/jamfile.jam
+END

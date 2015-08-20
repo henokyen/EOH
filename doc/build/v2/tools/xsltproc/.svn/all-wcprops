@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/xsltproc
+END
+test.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/xsltproc/test.xsl
+END
+included.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/xsltproc/included.xsl
+END
+test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/tools/xsltproc/test.xml
+END

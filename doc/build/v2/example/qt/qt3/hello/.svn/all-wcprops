@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/qt/qt3/hello
+END
+canvas.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/qt/qt3/hello/canvas.h
+END
+jamroot.jam
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/qt/qt3/hello/jamroot.jam
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/qt/qt3/hello/main.cpp
+END
+canvas.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/qt/qt3/hello/canvas.cpp
+END

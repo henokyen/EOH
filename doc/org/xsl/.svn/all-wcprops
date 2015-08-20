@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl
+END
+annotation.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/annotation.xsl
+END
+template.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/template.xsl
+END
+html-base.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/html-base.xsl
+END
+docbook.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/docbook.xsl
+END
+type.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/type.xsl
+END
+html-single.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/html-single.xsl
+END
+function.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/function.xsl
+END
+error.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/error.xsl
+END
+html-help.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/html-help.xsl
+END
+docbook-layout.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/docbook-layout.xsl
+END
+manpages.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/manpages.xsl
+END
+xhtml.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/xhtml.xsl
+END
+relative-href.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/relative-href.xsl
+END
+tutorial.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/tutorial.xml
+END
+chunk-common.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/chunk-common.xsl
+END
+admon.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/admon.xsl
+END
+reference.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/reference.xsl
+END
+global.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/global.xsl
+END
+macro.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/macro.xsl
+END
+callout.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/callout.xsl
+END
+utility.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/utility.xsl
+END
+library.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/library.xsl
+END
+html.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/html.xsl
+END
+fo.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/fo.xsl
+END
+xref.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/xref.xsl
+END
+source-highlight.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/source-highlight.xsl
+END
+index.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/index.xsl
+END
+lookup.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/lookup.xsl
+END
+navbar.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sferes2/!svn/ver/96/trunk/doc/org/xsl/navbar.xsl
+END

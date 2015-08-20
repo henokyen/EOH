@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/debian
+END
+boost-build.examples
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/debian/boost-build.examples
+END
+control
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/debian/control
+END
+changelog
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/debian/changelog
+END
+conffiles
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/debian/conffiles
+END
+copyright
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/debian/copyright
+END
+boost-build.docs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/debian/boost-build.docs
+END
+rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/debian/rules
+END
+excludes
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/debian/excludes
+END

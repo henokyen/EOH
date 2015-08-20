@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent
+END
+FSNodePOSIX.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/FSNodePOSIX.cxx
+END
+FSNodeWin32.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/FSNodeWin32.cxx
+END
+SettingsWin32.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/SettingsWin32.cxx
+END
+SettingsUNIX.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/SettingsUNIX.cxx
+END
+OSystemWin32.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/OSystemWin32.cxx
+END
+OSystemUNIX.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/OSystemUNIX.cxx
+END
+SettingsWin32.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/SettingsWin32.hxx
+END
+SettingsUNIX.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/SettingsUNIX.hxx
+END
+module.mk
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/module.mk
+END
+OSystemWin32.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/OSystemWin32.hxx
+END
+OSystemUNIX.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/os_dependent/OSystemUNIX.hxx
+END

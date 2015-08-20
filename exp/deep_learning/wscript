@@ -1,0 +1,212 @@
+#! /usr/bin/env python
+
+import sferes
+
+
+def build(bld):
+    ale = bld.new_task_gen('cxx', 'staticlib')
+    ale.source = 'ale/src/common/export_screen.cpp \
+    ale/src/common/SoundNull.cxx \
+    ale/src/common/SoundSDL.cxx \
+    ale/src/common/Defaults.cpp \
+    ale/src/control/game_controller.cpp \
+    ale/src/control/fifo_controller.cpp \
+    ale/src/control/ALEState.cpp \
+    ale/src/control/internal_controller.cpp \
+    ale/src/main.cpp \
+    ale/src/agents/SingleActionAgent.cpp \
+    ale/src/agents/PlayerAgent.cpp \
+    ale/src/agents/RandomAgent.cpp \
+    ale/src/os_dependent/OSystemUNIX.cxx \
+    ale/src/os_dependent/SettingsWin32.cxx \
+    ale/src/os_dependent/SettingsUNIX.cxx \
+    ale/src/os_dependent/FSNodePOSIX.cxx \
+    ale/src/games/Roms.cpp \
+    ale/src/games/RomUtils.cpp \
+    ale/src/games/supported/WizardOfWar.cpp \
+    ale/src/games/supported/AirRaid.cpp \
+    ale/src/games/supported/Frostbite.cpp \
+    ale/src/games/supported/Krull.cpp \
+    ale/src/games/supported/RiverRaid.cpp \
+    ale/src/games/supported/JourneyEscape.cpp \
+    ale/src/games/supported/Gopher.cpp \
+    ale/src/games/supported/IceHockey.cpp \
+    ale/src/games/supported/ElevatorAction.cpp \
+    ale/src/games/supported/Bowling.cpp \
+    ale/src/games/supported/StarGunner.cpp \
+    ale/src/games/supported/Enduro.cpp \
+    ale/src/games/supported/Kangaroo.cpp \
+    ale/src/games/supported/Pooyan.cpp \
+    ale/src/games/supported/Asterix.cpp \
+    ale/src/games/supported/Tennis.cpp \
+    ale/src/games/supported/MontezumaRevenge.cpp \
+    ale/src/games/supported/ChopperCommand.cpp \
+    ale/src/games/supported/BeamRider.cpp \
+    ale/src/games/supported/MsPacman.cpp \
+    ale/src/games/supported/CrazyClimber.cpp \
+    ale/src/games/supported/Assault.cpp \
+    ale/src/games/supported/Boxing.cpp \
+    ale/src/games/supported/Zaxxon.cpp \
+    ale/src/games/supported/Pitfall.cpp \
+    ale/src/games/supported/Defender.cpp \
+    ale/src/games/supported/Solaris.cpp \
+    ale/src/games/supported/YarsRevenge.cpp \
+    ale/src/games/supported/VideoPinball.cpp \
+    ale/src/games/supported/BankHeist.cpp \
+    ale/src/games/supported/Centipede.cpp \
+    ale/src/games/supported/Phoenix.cpp \
+    ale/src/games/supported/KungFuMaster.cpp \
+    ale/src/games/supported/BattleZone.cpp \
+    ale/src/games/supported/FishingDerby.cpp \
+    ale/src/games/supported/Carnival.cpp \
+    ale/src/games/supported/Gravitar.cpp \
+    ale/src/games/supported/DoubleDunk.cpp \
+    ale/src/games/supported/Alien.cpp \
+    ale/src/games/supported/Pong.cpp \
+    ale/src/games/supported/RoboTank.cpp \
+    ale/src/games/supported/Tutankham.cpp \
+    ale/src/games/supported/TimePilot.cpp \
+    ale/src/games/supported/PrivateEye.cpp \
+    ale/src/games/supported/Freeway.cpp \
+    ale/src/games/supported/SpaceInvaders.cpp \
+    ale/src/games/supported/DemonAttack.cpp \
+    ale/src/games/supported/Atlantis.cpp \
+    ale/src/games/supported/Seaquest.cpp \
+    ale/src/games/supported/UpNDown.cpp \
+    ale/src/games/supported/Hero.cpp \
+    ale/src/games/supported/Amidar.cpp \
+    ale/src/games/supported/Venture.cpp \
+    ale/src/games/supported/NameThisGame.cpp \
+    ale/src/games/supported/JamesBond.cpp \
+    ale/src/games/supported/RoadRunner.cpp \
+    ale/src/games/supported/Breakout.cpp \
+    ale/src/games/supported/QBert.cpp \
+    ale/src/games/supported/Berserk.cpp \
+    ale/src/games/supported/Asteroids.cpp \
+    ale/src/games/supported/Skiing.cpp \
+    ale/src/games/RomSettings.cpp \
+    ale/src/emucore/Settings.cxx \
+    ale/src/emucore/Console.cxx \
+    ale/src/emucore/Switches.cxx \
+    ale/src/emucore/TIASnd.cxx \
+    ale/src/emucore/MD5.cxx \
+    ale/src/emucore/Driving.cxx \
+    ale/src/emucore/Cart4K.cxx \
+    ale/src/emucore/Deserializer.cxx \
+    ale/src/emucore/CartAR.cxx \
+    ale/src/emucore/CartMC.cxx \
+    ale/src/emucore/Random.cxx \
+    ale/src/emucore/Control.cxx \
+    ale/src/emucore/CartF8.cxx \
+    ale/src/emucore/Cart2K.cxx \
+    ale/src/emucore/SpeakJet.cxx \
+    ale/src/emucore/CartDPC.cxx \
+    ale/src/emucore/Cart.cxx \
+    ale/src/emucore/CartFE.cxx \
+    ale/src/emucore/CartMB.cxx \
+    ale/src/emucore/Cart3E.cxx \
+    ale/src/emucore/CartF4.cxx \
+    ale/src/emucore/CartE0.cxx \
+    ale/src/emucore/Joystick.cxx \
+    ale/src/emucore/CartCV.cxx \
+    ale/src/emucore/AtariVox.cxx \
+    ale/src/emucore/FSNode.cxx \
+    ale/src/emucore/CartF6.cxx \
+    ale/src/emucore/M6532.cxx \
+    ale/src/emucore/m6502/src/M6502Hi.cxx \
+    ale/src/emucore/m6502/src/NullDev.cxx \
+    ale/src/emucore/m6502/src/System.cxx \
+    ale/src/emucore/m6502/src/Device.cxx \
+    ale/src/emucore/m6502/src/M6502Low.cxx \
+    ale/src/emucore/m6502/src/M6502.cxx \
+    ale/src/emucore/Keyboard.cxx \
+    ale/src/emucore/Cart4A50.cxx \
+    ale/src/emucore/CartUA.cxx \
+    ale/src/emucore/CartFASC.cxx \
+    ale/src/emucore/Serializer.cxx \
+    ale/src/emucore/CartE7.cxx \
+    ale/src/emucore/Booster.cxx \
+    ale/src/emucore/CartF4SC.cxx \
+    ale/src/emucore/Paddles.cxx \
+    ale/src/emucore/Event.cxx \
+    ale/src/emucore/CartF6SC.cxx \
+    ale/src/emucore/Cart0840.cxx \
+    ale/src/emucore/MediaSrc.cxx \
+    ale/src/emucore/CartF8SC.cxx \
+    ale/src/emucore/PropsSet.cxx \
+    ale/src/emucore/TIA.cxx \
+    ale/src/emucore/Props.cxx \
+    ale/src/emucore/Cart3F.cxx \
+    ale/src/emucore/OSystem.cxx \
+    ale/src/emucore/unzip.cc'
+    
+    ale.includes = '. ../../ \
+		    ale/src/agents \
+		    ale/src/common \
+		    ale/src/control \
+                    ale/src/emucore \
+                    ale/src/games \
+                    ale/src/os_dependent \
+		    ale/src/emucore/m6502/src/bspf/src \
+		    ale/src/emucore/m6502/src/'
+    ale.target = 'ale'
+    ale.uselib = 'ZLIB'
+    ale.cxxflags = '-DRLGENV_NOMAINLOOP -DUNIX -DUSE_NASM -DBSPF_UNIX -DHAVE_INTTYPES -DWINDOWED_SUPPORT -DHAVE_GETTIMEOFDAY -DSNAPSHOT_SUPPORT -ggdb3'
+
+    test_hnn = bld.new_task_gen('cxx', 'program')
+    test_hnn.source = 'test_hnn_3d.cpp'
+    test_hnn.includes = '. ../../'
+    test_hnn.uselib_local = 'sferes2'
+    test_hnn.uselib = 'BOOST BOOST_GRAPH BOOST_UNIT_TEST_FRAMEWORK EIGEN2'
+    test_hnn.target = 'test_hnn'
+    test_hnn.unit_test = 1
+
+    test_ale = bld.new_task_gen('cxx', 'program')
+    test_ale.source = 'ale/src/main.cpp'
+    test_ale.includes = '. ../../'
+    test_ale.uselib_local = 'ale'
+    test_ale.uselib = 'ZLIB'
+    test_ale.target = 'test_ale'
+    test_ale.cxxflags = ale.cxxflags
+    test_ale.includes = ale.includes
+
+
+
+    # sferes.create_variants(bld,
+    #                        source='freeway.cpp',
+    #                        uselib_local = 'sferes2 ale',
+    #                        uselib = 'EIGEN2 ZLIB',
+    #                        cxxflags = ale.cxxflags,
+    #                        includes = ale.includes,
+    #                        target = 'freeway',
+    #                        json = 'freeway.json',
+    #                        variants = ['FAST'])
+
+    sferes.create_variants(bld,
+                           source='space.cpp',
+                           uselib_local = 'sferes2 ale',
+                           uselib = 'EIGEN2 ZLIB',
+                           cxxflags = ale.cxxflags,
+                           includes = ale.includes,
+                           target = 'space',
+                           json = 'freeway.json',
+                           variants = ['NOISE', 
+                                       'EVAL_MPI NOISE',
+                                       'DIV_UNIQUE',
+                                       'EVAL_MPI DIV_UNIQUE',
+                                       'VISU', 
+                                       'KMEDOIDS'])
+
+    sferes.create_variants(bld,
+                           source='bullets.cpp',
+                           uselib_local = 'sferes2 ale',
+                           uselib = 'EIGEN2 ZLIB',
+                           cxxflags = ale.cxxflags,
+                           includes = ale.includes,
+                           target = 'space',
+                           json = 'freeway.json',
+                           variants = ['DIV_UNIQUE EVAL_MPI', 
+                                       'NOISE EVAL_MPI',
+                                       'VISU FIXED',
+                                       'VISU'])
+

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/generator
+END
+jamroot.jam
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/generator/jamroot.jam
+END
+foo.gci
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/generator/foo.gci
+END
+soap.jam
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/generator/soap.jam
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/generator/README.txt
+END

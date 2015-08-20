@@ -1,0 +1,249 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Documentation 1.0</title>
+<link rel="stylesheet" href="../../doc/src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="Documentation 1.0">
+<link rel="next" href="documentation/download.html" title="Download and unzip">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr><td valign="top"><img alt="EvoNeuro and Sferes Documentation" width="250" height="78" src="../../logoEvoNeuro.png"></td></tr></table>
+<hr>
+<div class="spirit-nav"><a accesskey="n" href="documentation/download.html"><img src="../../doc/src/images/next.png" alt="Next"></a></div>
+<div class="book">
+<div class="titlepage">
+<div>
+<div><h1 class="title">
+<a name="documentation"></a>Documentation 1.0</h1></div>
+<div><p class="copyright">Copyright &#169; 2011 </p></div>
+<div><div class="legalnotice">
+<a name="idp7801392"></a><p>
+        CeCiLL
+      </p>
+</div></div>
+</div>
+<hr>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="documentation.sferes2"></a><a class="link" href="index.html#documentation.sferes2" title="Sferes 2">Sferes 2</a>
+</h2></div></div></div>
+<div class="toc"><dl>
+<dt><span class="section"><a href="index.html#documentation.sferes2.introduction">Introduction</a></span></dt>
+<dt><span class="section"><a href="index.html#documentation.sferes2.main_features">Main features</a></span></dt>
+<dt><span class="section"><a href="index.html#documentation.sferes2.authors">Authors</a></span></dt>
+<dt><span class="section"><a href="index.html#documentation.sferes2.where_to_go_next_">Where to go
+      next?</a></span></dt>
+<dt><span class="section"><a href="index.html#documentation.sferes2.specific_sections_for_isir_members">Specific
+      sections for ISIR members</a></span></dt>
+</dl></div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="documentation.sferes2.introduction"></a><a class="link" href="index.html#documentation.sferes2.introduction" title="Introduction">Introduction</a>
+</h3></div></div></div>
+<p>
+        Sferes2 is a <span class="emphasis"><em>framework</em></span> for evolutionary computation
+        (EC) experiments and especially for evolutionary robotics (ER). Its main
+        goal is to help researchers in EC and ER to efficiently try new ideas. Sferes2
+        has been inspired by sferes <a href="http://sferes.lip6.fr" target="_top">http://sferes.lip6.fr</a>,
+        another (older and no more maintained) framework for ER.
+      </p>
+<p>
+        Sferes2 allows to design efficient programs on modern (multicore) computers:
+        our experiments typically require more than 24 hours of computation; in this
+        situation it can be profitable to trade some complexity of implementation
+        for some hours of computation. Nevertheless, we try to keep the framework
+        as simple as possible. More specifically, the following choices were made
+        in the initial design:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+            use of modern c++ techniques (template-based programming) to employ object-oriented
+            programming without the cost of virtual functions;
+          </li>
+<li class="listitem">
+            use of Intel TBB to take full advantages of multicore and SMP systems;
+          </li>
+<li class="listitem">
+            use of boost libraries when it's useful (shared_ptr, serialization, filesystem,
+            test,...);
+          </li>
+<li class="listitem">
+            use of MPI to distribute the computational cost on clusters;
+          </li>
+<li class="listitem">
+            a full set of unit tests;
+          </li>
+<li class="listitem">
+            no configuration file: a fully optimized executable is built for each
+            particular experiment.
+          </li>
+</ul></div>
+<p>
+        Appart from this documentation, information about Sferes 2 can be found in
+        <a href="http://www.isir.upmc.fr/files/2010ACTI1524.pdf" target="_top">Sferes_v2: Evolvin'
+        in the Multi-Core World</a>. If you use Sferes 2 in your work, please
+        cite <a href="http://www.isir.upmc.fr/pages/get_bib.php?id=1524" target="_top">the previous
+        publication</a>.
+      </p>
+<p>
+        The source code of many experiments using sferes is available on the <a href="htpp://pages.isir.upmc.fr/evorob_db" target="_top">evorob_db website</a>
+      </p>
+<p>
+        This documentation assumes that the reader is reasonably familiar with evolutionary
+        algorithms. For references you can check the following books about evolutionary
+        computation:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+            Deb, K. (2001). Multi-Objective Optimization Using Evolutionary Algorithms.
+            <span class="emphasis"><em>Wiley</em></span>.
+          </li>
+<li class="listitem">
+            De Jong, K. A. (2002). Evolutionary Computation. <span class="emphasis"><em>The MIT Press</em></span>.
+          </li>
+</ul></div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="documentation.sferes2.main_features"></a><a class="link" href="index.html#documentation.sferes2.main_features" title="Main features">Main features</a>
+</h3></div></div></div>
+<p>
+        Sferes2 currently includes the following EA and toolboxes (this is a non-exhaustive
+        list which contains only the most stable modules):
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+<p class="simpara">
+            EA
+          </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="circle">
+<li class="listitem">
+                a rank-based single-objective EA
+              </li>
+<li class="listitem">
+                CMAES (Covariance Matrix Adaptation Evolution Strategie)
+              </li>
+<li class="listitem">
+                NSGA-II (multiobjective EA)
+              </li>
+<li class="listitem">
+                Epsilon-MOEA (multiobjective EA)
+              </li>
+</ul></div>
+</li>
+<li class="listitem">
+<p class="simpara">
+            Genotypes / Phenotypes:
+          </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="circle">
+<li class="listitem">
+                Evolution of bit strings
+              </li>
+<li class="listitem">
+                Evolution of real parameters using different operators (SBX, gaussian,
+                etc)
+              </li>
+</ul></div>
+</li>
+<li class="listitem">
+<p class="simpara">
+            Simulators
+          </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="circle">
+<li class="listitem">
+                (optional) mobile robot (Khepera-like)
+              </li>
+<li class="listitem">
+                (optional) cartpole (single and double)
+              </li>
+</ul></div>
+</li>
+<li class="listitem">
+<p class="simpara">
+            Other
+          </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+                (optional) evolution of neural-networks
+              </li></ul></div>
+</li>
+</ul></div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="documentation.sferes2.authors"></a><a class="link" href="index.html#documentation.sferes2.authors" title="Authors">Authors</a>
+</h3></div></div></div>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+            Jean-Baptiste Mouret <a href="mailto:mouret@isir.fr" target="_top">mouret@isir.fr</a>:
+            main author and maintainer
+          </li>
+<li class="listitem">
+            Stephane Doncieux
+          </li>
+<li class="listitem">
+            Paul Tonelli<a href="mailto:tonelli@isir.upmc.fr" target="_top">tonelli@isir.upmc.fr</a>
+            : Documentation maintainer
+          </li>
+<li class="listitem">
+            Many members of <a href="http://www.isir.fr" target="_top">ISIR</a>
+          </li>
+</ul></div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="documentation.sferes2.where_to_go_next_"></a><a class="link" href="index.html#documentation.sferes2.where_to_go_next_" title="Where to go next?">Where to go
+      next?</a>
+</h3></div></div></div>
+<p>
+        <a class="link" href="documentation/download.html" title="Download and unzip">Download</a> Downloading sferes2
+      </p>
+<p>
+        <a class="link" href="documentation/compilation.html" title="Compilation">Compilation</a> How to compile
+        sferes2 on your system
+      </p>
+<p>
+        <a class="link" href="documentation/tutorial.html" title="Tutorial">Tutorial/Example</a> A tutorial/example
+        with explanation about the general structure of sferes2 experiment files,
+        the example file is generated automatically in the next tutorials.
+      </p>
+<p>
+        <a class="link" href="documentation/tutorial_neuro.html" title="Neurobiology Tutorial I">Neurobiology Tutorial I</a>
+        A tutorial to create an experiment using the neural network module of sferes2,
+        this enables you to create a neural network and evolve its weights and parameters.
+      </p>
+<p>
+        <a class="link" href="documentation/tutorial_topo.html" title="Neurobiology Tutorial II">Neurobiology Tutorial II</a>
+        A tutorial to evolve the topology of a network in sferes2
+      </p>
+<p>
+        <a class="link" href="documentation/tutorial_evoneuro.html" title="Neurobiology Tutorial III">Neurobiology Tutorial III</a>
+        A tutorial to evolve a network of maps using the EvoNeuro module from sferes
+        II.
+      </p>
+<p>
+        <a class="link" href="documentation/reference.html" title="Reference">Reference</a> A reference manual
+        / guide to the source code
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="documentation.sferes2.specific_sections_for_isir_members"></a><a class="link" href="index.html#documentation.sferes2.specific_sections_for_isir_members" title="Specific sections for ISIR members">Specific
+      sections for ISIR members</a>
+</h3></div></div></div>
+<p>
+        <a class="link" href="documentation/torque.html" title="Launching experiments using Torque">Torque Introduction</a> A reference
+        to launching experiments on the ISIR cluster
+      </p>
+</div>
+</div>
+</div>
+<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
+<td align="left"></td>
+<td align="right"><div class="copyright-footer"></div></td>
+</tr></table>
+<hr>
+<div class="spirit-nav"><a accesskey="n" href="documentation/download.html"><img src="../../doc/src/images/next.png" alt="Next"></a></div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4
+END
+qtnetwork.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtnetwork.cpp
+END
+qtmultimedia.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtmultimedia.cpp
+END
+jamroot.jam
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/jamroot.jam
+END
+phonon.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/phonon.cpp
+END
+qtsvg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtsvg.cpp
+END
+qtsql.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtsql.cpp
+END
+qt3support.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qt3support.cpp
+END
+qtxml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtxml.cpp
+END
+qtscript.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtscript.cpp
+END
+qtassistant.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtassistant.cpp
+END
+qttest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qttest.cpp
+END
+qtxmlpatterns.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtxmlpatterns.cpp
+END
+qtgui.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtgui.cpp
+END
+qtcorefail.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtcorefail.cpp
+END
+qtwebkit.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtwebkit.cpp
+END
+qtscripttools.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtscripttools.cpp
+END
+qthelp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qthelp.cpp
+END
+qtcore.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4/qtcore.cpp
+END

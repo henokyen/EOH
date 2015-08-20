@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/sferes2/!svn/ver/64/trunk/modules/cartpole
+END
+cartpole.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/1/trunk/modules/cartpole/cartpole.hpp
+END
+fit_cartpole.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/1/trunk/modules/cartpole/fit_cartpole.hpp
+END
+ctrl_cartpole.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/1/trunk/modules/cartpole/ctrl_cartpole.hpp
+END
+display.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/1/trunk/modules/cartpole/display.cpp
+END
+test_cartpole.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/1/trunk/modules/cartpole/test_cartpole.cpp
+END
+cartpole.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/1/trunk/modules/cartpole/cartpole.cpp
+END
+display.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/1/trunk/modules/cartpole/display.hpp
+END
+test_cartpole2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/1/trunk/modules/cartpole/test_cartpole2.cpp
+END
+wscript
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/1/trunk/modules/cartpole/wscript
+END
+simu_cartpole.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/1/trunk/modules/cartpole/simu_cartpole.hpp
+END
+test_cartpole_ea.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/64/trunk/modules/cartpole/test_cartpole_ea.cpp
+END

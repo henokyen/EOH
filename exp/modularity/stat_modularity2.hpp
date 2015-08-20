@@ -1,0 +1,156 @@
+#ifndef STAT_MODULARITY_HPP_
+#define STAT_MODULARITY_HPP_
+
+#include <numeric>
+
+namespace sferes
+{
+  namespace stat
+  {
+     // lexical order
+    struct compare_val_objs
+    {
+      compare_val_objs(){
+      }
+      template<typename I>
+      bool operator() (const boost::shared_ptr<I> i1, const boost::shared_ptr<I> i2) const
+      {
+        assert(i1->fit().objs().size() == i2->fit().objs().size());
+        assert(i1->fit().objs().size());
+        assert(i2->fit().objs().size());
+         // first, compare the main objective
+        if (i1->fit().value() > i2->fit().value())
+          return true;
+        if (i1->fit().value() < i2->fit().value())
+          return false;
+         // equality : compare other objectives
+        for (size_t i = 0; i < i1->fit().objs().size(); ++i)
+          if (i1->fit().obj(i) > i2->fit().obj(i))
+            return true;
+          else
+          if (i1->fit().obj(i) < i2->fit().obj(i))
+            return false;
+        return false;
+      }
+    };
+	   struct compare_hier_mod
+    {
+      compare_hier_mod(){
+      }
+      template<typename I>
+      bool operator() (const boost::shared_ptr<I>&i1,const boost::shared_ptr<I>&i2) const
+      {
+            //first, compare based on fitness
+        if (i1->fit().value() > i2->fit().value())
+           return true;
+        else if (i1->fit().value() == i2->fit().value())
+        {
+             //then compare based on hierarchy
+          if (i1->fit().get_grc() > i2->fit().get_grc())
+              return true;
+          else if (i1->fit().get_grc() == i2->fit().get_grc())
+              //then based on modularity
+              return (i1->fit().mod() > i2->fit().mod());
+          else 
+             return false; 
+        }
+      return false;
+
+      }
+      
+    };
+     // use fitness::values()
+    struct compare_values
+    {
+      compare_values(size_t k) : _k(k) {
+      }
+      template<typename I>
+      bool operator() (const boost::shared_ptr<I>&i1,
+                       const boost::shared_ptr<I>&i2) const
+      {
+        return i1->fit().values(_k) > i2->fit().values(_k);
+      }
+      size_t _k;
+    };
+
+    SFERES_STAT(Mod, Stat)
+    {
+      public:
+        template<typename E>
+        void refresh(const E& ea)
+        {
+          this->_create_log_file(ea, "modularity.dat");
+          if (ea.gen() % Params::stats::period != 0)
+            return;
+          typedef std::vector<boost::shared_ptr<Phen> > pareto_t;
+          pareto_t p = ea.pareto_front();
+          std::sort(p.begin(), p.end(), compare_hier_mod());
+         /* pareto_t p_v1 = ea.pop();
+          pareto_t p_v2 = ea.pop();
+          std::sort(p_v1.begin(), p_v1.end(), compare_values(0));
+          std::sort(p_v2.begin(), p_v2.end(), compare_values(1));*/
+
+          _best.clear();
+          std::vector<float> mod, length, optlength;
+
+          boost::shared_ptr<Phen> b = p[0];
+          std::cout<<"Preto size:"<<p.size()<<std::endl;
+          for (size_t i = 0; i < p.size() &&  p[i]->fit().obj(0) == p[0]->fit().obj(0); i=p.size())
+          {
+	    b = p[i];
+            _best.push_back(b);
+            mod.push_back(b->fit().mod());
+            length.push_back(b->fit().length());
+            optlength.push_back(b->fit().optlength());
+          }
+          float avg_mod = std::accumulate(mod.begin(), mod.end(), 0.0f) / mod.size();
+          float avg_length = std::accumulate(length.begin(), length.end(), 0.0f) / length.size();
+          float avg_optlength =
+            std::accumulate(optlength.begin(), optlength.end(), 0.0f) / optlength.size();
+          std::sort(mod.begin(), mod.end());
+          std::sort(length.begin(), length.end());
+          std::sort(optlength.begin(), optlength.end());
+          (*this->_log_file) << ea.gen() << " "                 // generation
+                             << _best[0]->fit().value() << " "  // best fitnesss (value)
+			     << _best[0]->fit().mod() << " " // mod of the first indiv (ild report)
+                             << avg_mod << " "                  // average modularity (among optimal indivs)
+                             << avg_length << " "               // average length
+                             << avg_optlength << " "            // average optimized length
+                             //<< p_v1[0]->fit().values(0) << " " // best indiv for objective 0, value of objective 2
+                             //<< p_v2[0]->fit().values(1) << " " // best indiv for objectiv 1, value of objective 1
+                             << mod.size() << " "               // number of optimal indivs
+                             << mod[mod.size() / 2] << " "      // median modularity
+                             << length[length.size() / 2] << " " // median length
+                             << optlength[optlength.size() / 2] << " " // median opt length
+                             << *std::max_element(mod.begin(), mod.end()) << " "
+                             << *std::min_element(mod.begin(), mod.end()) << " "
+                             << *std::max_element(length.begin(), length.end()) << " "
+                             << *std::min_element(length.begin(), length.end()) << " "
+                             << *std::max_element(optlength.begin(), optlength.end()) << " "
+                             << *std::min_element(optlength.begin(), optlength.end()) << " ";
+          for (size_t i = 0; i < _best[0]->fit().nb_values(); ++i)
+            (*this->_log_file) << _best[0]->fit().values(i) << " ";
+          (*this->_log_file) << std::endl;
+
+        }
+
+        void show(std::ostream& os, size_t k)
+        {
+          _best[k]->develop();
+          _best[k]->show(os);
+          _best[k]->fit().set_mode(fit::mode::view);
+          _best[k]->fit().eval(*_best[k]);
+        }
+        const boost::shared_ptr<Phen> best() const { return _best; }
+        template<class Archive>
+        void serialize(Archive& ar, const unsigned int version)
+        {
+          ar& BOOST_SERIALIZATION_NVP(_best);
+        }
+      protected:
+        std::vector<boost::shared_ptr<Phen> > _best;
+    };
+  }
+}
+
+#endif

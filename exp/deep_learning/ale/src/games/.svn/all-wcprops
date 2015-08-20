@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/er/!svn/ver/4358/src/sferes/exp/deep_learning/ale/src/games
+END
+RomSettings.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/RomSettings.cpp
+END
+RomUtils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/RomUtils.cpp
+END
+Roms.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/Roms.cpp
+END
+RomSettings.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/RomSettings.hpp
+END
+RomUtils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/RomUtils.hpp
+END
+Roms.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/Roms.hpp
+END
+module.mk
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/module.mk
+END

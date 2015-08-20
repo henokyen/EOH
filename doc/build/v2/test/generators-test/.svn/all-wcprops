@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test
+END
+nm.jam
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/nm.jam
+END
+a.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/a.cpp
+END
+jamroot.jam
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/jamroot.jam
+END
+x.l
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/x.l
+END
+b.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/b.cxx
+END
+c.tui
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/c.tui
+END
+e.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/e.cpp
+END
+extra.jam
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/extra.jam
+END
+qt.jam
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/qt.jam
+END
+z.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/z.cpp
+END
+d.wd
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/d.wd
+END
+jamfile.jam
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/jamfile.jam
+END
+lex.jam
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/lex.jam
+END
+y.x_pro
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators-test/y.x_pro
+END

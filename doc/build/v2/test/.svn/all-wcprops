@@ -1,0 +1,857 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test
+END
+example_make.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/example_make.py
+END
+core_modifiers.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/core_modifiers.py
+END
+lib_source_property.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/lib_source_property.py
+END
+test1.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/test1.py
+END
+unused.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/unused.py
+END
+library_property.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/library_property.py
+END
+conditionals3.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/conditionals3.py
+END
+template.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/template.py
+END
+exit_status.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/exit_status.py
+END
+remove_requirement.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/remove_requirement.py
+END
+c_file.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/c_file.py
+END
+dependency_property.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/dependency_property.py
+END
+clean.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/clean.py
+END
+v1_testing.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1_testing.py
+END
+example_customization.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/example_customization.py
+END
+check-jam-patches.jam
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/check-jam-patches.jam
+END
+symlink.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/symlink.py
+END
+dll_path.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/dll_path.py
+END
+project_test3.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project_test3.py
+END
+path_features.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/path_features.py
+END
+m1-03.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/m1-03.py
+END
+test.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/test.jam
+END
+unit-tests.jam
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/unit-tests.jam
+END
+conditionals_multiple.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/conditionals_multiple.py
+END
+resolution.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/resolution.py
+END
+expansion.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/expansion.py
+END
+module_actions.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/module_actions.py
+END
+loop.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/loop.py
+END
+load_dir.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/load_dir.py
+END
+unit_test.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/unit_test.py
+END
+sort_rule.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/sort_rule.py
+END
+core_delete_module.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/core_delete_module.py
+END
+wrong_project.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/wrong_project.py
+END
+indirect_conditional.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/indirect_conditional.py
+END
+assert-equal.jam
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/assert-equal.jam
+END
+svn_tree.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/svn_tree.py
+END
+railsys.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/railsys.py
+END
+core_import_module.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/core_import_module.py
+END
+default_toolset.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/default_toolset.py
+END
+test_system.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/test_system.html
+END
+ordered_properties.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/ordered_properties.py
+END
+stage.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/stage.py
+END
+TestCmd.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/TestCmd.py
+END
+searched_lib.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/searched_lib.py
+END
+suffix.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/suffix.py
+END
+abs_workdir.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/abs_workdir.py
+END
+startup_v1.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/startup_v1.py
+END
+implicit_dependency.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/implicit_dependency.py
+END
+generators_test.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generators_test.py
+END
+pch.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/pch.py
+END
+inherit_toolset.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/inherit_toolset.py
+END
+relative_sources.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/relative_sources.py
+END
+explicit.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/explicit.py
+END
+skipping.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/skipping.py
+END
+project_test1.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project_test1.py
+END
+free_features_request.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/free_features_request.py
+END
+timedata.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/timedata.py
+END
+copy_time.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/copy_time.py
+END
+Jamrules
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/Jamrules
+END
+m1-01.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/m1-01.py
+END
+print.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/print.py
+END
+build_file.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/build_file.py
+END
+check-bindrule.jam
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/check-bindrule.jam
+END
+core_d12.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/core_d12.py
+END
+gcc_runtime.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/gcc_runtime.py
+END
+test2.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/test2.py
+END
+boost-build.jam
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/boost-build.jam
+END
+default_build.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/default_build.py
+END
+make_rule.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/make_rule.py
+END
+library_chain.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/library_chain.py
+END
+test_all.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/test_all.py
+END
+property_expansion.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/property_expansion.py
+END
+testing_support.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/testing_support.py
+END
+load_order.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/load_order.py
+END
+tag.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/tag.py
+END
+absolute_sources.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/absolute_sources.py
+END
+project-test1.jam
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project-test1.jam
+END
+example_qt4.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/example_qt4.py
+END
+testing_primitives.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/testing_primitives.py
+END
+project_test4.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project_test4.py
+END
+build_no.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/build_no.py
+END
+generator_selection.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/generator_selection.py
+END
+core_dependencies.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/core_dependencies.py
+END
+check-arguments.jam
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/check-arguments.jam
+END
+wrapper.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/wrapper.py
+END
+chain.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/chain.py
+END
+core_varnames.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/core_varnames.py
+END
+using.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/using.py
+END
+preprocessor.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/preprocessor.py
+END
+ordered_include.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/ordered_include.py
+END
+use_requirements.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/use_requirements.py
+END
+alternatives.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/alternatives.py
+END
+unit_tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/unit_tests.py
+END
+ndebug.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/ndebug.py
+END
+configuration.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/configuration.py
+END
+double_loading.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/double_loading.py
+END
+test_nt_line_length.jam
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/test_nt_line_length.jam
+END
+conditionals2.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/conditionals2.py
+END
+echo_args.jam
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/echo_args.jam
+END
+startup_v2.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/startup_v2.py
+END
+duplicate.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/duplicate.py
+END
+bad_dirname.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/bad_dirname.py
+END
+jamfile.jam
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/jamfile.jam
+END
+core_typecheck.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/core_typecheck.py
+END
+alias.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/alias.py
+END
+m1-02.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/m1-02.py
+END
+disambiguation.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/disambiguation.py
+END
+example_gettext.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/example_gettext.py
+END
+project_root_rule.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project_root_rule.py
+END
+notfile.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/notfile.py
+END
+test_result_dumping.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/test_result_dumping.py
+END
+boostbook.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/boostbook.py
+END
+composite.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/composite.py
+END
+project_root_constants.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project_root_constants.py
+END
+check-test-tools.jam
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/check-test-tools.jam
+END
+qt4.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/qt4.py
+END
+project_glob.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project_glob.py
+END
+rebuilds.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/rebuilds.py
+END
+project_dependencies.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project_dependencies.py
+END
+empty.jam
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/empty.jam
+END
+dependency_test.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/dependency_test.py
+END
+inline.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/inline.py
+END
+default_features.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/default_features.py
+END
+conditionals.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/conditionals.py
+END
+prebuilt.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/prebuilt.py
+END
+example_libraries.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/example_libraries.py
+END
+standalone.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/standalone.py
+END
+test-config-example.jam
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/test-config-example.jam
+END
+build_dir.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/build_dir.py
+END
+library_order.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/library_order.py
+END
+tree.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/tree.py
+END
+BoostBuild.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/BoostBuild.py
+END
+inherited_dependency.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/inherited_dependency.py
+END
+out_of_tree.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/out_of_tree.py
+END
+source_locations.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/source_locations.py
+END
+no_type.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/no_type.py
+END
+regression.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/regression.py
+END
+custom_generator.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/custom_generator.py
+END
+direct_request_test.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/direct_request_test.py
+END
+file_name_handling.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/file_name_handling.py
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/readme.txt
+END
+recursive.jam
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/recursive.jam
+END

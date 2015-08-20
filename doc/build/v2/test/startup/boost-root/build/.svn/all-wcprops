@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/startup/boost-root/build
+END
+bootstrap.jam
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/startup/boost-root/build/bootstrap.jam
+END
+boost-build.jam
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/startup/boost-root/build/boost-build.jam
+END

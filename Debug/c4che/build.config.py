@@ -1,0 +1,2 @@
+version = 0x105014
+tools = [{'tool': 'ar', 'tooldir': None, 'funs': None}, {'tool': 'cxx', 'tooldir': None, 'funs': None}, {'tool': 'gxx', 'tooldir': None, 'funs': None}, {'tool': 'compiler_cxx', 'tooldir': None, 'funs': None}, {'tool': 'boost', 'tooldir': None, 'funs': None}, {'tool': 'tbb', 'tooldir': None, 'funs': None}, {'tool': 'mpi', 'tooldir': None, 'funs': None}, {'tool': 'eigen2', 'tooldir': None, 'funs': None}, {'tool': 'ode', 'tooldir': None, 'funs': None}]

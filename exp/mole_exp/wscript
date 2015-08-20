@@ -1,0 +1,31 @@
+
+#! /usr/bin/env python
+
+import sferes
+
+def build(bld):
+    uselib_ = 'BOOST EIGEN2 GSL MPI'
+    cxxflags_kdtree = \
+        bld.get_env()['CXXFLAGS']\
+        + ['-I.'] \
+        + ['-DLIBSSRCKDTREE_HAVE_BOOST'] \
+        + ['-std=c++0x']
+
+    obj = bld.new_task_gen('cxx', 'program')
+    obj.source = 'mole_andxorand.cpp'
+    obj.includes = '. ../../'
+    obj.uselib_local = 'sferes2'
+    obj.uselib = uselib_
+    obj.target = 'mole_exp'
+    obj.cxxflags = cxxflags_kdtree
+    obj.uselib_local = 'sferes2'
+    if(True): 
+       sferes.create_variants(bld,
+                             source = 'mole_andxorand.cpp',
+                             uselib_local = 'sferes2',
+                             uselib = uselib_,
+                             target = 'mvg',
+                             cxxflags = cxxflags_kdtree,
+                             json = '',
+                             variants = ['FG NOVMAP'])
+

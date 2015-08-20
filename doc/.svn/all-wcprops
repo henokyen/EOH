@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/sferes2/!svn/ver/96/trunk/doc
+END
+update_sferes_archive.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/update_sferes_archive.py
+END
+tutorial.xml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/sferes2/!svn/ver/96/trunk/doc/tutorial.xml
+END
+user-config.jam
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/sferes2/!svn/ver/96/trunk/doc/user-config.jam
+END
+boost-build.jam
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/sferes2/!svn/ver/96/trunk/doc/boost-build.jam
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/sferes2/!svn/ver/96/trunk/doc/README
+END

@@ -1,0 +1,23 @@
+#! /usr/bin/env python
+import os
+
+def set_options(blah) : pass
+
+def configure(conf):
+    conf.env['LIB_GSL']=['gsl','gslcblas']
+
+def build(bld):
+#    test_modularity = bld.new_task_gen('cpp', 'program')
+#    test_modularity.source = 'test_modularity.cpp'
+#    test_modularity.includes = '. ../../'
+#    test_modularity.uselib_local = ''
+#    test_modularity.uselib = 'BOOST_GRAPH BOOST_UNIT_TEST_FRAMEWORK GSL'
+#   test_modularity.target = 'test_modularity'
+#   test_modularity.unit_test = 1
+
+    compute_modularity = bld.new_task_gen('cxx', 'program')
+    compute_modularity.source = 'compute_modularity.cpp'
+    compute_modularity.includes = '. ../../'
+    compute_modularity.uselib_local = ''
+    compute_modularity.uselib = 'BOOST BOOST_GRAPH BOOST_UNIT_TEST_FRAMEWORK GSL'
+    compute_modularity.target = 'compute_modularity'

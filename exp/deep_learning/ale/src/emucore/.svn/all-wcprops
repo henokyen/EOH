@@ -1,0 +1,623 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/er/!svn/ver/4271/src/sferes/exp/deep_learning/ale/src/emucore
+END
+Cart3E.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart3E.cxx
+END
+Cart3F.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart3F.cxx
+END
+CartE0.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartE0.hxx
+END
+CartDPC.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartDPC.hxx
+END
+MD5.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/MD5.cxx
+END
+Random.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Random.hxx
+END
+Event.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Event.hxx
+END
+MediaSrc.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/MediaSrc.cxx
+END
+Switches.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Switches.cxx
+END
+CartE7.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartE7.hxx
+END
+Joystick.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Joystick.cxx
+END
+Props.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Props.cxx
+END
+Keyboard.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Keyboard.hxx
+END
+SpeakJet.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/SpeakJet.cxx
+END
+Driving.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Driving.hxx
+END
+Console.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Console.hxx
+END
+Serializer.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Serializer.cxx
+END
+CartMB.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartMB.hxx
+END
+CartMC.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartMC.hxx
+END
+CartF4SC.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF4SC.hxx
+END
+PropsSet.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/PropsSet.cxx
+END
+CartF6SC.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF6SC.hxx
+END
+CartAR.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartAR.hxx
+END
+Deserializer.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Deserializer.cxx
+END
+CartF8SC.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF8SC.hxx
+END
+CartCV.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartCV.cxx
+END
+FSNode.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/FSNode.hxx
+END
+EventStreamer.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/EventStreamer.cxx
+END
+CartUA.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartUA.hxx
+END
+Control.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Control.hxx
+END
+CartFASC.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartFASC.cxx
+END
+TIASnd.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/TIASnd.hxx
+END
+Cart4A50.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart4A50.hxx
+END
+Cart4K.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart4K.cxx
+END
+CartF4.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF4.hxx
+END
+unzip.cc
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/unzip.cc
+END
+Cart.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart.cxx
+END
+CartF6.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF6.hxx
+END
+Cart2K.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart2K.hxx
+END
+CartF8.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF8.hxx
+END
+AtariVox.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/AtariVox.hxx
+END
+OSystem.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4271/src/sferes/exp/deep_learning/ale/src/emucore/OSystem.cxx
+END
+Settings.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Settings.hxx
+END
+CartFE.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartFE.hxx
+END
+Cart0840.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart0840.hxx
+END
+CartE0.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartE0.cxx
+END
+CartDPC.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartDPC.cxx
+END
+Random.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Random.cxx
+END
+Event.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Event.cxx
+END
+M6532.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/M6532.hxx
+END
+Paddles.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Paddles.hxx
+END
+Booster.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Booster.hxx
+END
+TIA.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/TIA.hxx
+END
+stella.pro
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/stella.pro
+END
+CartE7.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartE7.cxx
+END
+Cart3E.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart3E.hxx
+END
+Cart3F.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart3F.hxx
+END
+MD5.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/MD5.hxx
+END
+module.mk
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/module.mk
+END
+MediaSrc.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/MediaSrc.hxx
+END
+Switches.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Switches.hxx
+END
+Keyboard.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Keyboard.cxx
+END
+Console.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Console.cxx
+END
+Driving.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Driving.cxx
+END
+Joystick.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Joystick.hxx
+END
+CartMB.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartMB.cxx
+END
+Props.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Props.hxx
+END
+CartMC.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartMC.cxx
+END
+CartF4SC.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF4SC.cxx
+END
+CartF6SC.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF6SC.cxx
+END
+SpeakJet.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/SpeakJet.hxx
+END
+CartAR.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartAR.cxx
+END
+CartF8SC.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF8SC.cxx
+END
+FSNode.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/FSNode.cxx
+END
+Serializer.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Serializer.hxx
+END
+CartUA.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartUA.cxx
+END
+Control.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Control.cxx
+END
+TIASnd.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/TIASnd.cxx
+END
+Cart4A50.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart4A50.cxx
+END
+CartF4.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF4.cxx
+END
+PropsSet.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/PropsSet.hxx
+END
+CartF6.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF6.cxx
+END
+unzip.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/unzip.c
+END
+Cart2K.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart2K.cxx
+END
+Deserializer.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Deserializer.hxx
+END
+DefProps.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/DefProps.hxx
+END
+CartF8.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartF8.cxx
+END
+CartCV.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartCV.hxx
+END
+EventStreamer.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/EventStreamer.hxx
+END
+unzip.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/unzip.h
+END
+CartFASC.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartFASC.hxx
+END
+AtariVox.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/AtariVox.cxx
+END
+Cart4K.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart4K.hxx
+END
+Sound.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Sound.hxx
+END
+Cart.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart.hxx
+END
+Settings.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Settings.cxx
+END
+CartFE.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/CartFE.cxx
+END
+Cart0840.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Cart0840.cxx
+END
+OSystem.hxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4217/src/sferes/exp/deep_learning/ale/src/emucore/OSystem.hxx
+END
+M6532.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/M6532.cxx
+END
+Paddles.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Paddles.cxx
+END
+Booster.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/Booster.cxx
+END
+TIA.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/TIA.cxx
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/kernel
+END
+errors.jam
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/kernel/errors.jam
+END
+bootstrap.jam
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/kernel/bootstrap.jam
+END
+bootstrap.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/kernel/bootstrap.py
+END
+boost-build.jam
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/kernel/boost-build.jam
+END
+class.jam
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/kernel/class.jam
+END
+modules.jam
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/kernel/modules.jam
+END

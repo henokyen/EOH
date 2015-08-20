@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project-test3/lib2
+END
+c.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project-test3/lib2/c.cpp
+END
+d.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project-test3/lib2/d.cpp
+END
+jamfile.jam
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/project-test3/lib2/jamfile.jam
+END

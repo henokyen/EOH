@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/subdir1
+END
+file-to-bind
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/subdir1/file-to-bind
+END

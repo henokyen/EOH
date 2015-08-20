@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/railsys/libx/src
+END
+jamfile.jam
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/railsys/libx/src/jamfile.jam
+END
+test_libx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/railsys/libx/src/test_libx.cpp
+END

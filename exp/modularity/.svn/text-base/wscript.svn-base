@@ -1,0 +1,211 @@
+#! /usr/bin/env python
+import sferes
+
+def build(bld):
+   uselib_ = 'BOOST EIGEN2 GSL'
+   cxxflags_kdtree = \
+        bld.get_env()['CXXFLAGS']\
+        + ['-I.'] \
+        + ['-DLIBSSRCKDTREE_HAVE_BOOST'] \
+        + ['-std=c++0x']
+
+   cxxflags_kdtree = bld.get_env()['CXXFLAGS'] \
+                     + ['-I.'] \
+                     + ['-DLIBSSRCKDTREE_HAVE_BOOST'] \
+                     + ['-std=c++0x']
+
+   test_opt_placement = bld.new_task_gen('cxx', 'program')
+   test_opt_placement.source = 'test_opt_placement.cpp'
+   test_opt_placement.includes = '. ../../'
+   test_opt_placement.uselib_local = ''
+   test_opt_placement.uselib = 'BOOST BOOST_GRAPH BOOST_UNIT_TEST_FRAMEWORK EIGEN2'
+   test_opt_placement.target = 'test_opt_placement'
+
+   arm = bld.new_task_gen('cxx', 'staticlib')
+   arm.source = 'arm.cpp'
+   arm.includes = '. ../../'
+   arm.target = 'arm'
+   arm.uselib = uselib_
+
+   if(False):
+      sferes.create_variants(bld,
+                             source = 'arm_ball.cpp',
+                             uselib_local = 'sferes2 arm',
+                             uselib = uselib_,
+                             target = 'armball',
+                             json = '',
+                             variants = ['BASE FLOAT',
+                                         'LENGTH ONP PNSGA PR25 FLOAT',
+                                         'MOD FLOAT',
+                                         'BASE FLOAT DIV',
+                                         'LENGTH ONP PNSGA PR25 FLOAT DIV',
+                                         'MOD FLOAT DIV'
+                                         ])
+   if(True):
+      sferes.create_variants(bld,
+                             source = 'sampling_retina.cpp',
+                             uselib_local = 'sferes2',
+                             uselib = uselib_,
+                             target = 'mvg',
+                             json = '',
+                             variants = ['FG_AND'])
+   if(True):
+      sferes.create_variants(bld,
+                             source = 'retina.cpp',
+                             uselib_local = 'sferes2',
+                             uselib = uselib_,
+                             target = 'mvg',
+                             json = '',
+                             variants = ['FG_AND LENGTH ONP PNSGA PR75',
+                                         'FG_AND LENGTH ONP PNSGA PR95',
+                                         ])
+   if(False):
+      sferes.create_variants(bld,
+                             source = 'retina.cpp',
+                             uselib_local = 'sferes2',
+                             uselib = uselib_,
+                             target = 'mvg',
+                             json = '',
+                             variants = ['FG_AND MDEL', 'FG_AND MDEL3',
+                                         'FG_AND LENGTH ONP PNSGA PR25 MDEL',
+                                         'FG_AND LENGTH ONP PNSGA PR25 MDEL3'])
+   if(True):
+      sferes.create_variants(bld,
+                             source = 'retina.cpp',
+                             uselib_local = 'sferes2',
+                             uselib = uselib_,
+                             target = 'mvg',
+                             json = '',
+                             variants = ['MVG PP10 LENGTH ONP PNSGA PR10',
+					 'MVG P20 LENGTH ONP PNSGA PR10',
+					 'MVG P100 LENGTH ONP PNSGA PR10',
+                                         'MVG P200 LENGTH ONP PNSGA PR10',
+					 'MVG P500 LENGTH ONP PNSGA PR10',
+                                         'MVG P1000 LENGTH ONP PNSGA PR10',
+                                         'MVG P5000 LENGTH ONP PNSGA PR10'
+                                         ])
+
+
+   if(False):
+      sferes.create_variants(bld,
+                             source = 'retina.cpp',
+                             uselib_local = 'sferes2',
+                             uselib = uselib_,
+                             target = 'mvg',
+                             json = '',
+                             variants = ['FG_AND LOGALL',
+                                         'FG_AND RANDOBJ',
+                                         'FG_AND RANDOBJ FLOAT',
+                                         'FG_AND RANDOBJ BOUNDR',
+                                         'FG_AND RANDOBJ FLOAT BOUNDR',
+                                         'FG_AND DIV',
+                                         'FG_AND BIGPOP',
+                                         'FG_AND MDEL',
+                                         'FG_AND MDEL2',
+					 'FG_OR',
+					 'FG_OR LENGTH ONP PNSGA PR25 STOP',
+					 'FG_AND LENGTH ONP PNSGA PR25 STOP',
+					 'FG_OR PNSGA PR100 STOP',
+                                         'FG_AND PNSGA PR100 STOP',
+					 'FG_AND LENGTH ONP PNSGA PR100',
+                                         'FG_AND LENGTH ONP PNSGA PR10',
+                                         'FG_AND LENGTH ONP PNSGA PR50',
+					 'FG_AND MOD',
+                                         'FG_AND MOD PNSGA PR25',
+                                         'FG_AND LENGTH ONP PNSGA PR25',
+                                         'FG_AND LENGTH ONP PNSGA PR25 FLOAT',
+                                         'FG_AND LENGTH ONP PNSGA PR25 RANDOBJ',
+                                         'FG_AND LENGTH ONP PNSGA PR25 LOGALL',
+                                         'FG_AND LENGTH ONP PNSGA PR25 RANDCOORDS',
+                                         'FG_OR LENGTH ONP PNSGA PR25',
+                                         'MVG PP10',#special name, conflict with P10
+					 'MVG P20',
+				         'FG_OR LENGTH ONP PNSGA PR25',
+ 					 'MVG P20',
+					 'MVG P100',
+                                         'MVG P200',
+                                         'MVG P500',
+					 'MVG P1000',
+                                         'MVG P5000',
+                                         'MVG PP10 LENGTH ONP PNSGA PR25',
+					 'MVG P20 LENGTH ONP PNSGA PR25',
+					 'MVG P100 LENGTH ONP PNSGA PR25',
+                                         'MVG P200 LENGTH ONP PNSGA PR25',
+					 'MVG P500 LENGTH ONP PNSGA PR25',
+                                         'MVG P1000 LENGTH ONP PNSGA PR25',
+                                         'MVG P5000 LENGTH ONP PNSGA PR25',
+                                         'MVG PP10 LENGTH ONP PNSGA PR100',
+					 'MVG P20 LENGTH ONP PNSGA PR100',
+					 'MVG P100 LENGTH ONP PNSGA PR100',
+                                         'MVG P200 LENGTH ONP PNSGA PR100',
+					 'MVG P500 LENGTH ONP PNSGA PR100',
+                                         'MVG P1000 LENGTH ONP PNSGA PR100',
+                                         'MVG P5000 LENGTH ONP PNSGA PR100',
+                                         'MVG PP10 LENGTH ONP PNSGA PR50',
+					 'MVG P20 LENGTH ONP PNSGA PR50',
+					 'MVG P100 LENGTH ONP PNSGA PR50',
+                                         'MVG P200 LENGTH ONP PNSGA PR50',
+					 'MVG P500 LENGTH ONP PNSGA PR50',
+                                         'MVG P1000 LENGTH ONP PNSGA PR50',
+                                         'MVG P5000 LENGTH ONP PNSGA PR50',
+                                         'MVG PP10 LENGTH ONP PNSGA PR75',
+					 'MVG P20 LENGTH ONP PNSGA PR75',
+					 'MVG P100 LENGTH ONP PNSGA PR75',
+                                         'MVG P200 LENGTH ONP PNSGA PR75',
+					 'MVG P500 LENGTH ONP PNSGA PR75',
+                                         'MVG P1000 LENGTH ONP PNSGA PR75',
+                                         'MVG P5000 LENGTH ONP PNSGA PR75',
+                                         'MVG PP10 LENGTH ONP',
+					 'MVG P20 LENGTH ONP',
+					 'MVG P100 LENGTH ONP',
+                                         'MVG P200 LENGTH ONP',
+					 'MVG P500 LENGTH ONP',
+                                         'MVG P1000 LENGTH ONP',
+                                         'MVG P5000 LENGTH ONP'
+                                         ])
+
+   if(False):
+      sferes.create_variants(bld,
+                             source = 'nxor.cpp',
+                             uselib_local = 'sferes2',
+                             uselib = uselib_,
+                             target = 'mvg',
+                             cxxflags = cxxflags_kdtree,
+                             json = '',
+                             variants = ['FG NF5 NOVMAP',
+                                         'FG NF5 NOVMAP NCONNS',
+                                         'FG NF5 NOVMAP NNODES',
+                                         'FG NF5 NCONNS PNSGA PR25',
+                                         'FG NF5 NNODES PNSGA PR25'
+
+                                         ])
+
+   if(False):
+      sferes.create_variants(bld,
+                             source = 'retina.cpp',
+                             uselib_local = 'sferes2',
+                             uselib = uselib_,
+                             target = 'mvg',
+                             cxxflags = cxxflags_kdtree,
+                             json = '',
+                             variants = ['FG_AND NOVMAP',
+                                         'FG_AND NOVMAP NCONNS',
+                                         'FG_AND NOVMAP NNODES',
+                                         ])
+
+
+   if(False):
+      sferes.create_variants(bld,
+                             source = 'hxor.cpp',
+                             uselib_local = 'sferes2',
+                             uselib = uselib_,
+                             target = 'mvg',
+                             json = '',
+                             cxxflags = cxxflags_kdtree,
+                             variants = ['FG NOVMAP',
+                                         'FG NOVMAP NCONNS',
+                                         'FG NOVMAP NNODES',
+                                         'FG NCONNS PNSGA PR25',
+                                         'FG NNODES PNSGA PR25'
+                                         ])
+

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/sferes2/!svn/ver/87/trunk/scripts
+END
+conv_gen.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/sferes2/!svn/ver/1/trunk/scripts/conv_gen.rb
+END
+skill.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/sferes2/!svn/ver/1/trunk/scripts/skill.rb
+END
+conv_rate.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/sferes2/!svn/ver/87/trunk/scripts/conv_rate.rb
+END
+license_cpp.txt
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sferes2/!svn/ver/1/trunk/scripts/license_cpp.txt
+END
+run_exp.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/sferes2/!svn/ver/1/trunk/scripts/run_exp.rb
+END
+add_license.sh
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sferes2/!svn/ver/1/trunk/scripts/add_license.sh
+END
+status.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/sferes2/!svn/ver/1/trunk/scripts/status.rb
+END
+error_parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sferes2/!svn/ver/1/trunk/scripts/error_parser.rb
+END
+gnuplot_best_indiv.sh
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/1/trunk/scripts/gnuplot_best_indiv.sh
+END
+license_py.txt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sferes2/!svn/ver/1/trunk/scripts/license_py.txt
+END
+average_fit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sferes2/!svn/ver/59/trunk/scripts/average_fit.rb
+END

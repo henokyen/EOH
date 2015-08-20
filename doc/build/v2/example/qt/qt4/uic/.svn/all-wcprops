@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/qt/qt4/uic
+END
+jamroot.jam
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/qt/qt4/uic/jamroot.jam
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/qt/qt4/uic/main.cpp
+END
+hello_world_widget.ui
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/example/qt/qt4/uic/hello_world_widget.ui
+END

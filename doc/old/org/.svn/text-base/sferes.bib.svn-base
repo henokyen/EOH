@@ -1,0 +1,14 @@
+
+@Book{deb_2001,
+author =	 {Deb, K.},
+title = 	 {Multi-Objective Optimization Using Evolutionary Algorithms},
+publisher = 	 {John Wiley and Sons},
+year = 	 {2001}
+}
+
+@Book{dejong_2002,
+  author = 	 {K. A. {de Jong}},
+  title = 	 {Evolutionary Computation },
+  publisher = 	 {The MIT Press},
+  year = 	 {2002}
+}

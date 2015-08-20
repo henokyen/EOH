@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/agents
+END
+SingleActionAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/agents/SingleActionAgent.cpp
+END
+RandomAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/agents/RandomAgent.cpp
+END
+PlayerAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/agents/PlayerAgent.hpp
+END
+SingleActionAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/agents/SingleActionAgent.hpp
+END
+RandomAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/agents/RandomAgent.hpp
+END
+module.mk
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/agents/module.mk
+END
+PlayerAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/agents/PlayerAgent.cpp
+END

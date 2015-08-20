@@ -1,0 +1,66 @@
+#+TITLE: Sferes2 -- documentation
+#+AUTHOR: Jean-Baptiste Mouret
+#+EMAIL: mouret@isir.fr
+#+LANGUAGE:  en
+#+STYLE:    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+ 
+* Introduction
+Sferes2 is a /framework/ for evolutionary computation (EC) experiments
+and especially for evolutionary robotics (ER). Its main goal is to
+help researchers in EC and ER to efficiently try new ideas. Sferes2
+has been inspired by sferes (http://sferes.lip6.fr), another (older
+and no more maintained) framework for ER.
+
+Sferes2 allows to design efficient programs on modern (multicore) computers: our
+experiments typically require more than 24 hours of computation; in
+this situation it can be profitable to trade some complexity of
+implementation for some hours of computation. Nevertheless, we try to
+keep the framework as simple as possible. More specifically, the
+following choices were made in the initial design:
+- use of modern c++ techniques (template-based programming)
+  to employ object-oriented programming without the cost of virtual
+  functions;
+- use of Intel TBB to take full advantages of multicore and SMP systems;
+- use of boost libraries when it's useful (shared\_ptr, serialization,
+  filesystem, test,...);
+- use of MPI to distribute the computational cost on clusters;
+- a full set of unit tests;
+- no configuration file: a fully optimized executable is built for
+  each particular experiment.
+
+This documentation assumes that the reader is reasonably familiar with
+evolutionary algorithms. For references you can check the following
+books about evolutionary computation:
+- Deb, K. (2001). Multi-Objective Optimization Using Evolutionary
+  Algorithms. /Wiley/.
+- De Jong, K. A. (2002). Evolutionary Computation. /The MIT Press/.
+
+** Main features
+Sferes2 currently includes the following EA and toolboxes (this is a
+non-exhaustive list which contains only the most stable modules):
+- EA
+ - a rank-based single-objective EA
+ - CMAES (Covariance Matrix Adaptation Evolution Strategie)
+ - NSGA-II (multiobjective EA)
+ - Epsilon-MOEA (multiobjective EA)
+- Genotypes / Phenotypes:
+ - Evolution of bit strings
+ - Evolution of real parameters using different operators (SBX,
+   gaussian, etc)
+- Simulators
+ - (optional) mobile robot (Khepera-like)
+ - (optional) cartpole (single and double)
+- Other
+ - (optional) evolution of neural-networks
+
+** Authors
+- Jean-Baptiste Mouret [[mailto:mouret@isir.fr][mouret@isir.fr]]: main author and
+  maintainer
+- Stephane Doncieux
+- Many members of [[http://www.isir.fr][ISIR]]
+
+* Where to go next?
+- [[file:download.org][Downloading sferes2]]
+- [[file:compilation.org][How to compile sferes2 on your system]]
+- [[file:tutorial.org][A basic tutorial/example]]
+- [[file:ref.org][A reference manual / guide to the source code]]

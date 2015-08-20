@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/Mac_files
+END
+dataend.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/Mac_files/dataend.c
+END
+datastart.c
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/Mac_files/datastart.c
+END
+MacOS_Test_config.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/Mac_files/MacOS_Test_config.h
+END
+MacOS_config.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/Mac_files/MacOS_config.h
+END

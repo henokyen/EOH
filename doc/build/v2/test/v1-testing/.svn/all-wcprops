@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1-testing
+END
+a.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1-testing/a.cpp
+END
+b.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1-testing/b.cpp
+END
+c.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1-testing/c.cpp
+END
+boost-build.jam
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1-testing/boost-build.jam
+END
+jamfile.jam
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1-testing/jamfile.jam
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/scripts
+END
+random.perl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/scripts/random.perl
+END
+cps.perl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/scripts/cps.perl
+END
+evaluate.perl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/scripts/evaluate.perl
+END
+batch_eval.perl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/scripts/batch_eval.perl
+END
+ALEJavaAgent.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/scripts/ALEJavaAgent.jar
+END

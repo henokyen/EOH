@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include
+END
+include.am
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/include.am
+END
+gc_allocator.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_allocator.h
+END
+gc.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc.h
+END
+gc_cpp.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_cpp.h
+END
+gc_amiga_redirects.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_amiga_redirects.h
+END
+gc_typed.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_typed.h
+END
+gc_backptr.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_backptr.h
+END
+gc_mark.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_mark.h
+END
+gc_pthread_redirects.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_pthread_redirects.h
+END
+leak_detector.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/leak_detector.h
+END
+gc_gcj.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_gcj.h
+END
+new_gc_alloc.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/new_gc_alloc.h
+END
+gc_tiny_fl.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_tiny_fl.h
+END
+javaxfc.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/javaxfc.h
+END
+gc_config_macros.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_config_macros.h
+END
+gc_inline.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/gc_inline.h
+END
+ec.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/ec.h
+END
+cord.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/cord.h
+END
+weakpointer.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/engine/boehm_gc/include/weakpointer.h
+END

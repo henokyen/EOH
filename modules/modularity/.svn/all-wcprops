@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/er/!svn/ver/2406/src/sferes/modules/modularity
+END
+modularity.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/er/!svn/ver/2406/src/sferes/modules/modularity/modularity.hpp
+END
+test1.dot
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/er/!svn/ver/2/src/sferes/modules/modularity/test1.dot
+END
+compute_modularity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/er/!svn/ver/2/src/sferes/modules/modularity/compute_modularity.cpp
+END
+test2.dot
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/er/!svn/ver/2/src/sferes/modules/modularity/test2.dot
+END
+test3.dot
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/er/!svn/ver/2/src/sferes/modules/modularity/test3.dot
+END
+test_modularity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/er/!svn/ver/2/src/sferes/modules/modularity/test_modularity.cpp
+END
+wscript
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/2/src/sferes/modules/modularity/wscript
+END

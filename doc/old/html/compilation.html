@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Sferes2 &ndash; compilation</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2010-01-31 20:59:49 CET"/>
+<meta name="author" content="Jean-Baptiste Mouret"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Sferes2 &ndash; compilation</h1>
+
+<p><a href="sferes2.html">{back to main page}</a>
+</p>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Dependencies </a></li>
+<li><a href="#sec-2">2 Compilation </a>
+<ul>
+<li><a href="#sec-2.1">2.1 Simple compilation </a></li>
+<li><a href="#sec-2.2">2.2 Configuration and details </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Dependencies </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>We list here the Ubuntu package names:
+We list here the Ubuntu package names:
+</p><ul>
+<li>
+[required] libboost-dev &gt;= 1.35 (including test, serialization, graph,
+program<sub>options</sub>, filesystem); see <a href="http://www.boost.org">http://www.boost.org</a>;
+</li>
+<li>
+[required] libboost-test-dev &gt;= 1.35
+</li>
+<li>
+[required] libboost-filesystem-dev &gt;= 1.35
+</li>
+<li>
+[required] libboost-program-options-dev &gt;= 1.35
+</li>
+<li>
+[required] libboost-graph-parallel-dev &gt;= 1.35
+</li>
+<li>
+[required] python &gt;= 2.4;
+</li>
+<li>
+[required] g++ &gt;= 4.2 (this should work with icc too);
+</li>
+<li>
+[optional but highly recommended] libtbb-dev; see
+<a href="http://www.threadingbuildingblocks.org/">http://www.threadingbuildingblocks.org/</a>
+</li>
+<li>
+[optional but recommended] libeigen2-dev &gt;= 2.06; see
+<a href="http://eigen.tuxfamily.org/">http://eigen.tuxfamily.org/</a>
+</li>
+<li>
+[optional but recommended] python-simplejson;
+</li>
+<li>
+[optional] libboost-mpi-dev , if you need the optional MPI support (Warning: the
+Ubuntu packages of boost are not compiled with MPI support; you will
+have to compile boost yourself to use MPI).
+</li>
+<li>
+[optional] OpenMPI or another MPI implementation (tested with IBM
+MPI and OpenMPI)
+</li>
+<li>
+[optional] libgoogle-perftools-dev.
+
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Compilation </h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2.1" class="outline-3">
+<h3 id="sec-2.1"><span class="section-number-3">2.1</span> Simple compilation </h3>
+<div class="outline-text-3" id="text-2.1">
+
+<p>Assuming that everything has been properly installed you should be
+able to compile sferes2 by typing (in the main sferes directory):
+</p>
+
+
+<pre class="src src-shell">./waf configure
+./waf build
+</pre>
+
+
+
+
+<p>
+You should then run the unit tests:
+</p>
+
+
+<pre class="src src-shell">./waf check
+</pre>
+
+
+
+<p>
+If everything is green, sferes2 is working! If not, please send an
+e-mail to the authors with as many details as
+possible about your problem.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.2" class="outline-3">
+<h3 id="sec-2.2"><span class="section-number-3">2.2</span> Configuration and details </h3>
+<div class="outline-text-3" id="text-2.2">
+
+<p>Sferes2 employs the waf build system (<a href="http://code.google.com/p/waf/">http://code.google.com/p/waf/</a>) instead of autoconf/automake and make. Waf employs files named
+<i>wscript</i> to describe the compilation process in
+python.
+</p>
+<p>
+The main wscript of sferes2 accepts the following configuration options:
+</p><ul>
+<li>
+&ndash;boost-includes=BOOSTINCLUDES : path to the boost directory where
+the includes are e.g. /usr/local/include/boost-1_35
+</li>
+<li>
+&ndash;boost-libs=BOOSTLIBS : path to the directory where the boost libs
+are e.g. /usr/local/lib
+</li>
+<li>
+&ndash;no-mpi : disable mpi (MPI is automatically disabled if no MPI
+implementation is found)
+</li>
+<li>
+&ndash;mpi=MPI : path to MPI [e.g. /usr/lib/openmpi ]
+</li>
+<li>
+&ndash;apple :  enable Apple (mac OSX) support
+</li>
+<li>
+&ndash;tbb=TBB : path to TBB if it's not installed in the default
+directory
+</li>
+<li>
+&ndash;64bits : compile for 64 bits architectures
+</li>
+<li>
+&ndash;ppc : compile for PowerPC (tested on IBM Power6)
+</li>
+<li>
+&ndash;rpath : set an optional rpath (useful in case of link failure)
+
+</li>
+</ul>
+
+<p>To use these options, pass them to the waf script during the
+configuration step. For example:
+</p>
+
+
+<pre class="src src-shell">./waf configure --mpi /usr/lib/openmpi/
+</pre>
+
+
+
+
+<p>
+The configure options used during the last call of the "configure"
+command are in the file build/configure.options.
+</p></div>
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Jean-Baptiste Mouret
+<a href="mailto:mouret@isir.fr">&lt;mouret@isir.fr&gt;</a>
+</p>
+<p class="date"> Date: 2010-01-31 20:59:49 CET</p>
+<p class="creator">HTML generated by org-mode 6.28e in emacs 23</p>
+</div>
+</div>
+</body>
+</html>

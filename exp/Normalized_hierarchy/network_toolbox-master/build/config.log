@@ -1,0 +1,129 @@
+# project modularity (0.0.1) configured on Thu Nov 13 14:27:25 2014 by
+# waf 1.7.16 (abi 98, python 20703f0 on linux2)
+# using ./waf configure --boost-include=/home/hmengist/sferes/include/ --boost-libs=/home/hmengist/sferes/lib/
+#
+----------------------------------------
+Setting top to
+/home/hmengist/sferes/sferes2/trunk/exp/Normalized_hierarchy/network_toolbox-master
+----------------------------------------
+Setting out to
+/home/hmengist/sferes/sferes2/trunk/exp/Normalized_hierarchy/network_toolbox-master/build
+----------------------------------------
+Checking for 'g++' (c++ compiler)
+find program=['g++', 'c++'] paths=['/home/hmengist/bin', '/apps/ARCC/bin/', '/home/hmengist/bin', '/apps/OPENMPI/intel/14.0.0/1.8.1/bin', '/apps/INTEL/2013/composer_xe_2013_sp1.0.080/bin/intel64', '/usr/lib64/qt-3.3/bin', '/apps/ARCC/bin', '/apps/torque/sbin', '/apps/torque/bin', '/apps/moab/sbin', '/apps/moab/bin', '/usr/local/bin', '/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/sbin', '/opt/ibutils/bin', '/home/hmengist/bin'] var='CXX' -> '/usr/bin/g++'
+find program=['ar'] paths=['/home/hmengist/bin', '/apps/ARCC/bin/', '/home/hmengist/bin', '/apps/OPENMPI/intel/14.0.0/1.8.1/bin', '/apps/INTEL/2013/composer_xe_2013_sp1.0.080/bin/intel64', '/usr/lib64/qt-3.3/bin', '/apps/ARCC/bin', '/apps/torque/sbin', '/apps/torque/bin', '/apps/moab/sbin', '/apps/moab/bin', '/usr/local/bin', '/bin', '/usr/bin', '/usr/local/sbin', '/usr/sbin', '/sbin', '/opt/ibutils/bin', '/home/hmengist/bin'] var='AR' -> '/usr/bin/ar'
+/usr/bin/g++
+----------------------------------------
+Checking boost includes
+1_52
+----------------------------------------
+Checking boost libs
+Found the boost path in /home/hmengist/sferes/lib with the libraries:
+    /home/hmengist/sferes/lib/libboost_chrono.a
+    /home/hmengist/sferes/lib/libboost_chrono.so
+    /home/hmengist/sferes/lib/libboost_chrono.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_context.a
+    /home/hmengist/sferes/lib/libboost_context.so
+    /home/hmengist/sferes/lib/libboost_context.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_date_time.a
+    /home/hmengist/sferes/lib/libboost_date_time.so
+    /home/hmengist/sferes/lib/libboost_date_time.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_exception.a
+    /home/hmengist/sferes/lib/libboost_filesystem.a
+    /home/hmengist/sferes/lib/libboost_filesystem.so
+    /home/hmengist/sferes/lib/libboost_filesystem.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_graph.a
+    /home/hmengist/sferes/lib/libboost_graph.so
+    /home/hmengist/sferes/lib/libboost_graph.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_graph_parallel.a
+    /home/hmengist/sferes/lib/libboost_graph_parallel.so
+    /home/hmengist/sferes/lib/libboost_graph_parallel.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_iostreams.a
+    /home/hmengist/sferes/lib/libboost_iostreams.so
+    /home/hmengist/sferes/lib/libboost_iostreams.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_locale.a
+    /home/hmengist/sferes/lib/libboost_locale.so
+    /home/hmengist/sferes/lib/libboost_locale.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_math_c99.a
+    /home/hmengist/sferes/lib/libboost_math_c99.so
+    /home/hmengist/sferes/lib/libboost_math_c99.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_math_c99f.a
+    /home/hmengist/sferes/lib/libboost_math_c99f.so
+    /home/hmengist/sferes/lib/libboost_math_c99f.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_math_c99l.a
+    /home/hmengist/sferes/lib/libboost_math_c99l.so
+    /home/hmengist/sferes/lib/libboost_math_c99l.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_math_tr1.a
+    /home/hmengist/sferes/lib/libboost_math_tr1.so
+    /home/hmengist/sferes/lib/libboost_math_tr1.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_math_tr1f.a
+    /home/hmengist/sferes/lib/libboost_math_tr1f.so
+    /home/hmengist/sferes/lib/libboost_math_tr1f.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_math_tr1l.a
+    /home/hmengist/sferes/lib/libboost_math_tr1l.so
+    /home/hmengist/sferes/lib/libboost_math_tr1l.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_mpi.a
+    /home/hmengist/sferes/lib/libboost_mpi.so
+    /home/hmengist/sferes/lib/libboost_mpi.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_mpi_python.a
+    /home/hmengist/sferes/lib/libboost_mpi_python.so
+    /home/hmengist/sferes/lib/libboost_mpi_python.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_prg_exec_monitor.a
+    /home/hmengist/sferes/lib/libboost_prg_exec_monitor.so
+    /home/hmengist/sferes/lib/libboost_prg_exec_monitor.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_program_options.a
+    /home/hmengist/sferes/lib/libboost_program_options.so
+    /home/hmengist/sferes/lib/libboost_program_options.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_python.a
+    /home/hmengist/sferes/lib/libboost_python.so
+    /home/hmengist/sferes/lib/libboost_python.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_random.a
+    /home/hmengist/sferes/lib/libboost_random.so
+    /home/hmengist/sferes/lib/libboost_random.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_regex.a
+    /home/hmengist/sferes/lib/libboost_regex.so
+    /home/hmengist/sferes/lib/libboost_regex.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_serialization.a
+    /home/hmengist/sferes/lib/libboost_serialization.so
+    /home/hmengist/sferes/lib/libboost_serialization.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_signals.a
+    /home/hmengist/sferes/lib/libboost_signals.so
+    /home/hmengist/sferes/lib/libboost_signals.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_system.a
+    /home/hmengist/sferes/lib/libboost_system.so
+    /home/hmengist/sferes/lib/libboost_system.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_test_exec_monitor.a
+    /home/hmengist/sferes/lib/libboost_thread.a
+    /home/hmengist/sferes/lib/libboost_thread.so
+    /home/hmengist/sferes/lib/libboost_thread.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_timer.a
+    /home/hmengist/sferes/lib/libboost_timer.so
+    /home/hmengist/sferes/lib/libboost_timer.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_unit_test_framework.a
+    /home/hmengist/sferes/lib/libboost_unit_test_framework.so
+    /home/hmengist/sferes/lib/libboost_unit_test_framework.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_wave.a
+    /home/hmengist/sferes/lib/libboost_wave.so
+    /home/hmengist/sferes/lib/libboost_wave.so.1.52.0
+    /home/hmengist/sferes/lib/libboost_wserialization.a
+    /home/hmengist/sferes/lib/libboost_wserialization.so
+    /home/hmengist/sferes/lib/libboost_wserialization.so.1.52.0
+Trying pattern boost_graph(-gcc[0-9]{0,3})+(-1_52)+
+Trying pattern boost_graph(-1_52)+
+Trying pattern boost_graph(-1_52)+
+Trying pattern boost_graph(-gcc[0-9]{0,3})+
+Trying pattern boost_graph
+Found boost lib libboost_graph.a
+Trying pattern boost_regex(-gcc[0-9]{0,3})+(-1_52)+
+Trying pattern boost_regex(-1_52)+
+Trying pattern boost_regex(-1_52)+
+Trying pattern boost_regex(-gcc[0-9]{0,3})+
+Trying pattern boost_regex
+Found boost lib libboost_regex.a
+Trying pattern boost_program_options(-gcc[0-9]{0,3})+(-1_52)+
+Trying pattern boost_program_options(-1_52)+
+Trying pattern boost_program_options(-1_52)+
+Trying pattern boost_program_options(-gcc[0-9]{0,3})+
+Trying pattern boost_program_options
+Found boost lib libboost_program_options.a
+ok

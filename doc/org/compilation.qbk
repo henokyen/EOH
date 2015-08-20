@@ -1,0 +1,175 @@
+[section Compilation]
+
+[section  Dependencies]
+
+We list here the Ubuntu package names:
+
+* [required] libboost-dev >= 1.35 (including test, serialization, graph,
+  program_options, filesystem); see [@http://www.boost.org];
+* [required] libboost-test-dev >= 1.35
+* [required] libboost-filesystem-dev >= 1.35
+* [required] libboost-program-options-dev >= 1.35
+* [required] libboost-graph-parallel-dev >= 1.35
+* [required] python >= 2.4;
+* [required] g++ >= 4.2 (this should work with icc too);
+* [optional but highly recommended] libtbb-dev; see
+  [@http://www.threadingbuildingblocks.org/]
+* [optional but recommended] libeigen2-dev >= 2.06; see
+  [@http://eigen.tuxfamily.org/]
+* [optional but recommended] python-simplejson;
+* [optional] libsdl1.2-dev , useful for visualisation of experiments
+* [optional] libboost-mpi-dev , if you need the optional MPI support (Warning: the
+  Ubuntu packages of boost are not compiled with MPI support; you will
+  have to compile boost yourself to use MPI).
+* [optional] OpenMPI or another MPI implementation (tested with IBM
+  MPI and OpenMPI)
+* [optional] libgoogle-perftools-dev.
+
+if you are under debian, the complete command line to type is :
+
+[teletype]
+``sudo apt-get install libboost-dev libboost-test-dev libboost-filesystem-dev libboost-program-options-dev libboost-graph-parallel-dev python g++ libtbb-dev libeigen2-dev python-simplejson libgoogle-perftools-dev``
+
+[endsect]
+
+[section Compilation]
+
+[section Simple compilation]
+
+The next step is to configure sferes prior to compiling it. We will disable mpi
+as its use is complex.
+
+[teletype]
+``./waf configure --no-mpi``
+
+If you have followed this tutorial, the output should look like this:
+
+[teletype]
+``
+Check for program g++ or c++             : /usr/bin/g++ 
+Check for program cpp                    : /usr/bin/cpp 
+Check for program ar                     : /usr/bin/ar 
+Check for program ranlib                 : /usr/bin/ranlib 
+Checking for g++                         : ok  
+boost headers                            : Version 1_46_1 (/usr/include) 
+library boost_serialization              : ok 
+library boost_filesystem                 : ok 
+library boost_system                     : ok 
+library boost_unit_test_framework        : ok 
+library boost_program_options            : ok 
+library boost_graph                      : not found 
+library boost_mpi                        : not found 
+library boost_python                     : not found 
+library boost_thread                     : not found 
+Checking for header tbb/parallel_for.h   : ok /usr/include 
+Checking for library libtbb              : ok /usr/lib 
+Checking for header tbb/parallel_for.h   : ok /usr/include 
+Checking for library libtbb              : ok /usr/lib 
+Checking for header mpi.h                : not found 
+Checking for SDL (optional)              : ok 
+Checking for header Eigen/Core           : ok /usr/include/eigen2 
+Check for program ode-config             : not found 
+Checking for ODE (optional)              : not found 
+Checking for GSL (optional)              : not found 
+``
+
+Assuming that everything has been properly installed you should be
+able to compile sferes2 by typing:
+[teletype]
+``./waf build``
+
+which should produce the output 
+
+[teletype]
+``'build' finished successfully (1m18.284s)``
+
+You should then run the unit tests:
+
+[teletype]
+``./waf check``
+
+If everything is green, sferes2 is working! If not, please send an
+e-mail to the authors with as many details as
+possible about your problem.
+
+[endsect]
+
+[section Configuration options in waf]
+
+Sferes2 employs the waf build system ([@http://code.google.com/p/waf/]) instead of autoconf/automake and make. Waf employs files named
+/wscript/ to describe the compilation process in
+python.
+
+The main wscript of sferes2 accepts the following configuration options:
+
+* --boost-includes=BOOSTINCLUDES : path to the boost directory where
+  the includes are e.g. /usr/local/include/boost-1\_35
+* --boost-libs=BOOSTLIBS : path to the directory where the boost libs
+  are e.g. /usr/local/lib
+* --no-mpi : disable mpi (MPI is automatically disabled if no MPI
+  implementation is found)
+* --mpi=MPI : path to MPI [e.g. /usr/lib/openmpi ]
+* --apple :  enable Apple (mac OSX) support
+* --tbb=TBB : path to TBB if it's not installed in the default
+  directory
+* --64bits : compile for 64 bits architectures
+* --ppc : compile for PowerPC (tested on IBM Power6)
+* --rpath : set an optional rpath (useful in case of link failure)
+
+To use these options, pass them to the waf script during the
+configuration step. For example:
+
+[teletype]
+``./waf configure --mpi /usr/lib/openmpi/``
+
+The configure options used during the last call of the "configure"
+command are in the file build/configure.options.
+
+[endsect]
+
+[section:additionnalmodules compiling additionnal modules]
+
+The previous compilation provided you with a minimal sferes install. Several
+modules are available in the "modules" directory of sferes. Before using any of
+these modules in your experiment, you must compile these modules using sferes.
+
+To do so, create a file named "modules.conf" at the root of sferes install
+(where waf is). You should then list the modules you want to use in this file,
+with one module per line.
+
+for example, if you want to use the modules cartpole and nn2, your modules.conf file should look like:
+
+[teletype]
+``cartpole
+nn2``
+
+if you are using the command line, you can create and fill the file the following way:
+
+[teletype]
+``
+touch modules.conf
+echo nn2 >> modules.conf
+echo cartpole >> modules.conf
+``
+
+you should then recompile sferes with the updated file :
+
+[teletype]
+``./waf build``
+
+This should generate test files in the build/default/modules/nn2 and build/default/modules/cartpole
+
+You can then run the tests by using the waf check:
+
+[teletype]
+``./waf check``
+
+[*WARNING] Some tests, namely test_esn and test_hyper_nn may not work out of the box. But unless you use these specific modules, they should not impact the rest of the code.
+
+
+
+[endsect]
+
+[endsect]
+
+[endsect]

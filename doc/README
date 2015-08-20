@@ -1,0 +1,39 @@
+Documentation de sferes2
+
+la nouvelle documentation utilise le système de compilation de la documentation
+de boost.
+
+Afin de compiler la documentation, vous devez aller dans le répertoire "org" et
+lancer la commande
+
+# make
+
+Le makefile inclut la mise à jour du serveur officiel par rsync, cependant,
+celle-ci ne sera possible que si vous disposez de la bonne clé ssh. Si vous
+souhaitez plus d'information sur la mise à jour du serveur, contacter
+l'administrateur réseau de l'ISIR.
+
+La documentation compilée se trouve dans le répertoire "org/html" et est au
+format html.
+
+Pour éditer la documentation, vous devez éditer les fichier *.qbk qui actuellement sont les suivants :
+
+sferes2.qbk  
+download.qbk  
+compilation.qbk  
+reference.qbk  
+torque.qbk  
+tutorial_evoneuro.qbk  
+tutorial_neuro.qbk  
+tutorial.qbk  
+tutorial_topo.qbk
+
+Pour l'ajout de nouvelles pages de documentation, vous devez ajouter un lien sur la page de départ : sferes2.qbk. 
+
+Vous pouvez trouver des information sur la syntaxe quickbook à l'adresse suivante :
+
+http://www.boost.org/doc/libs/1_50_0/doc/html/quickbook.html
+
+Si vous souhaitez insérer des images à la documentation, celles-ci doivent être
+mises dans le répertoire org/html/img et être dans un format compatible avec le
+html.

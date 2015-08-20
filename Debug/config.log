@@ -1,0 +1,123 @@
+# project sferes2 (0.exported) configured on Thu Apr  2 18:15:44 2015 by
+# waf 1.5.14 (abi 7, python 20703f0 on linux2)
+# using /home/henok/workspace/sferes/waf configure --boost-include=/home/henok/sferes/include/ --boost-lib=/home/henok/sferes/lib/ --eigen2=/home/henok/sferes/include/ --no-mpi configure
+#
+
+----------------------------------------
+Check for program g++ or c++
+  find program=['g++', 'c++'] paths=[] var='CXX'
+  -> '/usr/bin/g++'
+
+----------------------------------------
+Check for program cpp
+  find program=['cpp'] paths=[] var='CPP'
+  -> '/usr/bin/cpp'
+
+----------------------------------------
+Check for program ar
+  find program=['ar'] paths=[] var='AR'
+  -> '/usr/bin/ar'
+
+----------------------------------------
+Check for program ranlib
+  find program=['ranlib'] paths=[] var='RANLIB'
+  -> '/usr/bin/ranlib'
+
+----------------------------------------
+Checking for g++ 
+ok 
+
+----------------------------------------
+boost headers
+==>
+
+#include <iostream>
+#include <boost/version.hpp>
+int main() { std::cout << BOOST_VERSION << std::endl; }
+
+<==
+[1/2] cxx: .conf_check_0/test.cpp -> .conf_check_0/testbuild/default/test_1.o
+['/usr/bin/g++', '-I/home/henok/sferes/include', '../test.cpp', '-c', '-o', 'default/test_1.o']
+[2/2] cxx_link: .conf_check_0/testbuild/default/test_1.o -> .conf_check_0/testbuild/default/testprog
+['/usr/bin/g++', 'default/test_1.o', '-o', '/home/henok/workspace/sferes/Debug/.conf_check_0/testbuild/default/testprog']
+Version 1_52 (/home/henok/sferes/include)
+
+----------------------------------------
+library boost_serialization
+ok
+
+----------------------------------------
+library boost_filesystem
+ok
+
+----------------------------------------
+library boost_system
+ok
+
+----------------------------------------
+library boost_unit_test_framework
+ok
+
+----------------------------------------
+library boost_program_options
+ok
+
+----------------------------------------
+library boost_graph
+ok
+
+----------------------------------------
+library boost_mpi
+ok
+
+----------------------------------------
+library boost_python
+ok
+
+----------------------------------------
+library boost_thread
+ok
+
+----------------------------------------
+Checking for header tbb/parallel_for.h
+ok /usr/include
+
+----------------------------------------
+Checking for library libtbb
+ok /usr/lib
+
+----------------------------------------
+Checking for header tbb/parallel_for.h
+ok /usr/include
+
+----------------------------------------
+Checking for library libtbb
+ok /usr/lib
+
+----------------------------------------
+Checking for SDL (optional)
+pkg-config --errors-to-stdout --print-errors --cflags --libs sdl
+-D_GNU_SOURCE=1 -D_REENTRANT -I/usr/include/SDL  -lSDL  
+ok
+
+----------------------------------------
+Checking for header Eigen/Core
+ok /home/henok/sferes/include/
+
+----------------------------------------
+Check for program ode-config
+  find program=['ode-config'] paths=[] var=None
+  -> '/usr/local/bin/ode-config'
+
+----------------------------------------
+Checking for ODE (optional)
+ok
+
+----------------------------------------
+Checking for GSL (optional)
+pkg-config --errors-to-stdout --print-errors --cflags --libs gsl
+Package gsl was not found in the pkg-config search path.
+Perhaps you should add the directory containing `gsl.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'gsl' found
+not found

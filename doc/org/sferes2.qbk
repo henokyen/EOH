@@ -1,0 +1,128 @@
+[book Documentation
+    [quickbook 1.5]
+    [version 1.0]
+    [copyright 2011 ]
+    [license CeCiLL]
+]
+[section:sferes2 Sferes 2]
+
+[section Introduction]
+
+Sferes2 is a ['framework] for evolutionary computation (EC) experiments
+and especially for evolutionary robotics (ER). Its main goal is to
+help researchers in EC and ER to efficiently try new ideas. Sferes2
+has been inspired by sferes [@http://sferes.lip6.fr], another (older
+and no more maintained) framework for ER.
+
+Sferes2 allows to design efficient programs on modern (multicore) computers: our
+experiments typically require more than 24 hours of computation; in
+this situation it can be profitable to trade some complexity of
+implementation for some hours of computation. Nevertheless, we try to
+keep the framework as simple as possible. More specifically, the
+following choices were made in the initial design:
+
+* use of modern c++ techniques (template-based programming)
+  to employ object-oriented programming without the cost of virtual
+  functions;
+* use of Intel TBB to take full advantages of multicore and SMP systems;
+* use of boost libraries when it's useful (shared\_ptr, serialization,
+  filesystem, test,...);
+* use of MPI to distribute the computational cost on clusters;
+* a full set of unit tests;
+* no configuration file: a fully optimized executable is built for
+  each particular experiment.
+
+Appart from this documentation, information about Sferes 2 can be found in
+[@http://www.isir.upmc.fr/files/2010ACTI1524.pdf Sferes_v2: Evolvin' in the
+Multi-Core World]. If you use Sferes 2 in your work, please cite
+[@http://www.isir.upmc.fr/pages/get_bib.php?id=1524 the previous publication]. 
+
+The source code of many experiments using sferes is available on the
+[@htpp://pages.isir.upmc.fr/evorob_db evorob_db website]
+
+
+This documentation assumes that the reader is reasonably familiar with
+evolutionary algorithms. For references you can check the following
+books about evolutionary computation:
+
+* Deb, K. (2001). Multi-Objective Optimization Using Evolutionary
+  Algorithms. /Wiley/.
+* De Jong, K. A. (2002). Evolutionary Computation. /The MIT Press/.
+
+[endsect]
+
+[section Main features]
+
+Sferes2 currently includes the following EA and toolboxes (this is a
+non-exhaustive list which contains only the most stable modules):
+
+* EA
+ * a rank-based single-objective EA
+ * CMAES (Covariance Matrix Adaptation Evolution Strategie)
+ * NSGA-II (multiobjective EA)
+ * Epsilon-MOEA (multiobjective EA)
+* Genotypes / Phenotypes:
+ * Evolution of bit strings
+ * Evolution of real parameters using different operators (SBX,
+   gaussian, etc)
+* Simulators
+ * (optional) mobile robot (Khepera-like)
+ * (optional) cartpole (single and double)
+* Other
+ * (optional) evolution of neural-networks
+
+[endsect]
+
+
+[section Authors]
+
+* Jean-Baptiste Mouret [@mailto:mouret@isir.fr mouret@isir.fr]: main author and
+  maintainer 
+* Stephane Doncieux
+* Paul Tonelli[@mailto:paul@tonel.li paul@tonel.li] : Documentation maintainer
+* Many members of [@http://www.isir.fr ISIR]
+
+[endsect]
+
+
+[section Where to go next?]
+
+[link documentation.download Download] Downloading sferes2
+
+[link documentation.compilation Compilation] How to compile sferes2 on your system
+
+[link documentation.tutorial Tutorial/Example] A tutorial/example with explanation about the
+general structure of sferes2 experiment files, the example file is generated
+automatically in the next tutorials.
+
+[link documentation.tutorial_neuro Neurobiology Tutorial I] A tutorial to
+create an experiment using the neural network module of sferes2, this enables
+you to create a neural network and evolve its weights and parameters.
+
+[link documentation.tutorial_topo Neurobiology Tutorial II] A tutorial to
+evolve the topology of a network in sferes2
+
+[link documentation.tutorial_evoneuro Neurobiology Tutorial III] A tutorial to
+evolve a network of maps using the EvoNeuro module from sferes II.
+
+[link documentation.reference Reference] A reference manual / guide to the source code
+
+[endsect]
+
+[section Specific sections for ISIR members]
+
+[link documentation.torque Torque Introduction] A reference to launching experiments on the ISIR cluster
+
+[endsect]
+
+[endsect]
+
+[include download.qbk]
+[include torque.qbk]
+[include compilation.qbk]
+[include tutorial.qbk]
+[include tutorial_neuro.qbk]
+[include tutorial_topo.qbk]
+[include tutorial_evoneuro.qbk]
+[include reference.qbk]
+

@@ -1,0 +1,9 @@
+{
+  "nodes" : ["node03", "node04", "node05"],
+  "nb_runs": 20,
+  "bin_dir": "/home/mouret/svn/sferes2/trunk/build/default/exp/modularity",
+  "res_dir": "/home/mouret/svn/sferes2/trunk/res/modularity",
+  "exps" : [ "retina_mvg_length_div_p10000",
+	     "retina_mvg_div_p10000"
+	   ]
+}

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Sferes2 &ndash; documentation</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2010-01-31 21:01:48 CET"/>
+<meta name="author" content="Jean-Baptiste Mouret"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Sferes2 &ndash; documentation</h1>
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Introduction </a>
+<ul>
+<li><a href="#sec-1.1">1.1 Main features </a></li>
+<li><a href="#sec-1.2">1.2 Authors </a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Where to go next? </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>Sferes2 is a <i>framework</i> for evolutionary computation (EC) experiments
+and especially for evolutionary robotics (ER). Its main goal is to
+help researchers in EC and ER to efficiently try new ideas. Sferes2
+has been inspired by sferes (<a href="http://sferes.lip6.fr">http://sferes.lip6.fr</a>), another (older
+and no more maintained) framework for ER.
+</p>
+<p>
+Sferes2 allows to design efficient programs on modern (multicore) computers: our
+experiments typically require more than 24 hours of computation; in
+this situation it can be profitable to trade some complexity of
+implementation for some hours of computation. Nevertheless, we try to
+keep the framework as simple as possible. More specifically, the
+following choices were made in the initial design:
+</p><ul>
+<li>
+use of modern c++ techniques (template-based programming)
+to employ object-oriented programming without the cost of virtual
+functions;
+</li>
+<li>
+use of Intel TBB to take full advantages of multicore and SMP systems;
+</li>
+<li>
+use of boost libraries when it's useful (shared_ptr, serialization,
+filesystem, test,&hellip;);
+</li>
+<li>
+use of MPI to distribute the computational cost on clusters;
+</li>
+<li>
+a full set of unit tests;
+</li>
+<li>
+no configuration file: a fully optimized executable is built for
+each particular experiment.
+
+</li>
+</ul>
+
+<p>This documentation assumes that the reader is reasonably familiar with
+evolutionary algorithms. For references you can check the following
+books about evolutionary computation:
+</p><ul>
+<li>
+Deb, K. (2001). Multi-Objective Optimization Using Evolutionary
+Algorithms. <i>Wiley</i>.
+</li>
+<li>
+De Jong, K. A. (2002). Evolutionary Computation. <i>The MIT Press</i>.
+
+</li>
+</ul>
+
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1"><span class="section-number-3">1.1</span> Main features </h3>
+<div class="outline-text-3" id="text-1.1">
+
+<p>Sferes2 currently includes the following EA and toolboxes (this is a
+non-exhaustive list which contains only the most stable modules):
+</p><ul>
+<li>
+EA
+<ul>
+<li>
+a rank-based single-objective EA
+</li>
+<li>
+CMAES (Covariance Matrix Adaptation Evolution Strategie)
+</li>
+<li>
+NSGA-II (multiobjective EA)
+</li>
+<li>
+Epsilon-MOEA (multiobjective EA)
+</li>
+</ul>
+</li>
+<li>
+Genotypes / Phenotypes:
+<ul>
+<li>
+Evolution of bit strings
+</li>
+<li>
+Evolution of real parameters using different operators (SBX,
+gaussian, etc)
+</li>
+</ul>
+</li>
+<li>
+Simulators
+<ul>
+<li>
+(optional) mobile robot (Khepera-like)
+</li>
+<li>
+(optional) cartpole (single and double)
+</li>
+</ul>
+</li>
+<li>
+Other
+<ul>
+<li>
+(optional) evolution of neural-networks
+
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-1.2" class="outline-3">
+<h3 id="sec-1.2"><span class="section-number-3">1.2</span> Authors </h3>
+<div class="outline-text-3" id="text-1.2">
+
+<ul>
+<li>
+Jean-Baptiste Mouret <a href="mailto:mouret@isir.fr">mouret@isir.fr</a>: main author and
+maintainer
+</li>
+<li>
+Stephane Doncieux
+</li>
+<li>
+Many members of <a href="http://www.isir.fr">ISIR</a>
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Where to go next? </h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li>
+<a href="download.html">Downloading sferes2</a>
+</li>
+<li>
+<a href="compilation.html">How to compile sferes2 on your system</a>
+</li>
+<li>
+<a href="tutorial.html">A basic tutorial/example</a>
+</li>
+<li>
+<a href="ref.html">A reference manual / guide to the source code</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Jean-Baptiste Mouret
+<a href="mailto:mouret@isir.fr">&lt;mouret@isir.fr&gt;</a>
+</p>
+<p class="date"> Date: 2010-01-31 21:01:48 CET</p>
+<p class="creator">HTML generated by org-mode 6.28e in emacs 23</p>
+</div>
+</div>
+</body>
+</html>

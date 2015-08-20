@@ -1,0 +1,737 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/er/!svn/ver/4358/src/sferes/exp/deep_learning/ale/src/games/supported
+END
+DemonAttack.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/DemonAttack.hpp
+END
+Seaquest.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Seaquest.hpp
+END
+YarsRevenge.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/YarsRevenge.hpp
+END
+Frostbite.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Frostbite.cpp
+END
+DoubleDunk.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/DoubleDunk.hpp
+END
+Kangaroo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Kangaroo.cpp
+END
+Asteroids.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Asteroids.hpp
+END
+Pong.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Pong.cpp
+END
+ChopperCommand.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/ChopperCommand.hpp
+END
+Carnival.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Carnival.hpp
+END
+Tennis.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Tennis.hpp
+END
+TimePilot.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/TimePilot.cpp
+END
+Freeway.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Freeway.hpp
+END
+NameThisGame.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/NameThisGame.hpp
+END
+IceHockey.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/IceHockey.hpp
+END
+AirRaid.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/AirRaid.cpp
+END
+Assault.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Assault.cpp
+END
+Breakout.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Breakout.cpp
+END
+QBert.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/QBert.cpp
+END
+ElevatorAction.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/ElevatorAction.cpp
+END
+Phoenix.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Phoenix.hpp
+END
+RoboTank.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/RoboTank.hpp
+END
+Skiing.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Skiing.cpp
+END
+CrazyClimber.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/CrazyClimber.cpp
+END
+Boxing.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Boxing.cpp
+END
+RiverRaid.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/RiverRaid.cpp
+END
+Zaxxon.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Zaxxon.cpp
+END
+Gopher.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Gopher.hpp
+END
+BeamRider.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/BeamRider.cpp
+END
+MontezumaRevenge.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/MontezumaRevenge.cpp
+END
+SpaceInvaders.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/SpaceInvaders.hpp
+END
+MsPacman.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/MsPacman.cpp
+END
+WizardOfWar.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/WizardOfWar.cpp
+END
+Centipede.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Centipede.cpp
+END
+Pitfall.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Pitfall.hpp
+END
+Bowling.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Bowling.cpp
+END
+Tutankham.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Tutankham.hpp
+END
+Amidar.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Amidar.hpp
+END
+JamesBond.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/JamesBond.hpp
+END
+BankHeist.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/BankHeist.cpp
+END
+Pooyan.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Pooyan.hpp
+END
+KungFuMaster.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/KungFuMaster.cpp
+END
+BattleZone.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/BattleZone.hpp
+END
+PrivateEye.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/PrivateEye.cpp
+END
+VideoPinball.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/VideoPinball.hpp
+END
+RoadRunner.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/RoadRunner.cpp
+END
+JourneyEscape.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/JourneyEscape.hpp
+END
+Defender.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Defender.hpp
+END
+Solaris.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Solaris.hpp
+END
+FishingDerby.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/FishingDerby.hpp
+END
+Gravitar.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Gravitar.hpp
+END
+Atlantis.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Atlantis.hpp
+END
+Asterix.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Asterix.hpp
+END
+Alien.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Alien.cpp
+END
+DemonAttack.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/DemonAttack.cpp
+END
+Seaquest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Seaquest.cpp
+END
+YarsRevenge.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/YarsRevenge.cpp
+END
+DoubleDunk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/DoubleDunk.cpp
+END
+Asteroids.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Asteroids.cpp
+END
+StarGunner.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/StarGunner.hpp
+END
+Venture.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Venture.hpp
+END
+Krull.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Krull.hpp
+END
+ChopperCommand.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/ChopperCommand.cpp
+END
+Carnival.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Carnival.cpp
+END
+UpNDown.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/UpNDown.hpp
+END
+Tennis.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Tennis.cpp
+END
+Enduro.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Enduro.hpp
+END
+Hero.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Hero.hpp
+END
+Freeway.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Freeway.cpp
+END
+Berserk.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Berserk.hpp
+END
+NameThisGame.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/NameThisGame.cpp
+END
+IceHockey.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/IceHockey.cpp
+END
+Frostbite.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Frostbite.hpp
+END
+Kangaroo.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Kangaroo.hpp
+END
+Pong.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Pong.hpp
+END
+Phoenix.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Phoenix.cpp
+END
+TimePilot.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/TimePilot.hpp
+END
+RoboTank.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/RoboTank.cpp
+END
+AirRaid.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/AirRaid.hpp
+END
+Assault.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Assault.hpp
+END
+Breakout.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Breakout.hpp
+END
+QBert.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/QBert.hpp
+END
+Gopher.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Gopher.cpp
+END
+ElevatorAction.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/ElevatorAction.hpp
+END
+SpaceInvaders.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/er/!svn/ver/4358/src/sferes/exp/deep_learning/ale/src/games/supported/SpaceInvaders.cpp
+END
+Skiing.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Skiing.hpp
+END
+CrazyClimber.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/CrazyClimber.hpp
+END
+Boxing.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Boxing.hpp
+END
+Pitfall.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Pitfall.cpp
+END
+RiverRaid.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/RiverRaid.hpp
+END
+Tutankham.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Tutankham.cpp
+END
+Zaxxon.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Zaxxon.hpp
+END
+Amidar.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Amidar.cpp
+END
+BeamRider.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/BeamRider.hpp
+END
+MontezumaRevenge.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/MontezumaRevenge.hpp
+END
+JamesBond.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/JamesBond.cpp
+END
+MsPacman.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/MsPacman.hpp
+END
+WizardOfWar.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/WizardOfWar.hpp
+END
+Centipede.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Centipede.hpp
+END
+Pooyan.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Pooyan.cpp
+END
+Bowling.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Bowling.hpp
+END
+BattleZone.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/BattleZone.cpp
+END
+VideoPinball.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/VideoPinball.cpp
+END
+JourneyEscape.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/JourneyEscape.cpp
+END
+Defender.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Defender.cpp
+END
+Solaris.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Solaris.cpp
+END
+FishingDerby.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/FishingDerby.cpp
+END
+BankHeist.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/BankHeist.hpp
+END
+Gravitar.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Gravitar.cpp
+END
+Atlantis.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Atlantis.cpp
+END
+Asterix.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Asterix.cpp
+END
+KungFuMaster.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/KungFuMaster.hpp
+END
+PrivateEye.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/PrivateEye.hpp
+END
+RoadRunner.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/RoadRunner.hpp
+END
+StarGunner.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/StarGunner.cpp
+END
+Venture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Venture.cpp
+END
+Krull.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Krull.cpp
+END
+UpNDown.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/UpNDown.cpp
+END
+Enduro.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Enduro.cpp
+END
+Hero.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Hero.cpp
+END
+Alien.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Alien.hpp
+END
+Berserk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/games/supported/Berserk.cpp
+END

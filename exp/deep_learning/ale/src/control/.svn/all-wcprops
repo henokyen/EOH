@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/er/!svn/ver/4217/src/sferes/exp/deep_learning/ale/src/control
+END
+internal_controller.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/er/!svn/ver/4216/src/sferes/exp/deep_learning/ale/src/control/internal_controller.cpp
+END
+game_controller.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4217/src/sferes/exp/deep_learning/ale/src/control/game_controller.h
+END
+ALEState.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/control/ALEState.cpp
+END
+internal_controller.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/er/!svn/ver/4216/src/sferes/exp/deep_learning/ale/src/control/internal_controller.h
+END
+fifo_controller.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4214/src/sferes/exp/deep_learning/ale/src/control/fifo_controller.cpp
+END
+ALEState.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/control/ALEState.hpp
+END
+module.mk
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/control/module.mk
+END
+fifo_controller.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4214/src/sferes/exp/deep_learning/ale/src/control/fifo_controller.h
+END
+game_controller.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4216/src/sferes/exp/deep_learning/ale/src/control/game_controller.cpp
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/sferes2/!svn/ver/90/trunk/sferes/eval
+END
+parallel.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/1/trunk/sferes/eval/parallel.hpp
+END
+parallel_eval.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/1/trunk/sferes/eval/parallel_eval.hpp
+END
+mpi.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/sferes2/!svn/ver/90/trunk/sferes/eval/mpi.hpp
+END
+eval.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/sferes2/!svn/ver/1/trunk/sferes/eval/eval.hpp
+END

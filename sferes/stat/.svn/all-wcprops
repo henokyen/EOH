@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/sferes2/!svn/ver/76/trunk/sferes/stat
+END
+stat.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/sferes2/!svn/ver/1/trunk/sferes/stat/stat.hpp
+END
+best_fit.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/76/trunk/sferes/stat/best_fit.hpp
+END
+mean_fit.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/1/trunk/sferes/stat/mean_fit.hpp
+END
+pareto_front.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/sferes2/!svn/ver/1/trunk/sferes/stat/pareto_front.hpp
+END

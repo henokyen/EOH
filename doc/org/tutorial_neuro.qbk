@@ -1,0 +1,628 @@
+[section:tutorial_neuro Neurobiology Tutorial I]
+
+This page provides a step-by-step approach for neuroscientists wanting to
+optimize their models using sferes. In the course of this work you will learn
+how to optimise the number values of a fixed model. A second tutorial is
+available for people who want to optimize the topology of models using
+evoneuro. For all the tutorials, a complete code is available at the bottom of the
+webpage.
+
+[section Download and install Sferes2]
+
+The first step is to install and compile Sferes2. To do so, please follow the
+[link documentation.download download] and [link documentation.compilation
+compile] pages before continuing. If you have successfully followed these two
+pages,  you should be in the "trunk" directory of sferes2, else, type the
+following command after replacing SFERES2_PARENT_DIRECTORY by the path where
+you put sferes2:
+
+[teletype]
+``cd SFERES2_PARENT_DIRECTORY/sferes2/trunk``
+
+[endsect]
+
+[section Create a new experiment]
+
+To create a new experiment in sferes, you must first create its directory and
+go in it. You should replace "test" by the name of your new experiment in
+all the following command lines.
+
+[teletype]
+``./waf --create test``
+
+This should have created a new directory exp/test, a waf file exp/test/wscript
+which is used to compile the experiment, and a basic file exp/test/test.cpp.
+You can now edit/customize them.
+
+In the next section, we will transform the sample experiment provided to create
+a neural network using the NN2 module. This experiment will optimise the
+weights and bias parameters of a hand made feed-forward network with a set
+number of hidden neurons. The objective of this network will be to approximate
+a simple 3D gaussian function (two inputs, one output).
+
+[$../img/nn1.png]
+
+[endsect]
+
+[section Add the nn2 module to our experiment]
+
+nn2 is a module available in the sferes archive you have downloaded. you
+should have added it already to the list in your "modules.conf" file. If not,
+[link documentation.compilation.compilation.additionnalmodules do it now].
+
+we can now add a neural network to our experiment. To do so, we need to do
+three things:
+
+[endsect]
+
+[section Update the wscript configuration file]
+
+We must add the library EIGEN2, required by nn2 module in the list of the required uselib section of the
+file exp/test/wscript. 
+
+[python]
+``
+#! /usr/bin/env python
+def build(bld):
+    obj = bld.new_task_gen('cxx', 'program')
+    obj.source = 'test.cpp'
+    obj.includes = '. ../../'
+    obj.uselib = 'EIGEN2'
+    obj.target = 'test'
+    obj.uselib_local = 'sferes2'
+``
+
+[endsect]
+
+[section Modify the parameters]
+
+We must add the nn2 parameters in the params section of the experiment
+file test.cpp. 
+
+In sferes, all the parameters which will not change during an experiment should
+be set in the params section. For our experiment, we will just provide
+the number of hidden neurons in our neural network in a fit section of params. 
+
+[c++]
+``
+  struct fit
+  {
+    static const size_t nb_hidden_neurons = 3 ;
+    SFERES_ARRAY(float,x_pos, 0.69, 0.52, 0.80, 0.95, 0.97, 0.82, 0.11, 0.13, 0.27, 0.59);
+    SFERES_ARRAY(float,y_pos, 0.24, 0.30, 0.63, 0.30, 0.81, 0.50, 0.47, 0.53, 0.51, 0.66);
+  };
+``
+
+The two other lines use the macro SFERES_ARRAY which can be used to define
+arrays in the params. The first line defines two functions:
+
+* [c++]``x_pos(size_t i)`` which returns the float value at index i
+* [c++]``x_pos_size()`` which returns the size of the array
+
+The arrays x_pos and y_pos specify all the positions at which we will assess
+the output of our neural network against the reference function.
+
+[endsect]
+
+[section Add the relevant include files]
+
+In order to create a neural network, we will now add the relevant include file
+(as well as math.h for our function definition):
+
+[c++]
+``
+#include <modules/nn2/nn.hpp>
+#include <math.h>
+``
+
+[endsect]
+
+[section Defining the function to approximate]
+
+In this test, the function is really simple and computes a gaussian function in
+two dimensions:
+
+[c++]
+``
+  float _gaussian(float x, float y)
+  {
+   return exp(-(x*x+y*y)/2); 
+  }
+``
+
+We need to put this function in the FitTest class, which is defined by the macro
+SFERES_FITNESS which derives it from the default sferes fitness class. This
+class is the core of all experiments and must define the "eval" function which
+will be called to evaluate each individual in our experiment.
+
+[endsect]
+
+[section Neural network type]
+
+The definition of our network type require several templates to be set. These
+template parameters must be set in the main function of the experiment which
+always contains the following elements:
+
+ * The templates parameters of the genotype and phenotype
+
+ * the declaration of the algorithm instanciation : [teletype]``ea_t ea;``
+
+ * the call to the main function of sferes which runs the algorithm :
+[teletype]``run_ea(argc, argv, ea);``. This function parses the user arguments
+at execution.
+
+The first template parameter for a neural network, is the type of values passed around the network called "IO". In
+our situation, we will use float numbers.  
+
+[c++]
+``
+typedef float io_t;
+``
+
+At each activation a neuron will be passed a array of IO (usually a vector).
+and will output a single IO value. The neuron uses two functions to do so: a
+potential function "Pot" and an activation function "Act". in the following way:
+
+[teletype]
+``
+output = Act(Pot(inputs_array))
+``
+
+For our example, we will use a sum function call PfWSum as the potential
+function and a sigmoid like function AfTanh as the activation function. The
+AfTanh requires an additionnal parameter to set a bias in the neuron which will
+be set during the network creation. These two function are defined as well as a
+few other common functions in the files af.hpp and pf.hpp in the nn2 module
+folder. We now can define the type of our neurons in the network:
+
+[c++]
+``
+typedef Neuron<PfWSum<>, AfTanh<io_t> > neuron_t;
+
+``
+
+The next thing we need to define is the connection type. Again, we will use
+simple connections which have a single parameter: the weight type. Here, the
+weight type will be a float.
+
+[c++]
+``
+typedef Connection<float> connection_t;
+``
+
+We can now define the complete network type:
+
+[c++]
+``
+typedef NN< neuron_t, connection_t > nn_t;
+``
+
+[endsect]
+
+[section Setting the number of evolved parameters]
+
+We will instantiate a network at each evaluation. The evolved parameters will
+be used for two things:
+
+* setting each neuron bias
+* setting each connection weight
+
+We will therefore need a number of evolved parameters 4 times bigger than the
+number of hidden neurons (each hidden neuron has one internal parameters, one
+outbound and two inbound connections). We can now modify the gen_t line of the
+test experiment:
+
+[c++]
+``
+typedef gen::EvoFloat<4 * Params::fit::nb_hidden_neurons, Params> gen_t;
+``
+
+These parameters will have a value set by the parameters in Params.
+
+[endsect]
+
+[section Instantiating the neural network]
+
+by using the sekeleton provided, we can create a new network at the beginning
+of the eval function:
+
+[c++]
+``
+ template<typename Indiv>
+    void _generate_net(const Indiv& ind)
+    {
+      _hidden_neuron_handles = std::vector<neuron_handle_t>(0);
+      // iterator on the parameters
+      size_t k = 0;
+      // set the neural network number of inputs and outputs
+      _nn1.set_nb_inputs(2);
+      _nn1.set_nb_outputs(1);
+      // create the hidden neurons and set their internal bias
+      for (size_t i = 0; i < Params::fit::nb_hidden_neurons; ++i)
+      {
+        std::ostringstream tmp;
+        tmp << i;
+        _hidden_neuron_handles.push_back(_nn1.add_neuron(tmp.str()));
+        //set the neuron bias using the evolved parameters
+        _nn1.get_neuron_by_vertex(_hidden_neuron_handles[i]).set_afparams(ind.data(k++));
+      }
+      // create the first layer of connections and set their weight
+      for (size_t i = 0; i < _nn1.get_nb_inputs();++i)
+      {
+        for (size_t j = 0; j < _hidden_neuron_handles.size();++j)
+        {     
+          _nn1.add_connection(_nn1.get_input(i),_hidden_neuron_handles[j],ind.data(k++));
+        }
+      }
+       //the output is a real neuron, its bias must be initialised (this is not the case of the inputs) 
+        _nn1.get_neuron_by_vertex(_nn1.get_output(0)).set_afparams(0.0f);
+      // create the second layer of connections and set their weight
+      for (size_t j = 0; j < _hidden_neuron_handles.size();++j)
+      {
+        _nn1.add_connection(_hidden_neuron_handles[j], _nn1.get_output(0), ind.data(k++));
+      }
+    }
+``
+
+In this function, a few points are important.
+
+* Input and output neurons are automatically created by the functions
+set_nb_inputs and set_nb_outputs. These functions must be called before
+creating any hidden neurons.
+
+* add_neuron takes a identifier string as parameter and outputs a handle to the
+vertex, not the neuron! You need to use get_neuron_by_vertex to get the real
+neuron.
+
+* While the inputs of the network are not real neurons, the output contains Pot
+and Act functions. Their parameters must set. 
+
+* add_connection, which takes as parameters the pre-synaptic neuron, the
+post-synaptic neurons and the weight can take a single value as parameter if
+the number of parameter is equal to one, or an array if there are more
+parameters. 
+
+The variables used : "_hidden_neuron_handles" and "_nn1" must also
+be added in the protected section of the class.
+
+[c++]
+``
+protected:
+  std::vector<neuron_handle_t> _hidden_neuron_handles;
+  nn_t _nn1;
+``
+
+[endsect]
+
+[section Execute the neural network in a loop]
+
+We can now run the instantiated neural network in a loop and test the points defined in Params:
+
+[c++]
+``
+  template<typename Indiv>
+    void eval(const Indiv& ind)
+  {
+    //create the network
+    _generate_net(ind);
+    //initialize network (reset accumulators and set the weight buffers if pf)
+    _nn1.init();
+    float v = 0;
+    float tmp_val = 0;
+    for (size_t i = 0; i < Params::fit::x_pos_size(); ++i)
+    {
+      for (size_t j = 0; j < Params::fit::y_pos_size(); ++j)
+      {
+        //set the network inputs
+        std::vector<io_t> inputs(0);
+        inputs.push_back(Params::fit::x_pos(i));
+        inputs.push_back(Params::fit::y_pos(j));
+       //iterate the network
+       for (size_t k = 0;k < 3; ++k)
+       {
+         _nn1.step(inputs);
+       }
+       tmp_val=(_gaussian(inputs[0],inputs[1])-_nn1.get_outf()[0]);
+       v+=tmp_val*tmp_val;
+      }
+    }
+    this->_value = -v;
+  }
+``
+
+In this function, you should note that initializing the network before using it
+is mandatory. The step function, used three times here cycles through the
+neurons without taking the network topology into account. Therefore, you should
+execute a number of steps equivalent to the depth of the network (counting the
+input neurons) to be sure the output values have been updated. 
+
+The input neurons do not apply the activation function or the potential
+function on the input vector, on the contrary, the output neurons do.
+
+Finally, reading the network outputs is done by the function get_outf() which
+provides an array of io_t of size the numuber of output neurons.
+
+[endsect]
+
+[section Compiling and debugging the experiment]
+
+Once your code is done you can create the binary files for your experiment by using the following command:
+
+[teletype]
+``./waf --exp test``
+
+If your code is correct, you should get binary files of your experiment in to folders:
+* in [teletype]``build/debug/exp/test`` you will find a version compiled with debug information
+* in [teletype]``build/default/exp/test`` you will find the final version, with code optimized for speed, but no debug information 
+
+If your code contains errors, two tools may help you debug using the debug version : 
+* [@http://www.valgrind.org/ valgrind] can be used to easily find memory leaks or analyse which parts of your code are too slow in combination with [@http://kcachegrind.sourceforge.net/html/Home.html kcachegrind].
+* [@http://www.gnu.org/s/gdb/ gdb] is really useful to backtrace errors.
+
+
+[endsect]
+
+[section A posteriori analysis of solutions]
+
+Sferes2 provides several methods to analyse the results of your experiments. an experiment in sferes2 will create a new folder in the launch directory which should look like that:
+
+[teletype]
+``machineneame_2001-01-01_13_52_00_2170``
+
+and can be decomposed in the following elements separated by an underscore:
+# the hostname of the machine running the experiment (especially usefull for running experiments on multiple machines)
+# the date and hour the run was launched
+# a random generated string to identify the experiment
+
+This experiment will contain several files named [teletype]``gen_X`` with X
+being the generation. These files contain the pareto front of the experiment in
+xml format (using the
+[@http://www.boost.org/doc/libs/1_47_0/libs/serialization/doc/index.html
+serialization library] from boost). The interval at which these individuals are
+dumped is defined in the source code by the parameter
+[c++]``Params::pop::dump_period``.
+
+If you want to test one of these individuals, you can load it using the executable of the experiment from the [teletype]``build/debug/exp/test/`` directory:
+
+[teletype]
+``./test --load=machineneame_2001-01-01_13_52_00_2170/gen_50 --out gna --number 0``
+
+this will load the generation 50 of the run
+[teletype]``machineneame_2001-01-01_13_52_00_2170``, load the individual number
+0 in the file and write the debug information in a file named
+[teletype]``gna``.
+
+[endsect]
+
+[section Adding code executed when loading files]
+
+If you want additionnal debug information, you can define code in the fitness
+function which will only be run when loading files. This is done by using the
+[c++]``this->mode()`` function. This code snippet writes the topology of the
+loaded network in a file named [teletype]``graph.dot``.
+
+[c++]
+``
+if (this->mode() == fit::mode::view)
+{
+  std::ofstream ofs(std::string("graph.dot").c_str());
+  _nn1.write(ofs); 
+}
+``
+
+the graph.dot file created can then be transformed into a graphical view of your network using the dot software (not included in sferes 2 code):
+
+[teletype]
+``dot graph.dot -T eps -o graph.eps``
+
+
+[endsect]
+
+[section Complete file]
+
+Below is the complete example file:
+
+[c++]
+``
+#include <iostream>
+#include <sferes/phen/parameters.hpp>
+#include <sferes/gen/evo_float.hpp>
+#include <sferes/ea/rank_simple.hpp>
+#include <sferes/eval/eval.hpp>
+#include <sferes/stat/best_fit.hpp>
+#include <sferes/stat/mean_fit.hpp>
+#include <sferes/modif/dummy.hpp>
+#include <sferes/run.hpp>
+#include <modules/nn2/nn.hpp>
+#include <math.h>
+
+using namespace sferes;
+using namespace sferes::gen::evo_float;
+using namespace nn;
+
+struct Params
+{
+  struct evo_float
+  {
+    // we choose the polynomial mutation type
+    static const mutation_t mutation_type = polynomial;
+    // we choose the polynomial cross-over type
+    static const cross_over_t cross_over_type = sbx;
+    // the mutation rate of the real-valued vector
+    static const float mutation_rate = 0.1f;
+    // the cross rate of the real-valued vector
+    static const float cross_rate = 0.5f;
+    // a parameter of the polynomial mutation
+    static const float eta_m = 15.0f;
+    // a parameter of the polynomial cross-over
+    static const float eta_c = 10.0f;
+  };
+  struct pop
+  {
+    // size of the population
+    static const unsigned size = 200;
+    // number of generations
+    static const unsigned nb_gen = 2000;
+    // how often should the result file be written (here, each 5
+    // generation)
+    static const int dump_period = 5;
+    // how many individuals should be created during the random
+    // generation process?
+    static const int initial_aleat = 1;
+    // used by RankSimple to select the pressure
+    static const float coeff = 1.1f;
+    // the number of individuals that are kept from on generation to
+    // another (elitism)
+    static const float keep_rate = 0.6f;
+  };
+  struct fit
+  {
+    static const size_t nb_hidden_neurons = 3 ;
+    SFERES_ARRAY(float,x_pos, 0.69, 0.52, 0.80, 0.95, 0.97, 0.82, 0.11, 0.13, 0.27, 0.59);
+    SFERES_ARRAY(float,y_pos, 0.24, 0.30, 0.63, 0.30, 0.81, 0.50, 0.47, 0.53, 0.51, 0.66);
+  };
+  struct parameters
+  {
+    // maximum value of parameters
+    static const float min = -10.0f;
+    // minimum value
+    static const float max = 10.0f;
+  };
+};
+
+SFERES_FITNESS(FitTest, sferes::fit::Fitness)
+{
+  typedef float io_t;
+  typedef Neuron<PfWSum<>, AfTanh<io_t> > neuron_t;
+  typedef Connection<float> connection_t;
+  typedef NN< neuron_t, connection_t > nn_t;
+  typedef nn_t::vertex_desc_t neuron_handle_t;
+ public:
+  // indiv will have the type defined in the main (phen_t)
+  template<typename Indiv>
+    void eval(const Indiv& ind)
+  {
+    //create the network
+    _generate_net(ind);
+    //initialize network (reset accumulators and set the weight buffers if pf)
+    _nn1.init();
+    float v = 0;
+    float tmp_val = 0;
+    for (size_t i = 0; i < Params::fit::x_pos_size(); ++i)
+    {
+      for (size_t j = 0; j < Params::fit::y_pos_size(); ++j)
+      {
+        //set the network inputs
+        std::vector<io_t> inputs(0);
+        inputs.push_back(Params::fit::x_pos(i));
+        inputs.push_back(Params::fit::y_pos(j));
+       //iterate the network
+       for (size_t k = 0;k < 3; ++k)
+       {
+         _nn1.step(inputs);
+       }
+       tmp_val=(_gaussian(inputs[0],inputs[1])-_nn1.get_outf()[0]);
+       v+=tmp_val*tmp_val;
+      }
+    }
+    if (this->mode() == fit::mode::view)
+    {
+      std::ofstream ofs(std::string("graph.dot").c_str());
+      _nn1.write(ofs); 
+    }
+    this->_value = -v;
+  }
+ protected:
+  std::vector<neuron_handle_t> _hidden_neuron_handles;
+  nn_t _nn1;
+  float _gaussian(float x, float y)
+  {
+    return exp(-(x*x+y*y)/2);
+  }
+  template<typename Indiv>
+    void _generate_net(const Indiv& ind)
+    {
+      _hidden_neuron_handles = std::vector<neuron_handle_t>(0);
+      // iterator on the parameters
+      size_t k = 0;
+      // set the neural network number of inputs and outputs
+      _nn1.set_nb_inputs(2);
+      _nn1.set_nb_outputs(1);
+      // create the hidden neurons and set their internal bias
+      for (size_t i = 0; i < Params::fit::nb_hidden_neurons; ++i)
+      {
+        std::ostringstream tmp;
+        tmp << i;
+        _hidden_neuron_handles.push_back(_nn1.add_neuron(tmp.str()));
+        //set the neuron bias using the evolved parameters
+        _nn1.get_neuron_by_vertex(_hidden_neuron_handles[i]).set_afparams(ind.data(k++));
+      }
+      //the output is a real neuron, its bias must be initialised 
+      _nn1.get_neuron_by_vertex(_nn1.get_output(0)).set_afparams(0.0f);
+      // create the first layer of connections and set their weight
+      for (size_t i = 0; i < _nn1.get_nb_inputs();++i)
+      {
+        for (size_t j = 0; j < _hidden_neuron_handles.size();++j)
+        {
+          _nn1.add_connection(_nn1.get_input(i),_hidden_neuron_handles[j],ind.data(k++));
+        }
+      }
+      // create the second layer of connections and set their weight
+      for (size_t j = 0; j < _hidden_neuron_handles.size();++j)
+      {
+        _nn1.add_connection(_hidden_neuron_handles[j], _nn1.get_output(0), ind.data(k++));
+      }
+    }
+};
+
+int main(int argc, char **argv)
+{
+  // Our fitness is the class FitTest (see above), that we will call
+  // fit_t. Params is the set of parameters (struct Params) defined in
+  // this file.
+  typedef FitTest<Params> fit_t;
+  // We define the genotype. Here we choose EvoFloat (real
+  // numbers). We evolve 10 real numbers, with the params defined in
+  // Params (cf the beginning of this file)
+  typedef gen::EvoFloat<4 * Params::fit::nb_hidden_neurons, Params> gen_t;
+  // This genotype should be simply transformed into a vector of
+  // parameters (phen::Parameters). The genotype could also have been
+  // transformed into a shape, a neural network... The phenotype need
+  // to know which fitness to use; we pass fit_t.
+  typedef phen::Parameters<gen_t, fit_t, Params> phen_t;
+  // The evaluator is in charge of distributing the evaluation of the
+  // population. It can be simple eval::Eval (nothing special),
+  // parallel (for multicore machines, eval::Parallel) or distributed
+  // (for clusters, eval::Mpi).
+  typedef eval::Eval<Params> eval_t;
+  // Statistics gather data about the evolutionary process (mean
+  // fitness, Pareto front, ...). Since they can also stores the best
+  // individuals, they are the container of our results. We can add as
+  // many statistics as required thanks to the boost::fusion::vector.
+  typedef boost::fusion::vector<stat::BestFit<phen_t, Params>, stat::MeanFit<Params> >  stat_t;
+  // Modifiers are functors that are run once all individuals have
+  // been evalutated. Their typical use is to add some evolutionary
+  // pressures towards diversity (e.g. fitness sharing). Here we don't
+  // use this feature. As a consequence we use a "dummy" modifier that
+  // does nothing.
+  typedef modif::Dummy<> modifier_t;
+  // We can finally put everything together. RankSimple is the
+  // evolutianary algorithm. It is parametrized by the phenotype, the
+  // evaluator, the statistics list, the modifier and the general params.
+  typedef ea::RankSimple<phen_t, eval_t, stat_t, modifier_t, Params> ea_t;
+  // We now have a special class for our experiment: ea_t. The next
+  // line instantiate an object of this class
+  ea_t ea;
+  // we can now process the comannd line options an run the
+  // evolutionary algorithm (if a --load argument is passed, the file
+  // is loaded; otherwise, the algorithm is launched).
+  run_ea(argc, argv, ea);
+  //
+  return 0;
+}
+
+``
+
+[endsect]
+
+[endsect]

@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/er/!svn/ver/3553/src/sferes/modules/nn2
+END
+phen_dnn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/782/src/sferes/modules/nn2/phen_dnn.hpp
+END
+phen_hyper_nn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/er/!svn/ver/1451/src/sferes/modules/nn2/phen_hyper_nn.hpp
+END
+elman.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/er/!svn/ver/520/src/sferes/modules/nn2/elman.hpp
+END
+connection.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/er/!svn/ver/281/src/sferes/modules/nn2/connection.hpp
+END
+wscript
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/er/!svn/ver/995/src/sferes/modules/nn2/wscript
+END
+test_nn.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/1299/src/sferes/modules/nn2/test_nn.cpp
+END
+bench_nn.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/280/src/sferes/modules/nn2/bench_nn.cpp
+END
+pf.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/er/!svn/ver/2730/src/sferes/modules/nn2/pf.hpp
+END
+af_cppn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/1451/src/sferes/modules/nn2/af_cppn.hpp
+END
+esn_2.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/er/!svn/ver/1460/src/sferes/modules/nn2/esn_2.hpp
+END
+neuron.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/er/!svn/ver/678/src/sferes/modules/nn2/neuron.hpp
+END
+gen_dnn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/2437/src/sferes/modules/nn2/gen_dnn.hpp
+END
+test_dnn.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/316/src/sferes/modules/nn2/test_dnn.cpp
+END
+io_trait.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/225/src/sferes/modules/nn2/io_trait.hpp
+END
+nn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/er/!svn/ver/2437/src/sferes/modules/nn2/nn.hpp
+END
+gen_hyper_nn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/er/!svn/ver/2524/src/sferes/modules/nn2/gen_hyper_nn.hpp
+END
+test_hyper_nn.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/er/!svn/ver/1451/src/sferes/modules/nn2/test_hyper_nn.cpp
+END
+test_osc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/er/!svn/ver/2511/src/sferes/modules/nn2/test_osc.cpp
+END
+test_esn.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/337/src/sferes/modules/nn2/test_esn.cpp
+END
+test_mlp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/337/src/sferes/modules/nn2/test_mlp.cpp
+END
+params.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/er/!svn/ver/3553/src/sferes/modules/nn2/params.hpp
+END
+gen_dnn_ff.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/er/!svn/ver/1451/src/sferes/modules/nn2/gen_dnn_ff.hpp
+END
+trait.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/er/!svn/ver/1281/src/sferes/modules/nn2/trait.hpp
+END
+test_dnn_ff.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/er/!svn/ver/995/src/sferes/modules/nn2/test_dnn_ff.cpp
+END
+esn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/er/!svn/ver/337/src/sferes/modules/nn2/esn.hpp
+END
+af.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/er/!svn/ver/2344/src/sferes/modules/nn2/af.hpp
+END
+mlp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/er/!svn/ver/281/src/sferes/modules/nn2/mlp.hpp
+END

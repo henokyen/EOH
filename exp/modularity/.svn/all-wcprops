@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/er/!svn/ver/4602/src/sferes/exp/modularity
+END
+whatwhere.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/er/!svn/ver/1297/src/sferes/exp/modularity/whatwhere.cpp
+END
+modularity.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/er/!svn/ver/1290/src/sferes/exp/modularity/modularity.hpp
+END
+mvg.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/er/!svn/ver/2431/src/sferes/exp/modularity/mvg.hpp
+END
+opt_placement.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/er/!svn/ver/2802/src/sferes/exp/modularity/opt_placement.hpp
+END
+phen_hnn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/er/!svn/ver/2821/src/sferes/exp/modularity/phen_hnn.hpp
+END
+behavior_div.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/er/!svn/ver/1917/src/sferes/exp/modularity/behavior_div.hpp
+END
+mod2.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/2398/src/sferes/exp/modularity/mod2.hpp
+END
+arm_ball.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/er/!svn/ver/3276/src/sferes/exp/modularity/arm_ball.cpp
+END
+wscript
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/er/!svn/ver/4602/src/sferes/exp/modularity/wscript
+END
+stat_logall.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/er/!svn/ver/3373/src/sferes/exp/modularity/stat_logall.hpp
+END
+sampling_retina.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/er/!svn/ver/4602/src/sferes/exp/modularity/sampling_retina.cpp
+END
+pnsga.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/er/!svn/ver/2412/src/sferes/exp/modularity/pnsga.hpp
+END
+arm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/er/!svn/ver/2731/src/sferes/exp/modularity/arm.cpp
+END
+modif_age.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/er/!svn/ver/1928/src/sferes/exp/modularity/modif_age.hpp
+END
+hxor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/3372/src/sferes/exp/modularity/hxor.cpp
+END
+gen_hnn.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/er/!svn/ver/2821/src/sferes/exp/modularity/gen_hnn.hpp
+END
+retina.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/er/!svn/ver/4451/src/sferes/exp/modularity/retina.cpp
+END
+xor_and_xor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/er/!svn/ver/1421/src/sferes/exp/modularity/xor_and_xor.cpp
+END
+modif_novmap.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/er/!svn/ver/3372/src/sferes/exp/modularity/modif_novmap.hpp
+END
+arm.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/er/!svn/ver/2731/src/sferes/exp/modularity/arm.hpp
+END
+nxor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/er/!svn/ver/3372/src/sferes/exp/modularity/nxor.cpp
+END
+behavior_nov.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/er/!svn/ver/1355/src/sferes/exp/modularity/behavior_nov.hpp
+END
+stat_modularity.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/er/!svn/ver/3276/src/sferes/exp/modularity/stat_modularity.hpp
+END
+test_opt_placement.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/er/!svn/ver/2100/src/sferes/exp/modularity/test_opt_placement.cpp
+END
+gen_spatial.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/er/!svn/ver/4602/src/sferes/exp/modularity/gen_spatial.hpp
+END
+dist_retina.json
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/er/!svn/ver/1268/src/sferes/exp/modularity/dist_retina.json
+END
+arm_env.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/er/!svn/ver/2731/src/sferes/exp/modularity/arm_env.hpp
+END

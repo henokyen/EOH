@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2
+END
+Jamroot.jam
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/Jamroot.jam
+END
+roll.sh
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/roll.sh
+END
+hacking.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/hacking.txt
+END
+bootstrap.bat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/bootstrap.bat
+END
+bootstrap.jam
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/bootstrap.jam
+END
+changes.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/changes.txt
+END
+bootstrap.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/bootstrap.sh
+END
+nightly.sh
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/nightly.sh
+END
+build-system.jam
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/build-system.jam
+END
+user-config.jam
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/user-config.jam
+END
+boost_build.png
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/boost_build.png
+END
+boost-build.jam
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/boost-build.jam
+END
+build_system.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/build_system.py
+END
+manager.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/manager.py
+END
+boost_build.svg
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/boost_build.svg
+END
+release_procedure.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/release_procedure.txt
+END
+exceptions.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/exceptions.py
+END
+to_merge.sh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/to_merge.sh
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/index.html
+END
+site-config.jam
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/site-config.jam
+END
+boost.css
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/boost.css
+END

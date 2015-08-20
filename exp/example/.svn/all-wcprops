@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/sferes2/!svn/ver/2/trunk/exp/example
+END
+wscript
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/sferes2/!svn/ver/2/trunk/exp/example/wscript
+END
+example.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/sferes2/!svn/ver/2/trunk/exp/example/example.cpp
+END

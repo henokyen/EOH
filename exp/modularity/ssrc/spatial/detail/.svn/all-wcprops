@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/er/!svn/ver/2879/src/sferes/exp/modularity/ssrc/spatial/detail
+END
+kd_tree_nearest_neighbor.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/er/!svn/ver/2879/src/sferes/exp/modularity/ssrc/spatial/detail/kd_tree_nearest_neighbor.h
+END
+kd_tree_nearest_neighbors.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/er/!svn/ver/2879/src/sferes/exp/modularity/ssrc/spatial/detail/kd_tree_nearest_neighbors.h
+END
+kd_tree_node.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/er/!svn/ver/2879/src/sferes/exp/modularity/ssrc/spatial/detail/kd_tree_node.h
+END
+kd_tree_range_search_iterator.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/er/!svn/ver/2879/src/sferes/exp/modularity/ssrc/spatial/detail/kd_tree_range_search_iterator.h
+END
+coordinate_limits.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/er/!svn/ver/2879/src/sferes/exp/modularity/ssrc/spatial/detail/coordinate_limits.h
+END

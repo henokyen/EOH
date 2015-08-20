@@ -1,0 +1,20 @@
+#+TITLE: Sferes2 -- documentation
+#+AUTHOR: Jean-Baptiste Mouret
+#+EMAIL: mouret@isir.fr
+#+LANGUAGE:  en
+#+STYLE:    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+
+[[file:sferes2.org][{back to sferes2 main page}]]
+ 
+* Download the last version
+The last version of sferes2 is available at:
+http://www.isir.upmc.fr/~mouret/sferes2/releases/sferes2_last.tgz
+
+
+* For ISIR's member
+If you are a member of ISIR, you should checkout the last version of
+sferes2 from the svn repository:
+#+BEGIN_SRC shell
+svn co https://hotline.isir.upmc.fr/svn/sferes2
+#+END_SRC
+

@@ -1,0 +1,6 @@
+/home/henok/workspace/sferes/waf configure --boost-include=/home/henok/sferes/include/ --boost-lib=/home/henok/sferes/lib/ --eigen2=/home/henok/sferes/include/ --no-mpi configure 
+/home/henok/workspace/sferes/waf configure --boost-include=/home/henok/sferes/include/ --boost-lib=/home/henok/sferes/lib/ --eigen2=/home/henok/sferes/include/ --no-mpi configure 
+/home/henok/workspace/sferes/waf configure --boost-include=/home/henok/sferes/include/ --boost-lib=/home/henok/sferes/lib/ --eigen2=/home/henok/sferes/include/ --no-mpi --tbb=/user/include/tbb configure 
+/home/henok/workspace/sferes/waf configure --boost-include=/home/henok/sferes/include/ --boost-lib=/home/henok/sferes/lib/ --eigen2=/home/henok/sferes/include/ --no-mpi --tbb=/user/include/tbb configure 
+/home/henok/workspace/sferes/waf configure --boost-include=/home/henok/sferes/include/ --boost-lib=/home/henok/sferes/lib/ --eigen2=/home/henok/sferes/include/ --no-mpi --tbb=/user/include/tbb configure 
+/home/henok/workspace/sferes/waf configure --boost-include=/home/henok/sferes/include/ --boost-lib=/home/henok/sferes/lib/ --eigen2=/home/henok/sferes/include/ --no-mpi --tbb=/user/include/tbb configure 

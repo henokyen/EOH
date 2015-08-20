@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth
+END
+phones.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/phones.h
+END
+PORTING
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/PORTING
+END
+trie.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/trie.c
+END
+opsynth.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/opsynth.c
+END
+kmap
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/kmap
+END
+phtoelm.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/phtoelm.c
+END
+phones.def
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/phones.def
+END
+trie.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/trie.h
+END
+module.mk
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/module.mk
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/config.h
+END
+phfeat.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/phfeat.h
+END
+elements.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/elements.c
+END
+phtoelm.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/phtoelm.h
+END
+darray.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/darray.c
+END
+phtoelm.def
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/phtoelm.def
+END
+holmes.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/holmes.c
+END
+darray.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/darray.h
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/COPYING
+END
+useconfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/useconfig.h
+END
+Elements.def
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/Elements.def
+END
+phones.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/phones.c
+END
+rsynth.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/er/!svn/ver/4189/src/sferes/exp/deep_learning/ale/src/emucore/rsynth/rsynth.h
+END

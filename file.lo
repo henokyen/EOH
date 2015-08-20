@@ -1,0 +1,11 @@
+Waf: Entering directory `/home/hmengist/sferes/sferes2/trunk/build'
+[ 22/120] cxx: exp/modularity/sampling_hiermod_fg_and.cpp -> build/default/exp/modularity/sampling_hiermod_fg_and_2.o
+[ 52/120] cxx: exp/modularity/sampling_hiermod_fg_and.cpp -> build/debug/exp/modularity/sampling_hiermod_fg_and_2.o
+[112/120] cxx_link: build/debug/exp/modularity/sampling_hiermod_fg_and_2.o -> build/debug/exp/modularity/sampling_hiermod_fg_and
+[ 84/120] cxx_link: build/default/exp/modularity/sampling_hiermod_fg_and_2.o -> build/default/exp/modularity/sampling_hiermod_fg_and
+Waf: Leaving directory `/home/hmengist/sferes/sferes2/trunk/build'
+'build' finished successfully (41.158s)
+module : [modules/nn2]
+Entering directory `/home/hmengist/sferes/sferes2/trunk'
+Building exp: modularity
+Entering directory `/home/hmengist/sferes/sferes2/trunk/modules/'

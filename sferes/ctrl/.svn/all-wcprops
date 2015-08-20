@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/sferes2/!svn/ver/1/trunk/sferes/ctrl
+END
+arch_pid.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/1/trunk/sferes/ctrl/arch_pid.hpp
+END
+sensor.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/sferes2/!svn/ver/1/trunk/sferes/ctrl/sensor.hpp
+END
+arch.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/sferes2/!svn/ver/1/trunk/sferes/ctrl/arch.hpp
+END
+agent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/sferes2/!svn/ver/1/trunk/sferes/ctrl/agent.hpp
+END
+arch_sum.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/1/trunk/sferes/ctrl/arch_sum.hpp
+END
+arch_sub.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/sferes2/!svn/ver/1/trunk/sferes/ctrl/arch_sub.hpp
+END

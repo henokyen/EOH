@@ -1,0 +1,117 @@
+[section:torque Launching experiments using Torque]
+
+This short tutorial is intended for isir members who are working on the
+[@http://intranet.isir.upmc.fr/index.php?page=cluster-isir ISIR cluster]. It explains how to automatically launch a batch of experiments on the cluster nodes
+
+[section Script Files]
+
+The torque system used on the cluster can be launched using the
+[@http://www.hpc.dtu.dk/GridEngine/man/qsub.html qsub] command.
+However, waf, used to compile sferes was scripted to accept experiment files.
+
+The files used for experiments are in json format and should have the .json
+extension for easier maintenance.
+
+each file has the following structure 
+
+[python]
+``
+{
+   "email" : "yourname@youraddress.com",
+   "wall_time" : "00:59:59",
+   "nb_runs": 4,
+   "bin_dir": "/${path_to_binaries}/",
+   "res_dir": "/${path_to_results_folder}",
+   "exps" : ["${binary_name_2}","${binary_name_2}"]
+}
+``
+
+The [*email] field is used by the system to report each job status after it ends.
+
+The [*wall_time] field defines the maximum allowed time for each job. If your
+experiment has not exited at the end of the time, it will be killed by the
+server. The wall time is used by torque to define the number of parrallel nodes
+allocated on the cluster :
+
+[table:id Wall time and parrallel execution
+    [[Wall_time] [cluster nodes used]]
+    [[<01:00:00]     [8]   ]
+    [[<12:00:00]     [4]   ]
+    [[<24:00:00]     [2]   ]
+    [[>23:59:59]     [1]   ]
+]
+
+The [*nb_runs] defines the number of jobs which should be created.
+
+The [*bin_dir] sets the path to find the binaries to execute, you must put a
+complete path to your executables (avoid ~ as the user who will execute the
+program is not your regular user).
+
+The [*res_dir] sets the path to put the results
+
+The [*exps] sets the name of the binaries to execute. If you have more than one
+binary, the file will creat nb_runs jobs for each binary.
+
+[endsect]
+
+[section Commands]
+
+After creating ${your_exp}.json file, you can launch it on the cluster using the following syntax:
+
+[teletype]
+``
+./waf --qsub ${path_to_your_json}/${your_json_file}.json
+``
+
+This will create all the required jobs in the queue.
+
+To check if the current queue, you can use the [@http://www.hpc.dtu.dk/GridEngine/man/qstat.html qstat] command. Its output should look like this:
+
+[teletype]
+``
+Job id                    Name             User            Time Use S Queue
+------------------------- ---------------- --------------- -------- - -----
+83356.cluster             ...e10_swap2_nov username2         73:50:34 R q1jour         
+83357.cluster             ...e10_swap5_nov username2                0 Q q1jour         
+83358.cluster             ...e10_swap5_nov username2                0 Q q1jour         
+83359.cluster             ...odulation_nov username1         74:34:31 R q1jour         
+83360.cluster             ...odulation_nov username1                0 Q q1jour         
+83361.cluster             ...odulation_nov username1                0 Q q1jour         
+
+``
+
+If you want to remove jobs from the queue (you can only remove [`your] jobs
+from the queue), you can use the
+[@http://www.hpc.dtu.dk/GridEngine/man/qdel.html qdel] with the following
+syntax
+
+[teletype]
+``
+qdel ${job_id}
+``
+
+Usually, your experiment ids will be grouped, so you can delete multiple jobs
+using the following syntax:
+
+[teletype]
+``
+for i in `seq ${start_id} ${end_id}`;do qdel $i;done
+``
+
+[endsect]
+
+[section Result Files]
+
+The result from your experiments will be put in the res_dir folder. For
+each experiment, a folder with its name will be created containing one
+subdirectory for each job in the experiment named job_1, job_2... Each of these
+folder will contain:
+
+* the usual generated files depending on your experiment
+* a ${your_exp_name}.e??? containing the stderr output if relevant
+* an stdout file containing the console output from the experiment
+
+[endsect]
+
+[endsect]
+

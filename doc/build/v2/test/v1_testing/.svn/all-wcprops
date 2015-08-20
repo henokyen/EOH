@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1_testing
+END
+jamroot.jam
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1_testing/jamroot.jam
+END
+Jamrules
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1_testing/Jamrules
+END
+foo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1_testing/foo.cpp
+END
+lib.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1_testing/lib.cpp
+END
+boost-build.jam
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1_testing/boost-build.jam
+END
+jamfile.jam
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1_testing/jamfile.jam
+END
+lib-err.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/sferes2/!svn/ver/96/trunk/doc/build/v2/test/v1_testing/lib-err.cpp
+END
