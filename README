@@ -1,3 +1,22 @@
-see doc/html/sferes2.html
+
+This repository consists the c++ source code that led to the publication of the paper "The evolutionary origins of hierarchy". The program runs on the sferes framework. 
+Thus, sferes must be configured and built on your system thought the WAF building system
+First, download sferes from   https://github.com/sferes2/sferes2 . To configure sferes run this command (Assuming that sferes is downloaded at /home/$USER/, which is your home directory).
+
+./waf configure --boost-include=/home/$USER/sferes/include/ --boost-libs=/home/$USER/sferes/lib/ --eigen
+
+Then build sferes via
+./waf build
+
+Experiments are placed in the folder:  sferes/sferes2/trunk/exp
+To compile and run an experiment, run the following command from sferes/sferes2/trunk/: 
+./waf --exp NAME_OF_EXPERIMENT
+
+For example to compile the main experiment from “The evolutionary origins of hierarchy paper”, run this command: 
+./waf --exp modularity
+The executable should be placed in the folder: 
+sferes/sferes2/trunk/build/debug/exp/modularity
+Please email me henok.sahilu2006@gmail.com  if you need further
+
 
 
